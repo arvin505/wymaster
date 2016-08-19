@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!--<android.support.v7.widget.RecyclerView-->
+    <!--android:id="@+id/fragment_comment_recycler"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="@color/bg_gray"-->
+    <!--android:paddingLeft="17dp"-->
+    <!--android:paddingRight="17dp"></android.support.v7.widget.RecyclerView>-->
+
+    <com.miqtech.master.client.view.MyHasErrorListView
+        android:id="@+id/fragment_comment_mylistview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_gray"
+        android:divider="@null"
+        android:paddingLeft="17dp"
+        android:paddingRight="17dp"></com.miqtech.master.client.view.MyHasErrorListView>
+
+</LinearLayout>
+
+

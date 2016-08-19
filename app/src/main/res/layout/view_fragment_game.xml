@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lv_bg_gray"
+    android:gravity="center"
+    android:orientation="vertical">
+        <com.miqtech.master.client.view.pullToRefresh.PullToRefreshListView
+            android:id="@+id/prlvGame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@null"
+            android:listSelector="@color/transparent"
+            android:paddingLeft="@dimen/dimen_15dp"
+            android:paddingRight="@dimen/dimen_15dp"
+            android:scrollbars="none"></com.miqtech.master.client.view.pullToRefresh.PullToRefreshListView>
+</LinearLayout>

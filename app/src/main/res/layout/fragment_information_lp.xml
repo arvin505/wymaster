@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/shop_bg_color"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/bgView"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/shop_splite_line"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.miqtech.master.client.view.CircleImageView
+            android:id="@+id/anchorHeader"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/default_head" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+            <TextView
+                android:id="@+id/anchorTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/shop_font_black"
+                android:textSize="@dimen/text_size_15" />
+            <ImageView
+                android:id="@+id/anchorSex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/live_play_men"
+                android:visibility="gone"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/fansNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="粉丝 2.4W"
+                android:textColor="@color/shop_font_black_light"
+                android:textSize="@dimen/text_size_13" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvAttention"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/shape_orange_lien_bg"
+            android:paddingBottom="4dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="4dp"
+            android:text="@string/live_play_attention_btn"
+            android:textColor="@color/light_orange"
+            android:textSize="@dimen/text_size_15" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/shop_splite_line"></View>
+
+    <TextView
+        android:id="@+id/anchorContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:lineSpacingExtra="9dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="12dp"
+        android:text=""
+        android:textColor="@color/shop_buy_record_gray"
+        android:textSize="@dimen/text_size_14" />
+
+</LinearLayout>

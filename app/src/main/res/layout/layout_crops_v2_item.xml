@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <FrameLayout
+            android:id="@+id/flCorpsItemMatch"
+            android:layout_width="match_parent"
+            android:layout_height="34dp">
+
+            <TextView
+                android:id="@+id/tvCorpsItemMatchName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:singleLine="true"
+                android:textColor="@color/lv_item_content_text"
+                android:textSize="@dimen/text_size_12" />
+
+            <TextView
+                android:id="@+id/tvCorpsItemMatchRound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:textColor="@color/lv_item_content_text"
+                android:textSize="@dimen/text_size_12" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/line" />
+
+        <FrameLayout
+            android:id="@+id/flCorpsItemCorps"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvCorpsItemCorpsName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="@color/black_extend_intro"
+                    android:textSize="@dimen/text_size_14" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7.5dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/member_icon" />
+
+                <TextView
+                    android:id="@+id/tvCorpsItemCorpsNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:singleLine="true"
+                    android:textColor="@color/orange"
+                    android:textSize="@dimen/text_size_12" />
+
+                <TextView
+                    android:id="@+id/tvCorpsItemCorpsToatlNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:singleLine="true"
+                    android:textColor="@color/lv_item_content_text"
+                    android:textSize="@dimen/text_size_12" />
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:scaleType="centerCrop"
+                android:src="@drawable/gray_right" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

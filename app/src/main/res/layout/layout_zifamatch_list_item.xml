@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/shop_bg_color"
+    android:orientation="vertical"
+    android:paddingLeft="12dp"
+    android:paddingRight="6dp"
+    android:paddingTop="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/fight_background_list"
+            android:paddingBottom="12dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:paddingTop="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/img_match_poster"
+                        android:layout_width="match_parent"
+                        android:layout_height="155dp"
+                        android:padding="0dp"
+                        android:layout_centerInParent="true"
+                        android:background="@color/shop_bg_color"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/default_img" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_match_by"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="122dp"
+                        android:background="@drawable/fight_gradient_bg_ad"
+                        android:gravity="right"
+                        android:padding="9dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="by"
+                            android:drawableLeft="@drawable/icon_fight_sponsor"
+                            android:textColor="@color/shop_gray_bg"
+                            android:drawablePadding="4dp"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/tv_match_by"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:text="苍穹之贱"
+                            android:textColor="@color/light_orange"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_match_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginTop="4dp"
+                    android:maxLines="2"
+
+                    android:textColor="@color/shop_font_black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="9dp"
+                    android:paddingRight="9dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/icon_battle_time"
+                        android:drawablePadding="6dp"
+                        android:text="@string/match_start_time"
+                        android:textColor="@color/textColorGray"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_match_start_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9dp"
+
+                        android:textColor="@color/textColorGray"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="9dp"
+                    android:paddingRight="9dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/match_corps_game_icon"
+                        android:drawablePadding="6dp"
+                        android:text="@string/match_team"
+                        android:textColor="@color/textColorGray"
+                        android:textSize="14sp" />
+
+                    <com.miqtech.master.client.view.CornerProgressView
+                        android:id="@+id/pb_match"
+                        android:layout_width="160dp"
+                        android:layout_height="10dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:visibility="visible"
+                        app:borderColor="@color/light_orange"
+                        app:endColor="@color/light_orange"
+                        app:progressBackground="#ffb081"
+                        app:startColor="@color/light_orange" />
+
+                    <TextView
+                        android:id="@+id/tv_current_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+
+                        android:textColor="@color/light_orange"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/"
+                        android:textColor="@color/textColorGray"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_max_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="@color/textColorGray"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/im_match_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="9dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:src="@drawable/match_state_signup" />
+</RelativeLayout>

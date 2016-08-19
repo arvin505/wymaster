@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="15dp"
+    android:paddingBottom="8dp"
+    android:paddingTop="12dp">
+
+    <View
+        android:layout_width="5dp"
+        android:layout_height="12dp"
+        android:background="@color/colorActionBarSelected" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="搜索结果"
+        android:textColor="@color/colorActionBarUnSelected" />
+
+</LinearLayout>

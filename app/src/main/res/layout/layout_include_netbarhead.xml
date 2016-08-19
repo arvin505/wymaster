@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@color/white"
+    android:id="@+id/rl_toolbar"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/white" >
+
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent" >
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:src="@drawable/back"
+                android:scaleType="center" />
+            <com.dk.view.drop.WaterDrop
+                android:id="@+id/main_drop"
+                android:layout_marginTop="10dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:visibility="gone" />
+                
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvLeftTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:text="@string/netbarInfoTitle"
+            android:layout_centerVertical="true"
+            android:textColor="@color/shop_font_black"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/blue_gray"
+            android:textSize="@dimen/text_size_big"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvRightTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/rlHandle"
+            android:text="继续"
+            android:textColor="@color/blue_gray"
+            android:textSize="@dimen/text_size_normal"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/iv_title_left"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="25dp"
+                android:scaleType="center"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/iv_left_text"
+                android:layout_width="75dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="25dp"
+                android:gravity="center"
+                android:ellipsize="middle"
+                android:singleLine="true"
+                android:textColor="@color/blue_gray"
+                android:textSize="17sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_title_right"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="12dp"
+                android:scaleType="center"
+                android:visibility="gone" />
+            <TextView
+                android:id="@+id/tv_text_left"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="12dp"
+                android:gravity="center"
+                android:ellipsize="middle"
+                android:singleLine="true"
+                android:textColor="@color/blue_gray"
+                android:textSize="@dimen/text_size_great"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlHandle"
+            android:layout_width="70dp"
+            android:layout_height="55dp"
+            android:layout_alignParentRight="true"
+            android:visibility="visible" >
+
+            <ImageView
+                android:id="@+id/ivHandle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tvHandle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/blue_gray"
+                android:textSize="@dimen/text_size_normal" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

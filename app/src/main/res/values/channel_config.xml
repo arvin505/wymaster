@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="channel_no_game">
+        <item>小米</item>
+        <item>中国移动MM商城</item>
+        <item>中国联通沃商店</item>
+        <item>华为应用商店</item>
+        <item>安智市场</item>
+        <item>机锋</item>
+        <item>搜狗</item>
+        <item>oppo</item>
+        <item>魅族</item>
+        <item>木蚂蚁</item>
+        <item>联想</item>
+        <item>三星</item>
+        <item>锤子</item>
+        <item>vivo</item>
+    </string-array>
+
+    <string-array name="channel_normal">
+        <item>360手机助手</item>
+        <item>百度开发者平台</item>
+        <item>应用宝</item>
+        <item>豌豆荚</item>
+        <item>uc</item>
+        <item>网娱1</item>
+        <item>网娱2</item>
+        <item>网娱3</item>
+        <item>网娱4</item>
+        <item>网娱5</item>
+        <item>网娱6</item>
+        <item>网娱7</item>
+        <item>网娱8</item>
+        <item>网娱9</item>
+        <item>网娱10</item>
+        <item>小安卓市场</item>
+        <item>广点通1</item>
+        <item>广点通2</item>
+    </string-array>
+</resources>

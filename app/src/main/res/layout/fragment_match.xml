@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.miqtech.master.client.view.pullToRefresh.PullToRefreshRecyclerView
+        android:id="@+id/rvMatch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/shop_bg_color"
+        ptr:ptrHeaderBackground="@android:color/transparent"
+        ptr:ptrHeaderTextColor="@color/lv_item_content_text"
+        ptr:ptrMode="both"
+        ptr:ptrRefreshableViewBackground="#fafafa"
+        ptr:ptrShowIndicator="false" />
+
+    <RelativeLayout
+        android:id="@+id/rlAllMatch"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_all_match_screen_height"
+        android:background="@color/mobile_login_gray"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:text="全部赛事"
+            android:textColor="@color/shop_buy_record_gray"
+            android:textSize="@dimen/text_size_13" />
+
+        <ImageView
+            android:id="@+id/ivType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:padding="5dp"
+            android:src="@drawable/match_filter" />
+    </RelativeLayout>
+
+</RelativeLayout>

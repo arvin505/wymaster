@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+   >
+
+  <RelativeLayout
+      android:id="@+id/rlTopTitle"
+      android:layout_width="match_parent"
+      android:layout_height="39dp"
+      android:paddingLeft="15dp"
+      android:paddingRight="12dp"
+      android:gravity="center_vertical">
+    <TextView
+        android:id="@+id/tvMatchProcess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/match_progress"
+        android:textColor="@color/shop_font_black"
+        android:textSize="@dimen/text_size_15"
+        android:textStyle="bold"/>
+      <TextView
+          android:id="@+id/tvSeeMatchPic"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:text="@string/see_match_pic"
+          android:textColor="@color/shop_font_black_light"
+          android:textSize="@dimen/text_size_13"
+          android:drawableRight="@drawable/register_right_oranger"
+          android:drawablePadding="6dp"
+          />
+  </RelativeLayout>
+ <View
+     android:id="@+id/spliteLine1"
+    android:layout_width="match_parent"
+    android:layout_height="0.5dp"
+    android:background="@color/shop_gray_bg"
+     android:visibility="gone"/>
+    <RelativeLayout
+        android:id="@+id/rlMatchProgress"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+       >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/matchName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="小组赛阶段-第一轮"
+                android:textColor="@color/shop_font_black"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:id="@+id/matchTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2016 5 30-2016 6 10"
+                android:textColor="@color/shop_buy_record_gray"
+                android:layout_marginTop="9dp"
+                android:textSize="@dimen/text_size_13" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivMatchState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/match_state_end"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            />
+        <View
+            android:id="@+id/spliteLine2"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/shop_gray_bg" />
+        </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/llSeeMore"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:gravity="center">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/match_see_more"
+        android:textColor="@color/light_orange"
+        android:drawableRight="@drawable/register_right_oranger"
+        android:drawablePadding="6dp"
+        android:textSize="@dimen/text_size_13" />
+    </LinearLayout>
+
+</LinearLayout>

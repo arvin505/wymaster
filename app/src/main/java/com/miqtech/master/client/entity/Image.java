@@ -1,0 +1,15 @@
+package com.miqtech.master.client.entity;
+
+public class Image {
+	String url;
+
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+	
+	
+}

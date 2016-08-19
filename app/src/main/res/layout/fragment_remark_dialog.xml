@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="17dp"
+        android:text="@string/remark_detail"
+        android:textColor="@color/textColorGray"
+        android:textSize="@dimen/text_size_15"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_remark_detail"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+
+        android:maxLength="50"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="11dp"
+        android:textColor="@color/lv_item_content_text"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
+
+    <TextView
+        android:id="@+id/tv_sure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/countersign"
+        android:gravity="center"
+        android:textColor="@color/colorActionBarSelected"
+        android:padding="@dimen/dimen_15dp"
+        />
+
+</LinearLayout>

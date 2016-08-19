@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <com.miqtech.master.client.view.BannerPagerView
+        android:id="@+id/vp_banner"
+        android:layout_width="match_parent"
+        android:layout_height="175dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="27dp"
+        android:background="#7F000000"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        >
+        <TextView
+            android:id="@+id/banner_extend_infor_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:background="@drawable/shape_extend_banner"
+            android:gravity="center"
+            android:textColor="@color/light_orange"
+            android:textSize="@dimen/text_size_10" />
+
+        <TextView
+            android:id="@+id/banner_extend_intro_infor_fragment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="9dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_15" />
+
+        <LinearLayout
+            android:id="@+id/ll_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center|right"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            />
+    </LinearLayout>
+</RelativeLayout>

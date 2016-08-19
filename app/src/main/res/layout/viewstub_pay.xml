@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/flEmptyView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"></FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_shop_detail_buy_num"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/ibMinus"
+                android:layout_width="49dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/goldcoin_minus" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/shop_splite_line"></View>
+
+            <TextView
+                android:id="@+id/tvPayNum"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/text_size_14" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/shop_splite_line"></View>
+
+            <ImageButton
+                android:id="@+id/ibPlus"
+                android:layout_width="49dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/goldcoin_plus" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="18dp"
+            android:background="@color/shop_pay_splite_line"></View>
+
+        <TextView
+            android:id="@+id/tvPayGoldCoinNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="12dp"
+            android:text="共200金币"
+            android:textColor="@color/shop_font_black"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/tvPayBtn"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/orange"
+            android:gravity="center"
+            android:text="@string/sureBtn"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_15" />
+    </LinearLayout>
+</LinearLayout>

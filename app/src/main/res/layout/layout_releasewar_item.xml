@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="190dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="55dp"
+        android:text="该网吧暂时没有什么活动\n不如来发起一场约战吧"
+        android:textColor="@color/black_extend_intro"
+        android:textSize="@dimen/text_size_15" />
+    <Button
+        android:id="@+id/btnReleaseWar"
+        android:layout_width="89dp"
+        android:layout_height="32dp"
+        android:background="@drawable/shape_corner_orange_bg"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12.5dp"
+        android:textSize="@dimen/text_size_14"
+        android:textColor="@color/orange"
+        android:text="发布约战"
+        />
+</LinearLayout>

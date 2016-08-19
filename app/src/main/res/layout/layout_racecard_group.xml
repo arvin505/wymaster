@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/racecard_group_width"
+    android:layout_height="@dimen/racecard_group_height"
+    android:paddingLeft="@dimen/racecard_round_line_margin"
+    android:paddingRight="@dimen/racecard_round_line_margin"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="140dp"
+        android:layout_height="18dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvTeamCodeA"
+            android:layout_width="18dp"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/text_size_10"
+            android:textColor="@color/address_hint"
+            android:gravity="center"
+            android:text="1"
+            android:background="@color/light_gray1" />
+
+        <TextView
+            android:id="@+id/tvTeamNameA"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/text_size_10"
+            android:textColor="@color/address_hint"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="3dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tvScoreA"
+            android:layout_width="18dp"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/text_size_10"
+            android:textColor="@color/address_hint"
+            android:gravity="center"
+            android:background="@color/light_orange" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="140dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvTeamCodeB"
+            android:layout_width="18dp"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/text_size_10"
+            android:textColor="@color/address_hint"
+            android:gravity="center"
+            android:background="@color/light_gray1" />
+
+        <TextView
+            android:id="@+id/tvTeamNameB"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/text_size_10"
+            android:textColor="@color/address_hint"
+            android:layout_marginLeft="3dp"
+            android:gravity="center_vertical"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tvScoreB"
+            android:layout_width="18dp"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/text_size_10"
+            android:textColor="@color/address_hint"
+            android:gravity="center"
+            android:background="@color/light_orange" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,25 @@
+<resources>
+
+    <dimen name="indicator_width">12dp</dimen>
+    <dimen name="indicator_height">2dp</dimen>
+    <dimen name="indicator_padding">2dp</dimen>
+    <dimen name="arc_max_height">50dp</dimen>
+    <dimen name="sheet_height">290dp</dimen>
+
+    <dimen name="view_item_margin">4dp</dimen>
+    <dimen name="view_item_margin2">8dp</dimen>
+    <dimen name="view_item_margin4">16dp</dimen>
+    <dimen name="view_item_padding">4dp</dimen>
+    <dimen name="view_item_padding2">8dp</dimen>
+    <dimen name="view_item_margin3">32dp</dimen>
+
+    <dimen name="text_size_normal">15sp</dimen>
+    <dimen name="text_size_small">13sp</dimen>
+
+
+    <string name="share">分享到</string>
+    <string name="weibo">微博</string>
+    <string name="weixinhaoyou">微信好友</string>
+    <string name="weixinfriend">朋友圈</string>
+    <string name="qq">QQ</string>
+</resources>

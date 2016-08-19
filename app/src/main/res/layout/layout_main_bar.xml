@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="49dp"
+
+    android:background="#fcffffff"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line" />
+
+    <LinearLayout
+        android:id="@+id/ll_main_bar"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="#fcffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_main_bar_match"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/icon_bar_match_selected"
+            android:gravity="center"
+            android:text="@string/main_bar_match"
+
+            android:textColor="@color/colorActionBarSelected"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tv_main_bar_information"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/icon_bar_info_unselected"
+            android:gravity="center"
+            android:text="@string/information"
+            android:textColor="@color/textColorGray"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tv_main_bar_find"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/icon_bar_find_unselected"
+            android:gravity="center"
+            android:text="@string/main_bar_find"
+            android:textColor="@color/textColorGray"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tv_main_bar_mine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/icon_bar_info_unselected"
+            android:gravity="center"
+            android:text="@string/main_bar_mine"
+
+            android:textColor="@color/textColorGray"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+</LinearLayout>

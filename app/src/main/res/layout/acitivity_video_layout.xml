@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        >
+        <LinearLayout
+            android:id="@+id/llBack"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+        <ImageView
+            android:id="@+id/ibLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:src="@drawable/back"
+            android:paddingLeft="12dp"
+            android:paddingRight="6dp"
+             />
+        <TextView
+            android:id="@+id/tvLeftHint"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@id/ibLeft"
+            android:textSize="12sp"
+            android:textColor="@color/shop_font_black"
+            android:layout_centerVertical="true"
+            android:text="返回"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全部直播"
+            android:textSize="@dimen/text_size_15"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+           />
+            <ImageView
+                android:id="@+id/ivIndicate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:layout_marginLeft="5dp"
+                android:visibility="gone"
+                android:src="@drawable/coin_down"/>
+        </LinearLayout>
+     <View
+         android:layout_width="match_parent"
+         android:layout_height="0.5dp"
+         android:layout_alignParentBottom="true"
+         android:background="@color/shop_splite_line"></View>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/llMoretabIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tvTab1"
+                style="@style/live_play_tab_textview_style"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/live_video_hot" />
+
+            <TextView
+                android:id="@+id/tvTab2"
+                style="@style/live_play_tab_textview_style"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/live_video_new" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/shop_splite_line" />
+        <LinearLayout
+            android:id="@+id/llIndex"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-3.25dp"
+            android:orientation="horizontal" >
+
+            <View
+                android:id="@+id/tabTag"
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/light_orange" />
+        </LinearLayout>
+    </LinearLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white" />
+</LinearLayout>

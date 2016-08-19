@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ignore="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="115dp"
+    android:background="@color/white"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp">
+
+    <View
+        android:id="@+id/eventAgainstItemLine"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/shop_splite_line" />
+
+    <RelativeLayout
+        android:id="@+id/rlCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/eventAgainstItemTvScoreLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/light_orange"
+            android:textSize="@dimen/text_size_17"
+            android:textStyle="bold"
+            ignore:text="2" />
+
+        <LinearLayout
+            android:id="@+id/eventAgainstItemLlVs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_toRightOf="@id/eventAgainstItemTvScoreLeft"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/fight_match_vs" />
+
+            <TextView
+                android:id="@+id/eventAgainstItemLlTvStatue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/bg_against_end"
+                android:textColor="@color/shop_buy_record_gray"
+                android:textSize="@dimen/text_size_12"
+                ignore:text="已结束" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/eventAgainstItemTvScoreRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@id/eventAgainstItemLlVs"
+            android:textColor="@color/shop_font_black"
+            android:textSize="@dimen/text_size_17"
+            android:textStyle="bold"
+            ignore:text="1" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/eventAgainstItemLlHeadLeft"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/eventAgainstItemLine"
+        android:layout_toLeftOf="@id/rlCenter"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/eventAgainstItemRlHeadLeft"
+            android:layout_width="59dp"
+            android:layout_height="73dp"
+            android:orientation="vertical">
+
+            <com.miqtech.master.client.view.CircleImageView
+                android:id="@+id/eventAgainstItemIvHeadLeft"
+                android:layout_width="49dp"
+                android:layout_height="49dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5.5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/default_head" />
+
+
+            <ImageView
+                android:id="@+id/eventAgainstItemIvHeadBgLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/fight_match_win" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/eventAgainstItemTvNameLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:ellipsize="end"
+            android:maxEms="6"
+            android:textColor="@color/shop_font_black"
+            android:textSize="@dimen/text_size_14"
+            ignore:text="琼斯。斯奈德" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/eventAgainstItemLlHeadRight"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/eventAgainstItemLine"
+        android:layout_toRightOf="@id/rlCenter"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/eventAgainstItemRlHeadRight"
+            android:layout_width="59dp"
+            android:layout_height="73dp"
+            android:orientation="vertical">
+
+            <com.miqtech.master.client.view.CircleImageView
+                android:id="@+id/eventAgainstItemIvHeadRight"
+                android:layout_width="49dp"
+                android:layout_height="49dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5.5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/default_head" />
+
+
+            <ImageView
+                android:id="@+id/eventAgainstItemIvHeadBgRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/fight_match_convey" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/eventAgainstItemTvNameRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:ellipsize="end"
+            android:maxEms="6"
+            android:textColor="@color/shop_font_black"
+            android:textSize="@dimen/text_size_14"
+            ignore:text="呀哥你太" />
+    </LinearLayout>
+</RelativeLayout>

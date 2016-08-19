@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.miqtech.master.client.view.pullToRefresh.PullToRefreshScrollView
+        android:id="@+id/wyPSAthletics"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="false"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.miqtech.master.client.view.HeadLinesView
+                android:id="@+id/athleticsHead"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/athletics_add_height" />
+
+            <com.miqtech.master.client.view.RecommendViewPager
+                android:id="@+id/vpRecommend"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/gallery_height"
+                android:layout_marginBottom="@dimen/margin_25dp"
+                android:layout_marginTop="@dimen/margin_20dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/line" />
+
+                <LinearLayout
+                    android:id="@+id/llTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/llOfficialActivity"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvOfficialActivity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:text="官方活动"
+                            android:textColor="@color/orange"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tvOfficialBottom"
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:background="@color/orange" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llRecreationlMatch"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvRecreationlMatch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:text="娱乐比赛"
+                            android:textColor="@color/gray"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tvRecreationBottom"
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:background="@color/orange"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llPlayerYuezhan"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvPlayerYuezhan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:text="玩家约战"
+                            android:textColor="@color/gray"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tvPlayBottom"
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:background="@color/orange"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <com.miqtech.master.client.view.MyListView
+                android:id="@+id/lvOfficialActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:paddingLeft="15dp"
+                android:paddingRight="@dimen/dimen_15dp" />
+
+            <LinearLayout
+                android:id="@+id/ll_gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.miqtech.master.client.view.MyGridView
+                    android:id="@+id/gvRecreationlMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:gravity="center"
+                    android:horizontalSpacing="8dp"
+                    android:numColumns="2"
+                    android:padding="15dp"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="10dp" />
+            </LinearLayout>
+
+            <com.miqtech.master.client.view.MyListView
+                android:id="@+id/lvPlayYuezhan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </com.miqtech.master.client.view.pullToRefresh.PullToRefreshScrollView>
+
+    <LinearLayout
+        android:id="@+id/llTitle1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:id="@+id/llOfficialActivity1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvOfficialActivity1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:text="官方活动"
+                    android:textColor="@color/orange"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvOfficialBottom1"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/orange" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llRecreationlMatch1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvRecreationlMatch1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:text="娱乐比赛"
+                    android:textColor="@color/gray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvRecreationBottom1"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/orange"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llPlayerYuezhan1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvPlayerYuezhan1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:text="玩家约战"
+                    android:textColor="@color/gray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvPlayBottom1"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/orange"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

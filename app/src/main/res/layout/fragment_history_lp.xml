@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/shop_bg_color">
+    <View
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/shop_splite_line"></View>
+    <com.miqtech.master.client.view.pullToRefresh.PullToRefreshRecyclerView
+        android:id="@+id/prrvLiveRoom"
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        ptr:ptrMode="pullFromEnd"
+        ptr:ptrHeaderBackground="@android:color/transparent"
+        ptr:ptrShowIndicator="false" />
+
+</LinearLayout>

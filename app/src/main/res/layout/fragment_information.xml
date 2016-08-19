@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.miqtech.master.client.view.RefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swRefresh_infor_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lv_bg_gray">
+
+
+    <com.miqtech.master.client.view.MyListViewForInfo
+        android:id="@+id/lv_infor_fragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none"></com.miqtech.master.client.view.MyListViewForInfo>
+
+
+</com.miqtech.master.client.view.RefreshLayout>

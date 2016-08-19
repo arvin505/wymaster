@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:background="@color/transparent"
+    android:padding="0dp"
+    android:minHeight="44dp"
+    >
+
+    <TextView
+        android:id="@+id/tv_item_game_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="0dp"
+        android:text="@string/game_lol"
+        android:layout_centerInParent="true"
+        android:background="@color/transparent"
+        android:textColor="@color/font_gray"
+        android:textSize="@dimen/text_size_14" />
+
+    <ImageView
+        android:layout_width="0.5px"
+        android:layout_height="44dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_alignParentRight="true"
+        android:src="@color/cpb_grey" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5px"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/cpb_grey" />
+
+
+</RelativeLayout>

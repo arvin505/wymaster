@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/layout_include_header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <RelativeLayout
+                android:id="@+id/rlCurrentCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="当前城市"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:id="@+id/tvCurrentCity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@drawable/right_arrows"
+                    android:drawablePadding="10dp"
+                    android:ellipsize="end"
+                    android:maxLength="8"
+                    android:singleLine="true"
+                    android:text="杭州"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_normal" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line" />
+
+            <com.miqtech.master.client.view.MyGridView
+                android:id="@+id/gvCity"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:columnWidth="50dp"
+                android:gravity="center"
+                android:horizontalSpacing="7dp"
+                android:numColumns="3"
+                android:padding="10dp"
+                android:scrollbars="none"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="10dp" >
+            </com.miqtech.master.client.view.MyGridView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

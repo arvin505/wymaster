@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <GridView
+        android:id="@+id/gvGame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/shop_splite_line"
+        android:scrollbars="none"
+        android:stretchMode = "columnWidth"
+        android:horizontalSpacing = "1px"
+        android:verticalSpacing = "1px"
+        android:numColumns="3" />
+
+</LinearLayout>

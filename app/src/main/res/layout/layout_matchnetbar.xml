@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:paddingTop="7.5dp"
+    android:paddingBottom="7.5dp"
+    android:gravity="center_horizontal"
+    android:paddingLeft="38dp"
+    android:paddingRight="38dp"
+    android:id="@+id/llMatchNetbar"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tvNetbarName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/icon_orange_local"
+        android:textColor="#7d7d7d"
+        android:drawablePadding="7.5dp"
+        android:textSize="@dimen/text_size_15"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:drawableRight="@drawable/register_right_gray"
+        />
+    <TextView
+        android:id="@+id/tvNetbarAddress"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="7.5dp"
+        android:layout_height="wrap_content"
+        android:textColor="#7d7d7d"
+        android:textSize="@dimen/text_size_12"
+        android:singleLine="true"
+        android:ellipsize="end"
+        />
+</LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/layout_include_netbarhead" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignBottom="@id/header"
+        android:background="@color/line" />
+
+    <RelativeLayout
+        android:id="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/vDian"
+            android:layout_width="5dp"
+            android:layout_height="10dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="5dp"
+            android:background="@color/colorActionBarSelected" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_toRightOf="@+id/vDian"
+            android:text="加入现有约战"
+            android:textColor="@color/font_gray"
+            android:textSize="@dimen/text_size_small" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lvReleaseWar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlHeader"
+        android:divider="@null"
+        android:scrollbars="none"></ListView>
+
+    <TextView
+        android:id="@+id/tvReleaseWar2Ta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorActionBarSelected"
+        android:drawableRight="@drawable/right_arrows"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="创建和TA的约战"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_great" />
+
+</RelativeLayout>

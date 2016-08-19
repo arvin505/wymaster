@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/layout_include_header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <LinearLayout
+                android:id="@+id/llEnvironment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="环境舒适"
+                    android:textColor="@color/blue_gray"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <RatingBar
+                    android:id="@+id/rbEnvironment"
+                    style="@style/RatingBarBig"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/line" />
+
+            <LinearLayout
+                android:id="@+id/llComputerCon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="机器配置"
+                    android:textColor="@color/blue_gray"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <RatingBar
+                    android:id="@+id/rbComputerCon"
+                    style="@style/RatingBarBig"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/line" />
+
+            <LinearLayout
+                android:id="@+id/llNet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="网络流畅"
+                    android:textColor="@color/blue_gray"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <RatingBar
+                    android:id="@+id/rbNet"
+                    style="@style/RatingBarBig"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/line" />
+
+            <LinearLayout
+                android:id="@+id/llNetbarServe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="网吧服务"
+                    android:textColor="@color/blue_gray"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <RatingBar
+                    android:id="@+id/rbNetbarServe"
+                    style="@style/RatingBarBig"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/shape_gray_line_bg"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/edtEvaluate"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="6"
+                    android:background="@null"
+                    android:gravity="start"
+                    android:hint="网吧环境如何，玩游戏卡不卡？有没有邂逅萌妹子呢？写写你的看法吧~"
+                    android:padding="10dp"
+                    android:textColor="@color/blue_gray"
+                    android:maxLines="10"
+                    android:maxLength="150"
+                    android:textSize="@dimen/text_size_small" />
+
+                <LinearLayout
+                    android:id="@+id/llUploadPics"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:padding="10dp"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1" >
+
+                    <CheckBox
+                        android:id="@+id/cbAnonymity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/btn_anonymity_selector"
+                        android:paddingLeft="5dp"
+                        android:text="匿名"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <TextView
+                        android:id="@+id/btnImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/cbAnonymity"
+                        android:background="@null"
+                        android:drawablePadding="5dp"
+                        android:drawableLeft="@drawable/btn_img_selector"
+                        android:text="图片"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <TextView
+                        android:id="@+id/tvSurplus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:text="剩余150字"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/text_size_small" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_login_selector"
+                android:paddingBottom="15dp"
+                android:enabled="false"
+                android:paddingTop="15dp"
+                android:text="确认提交"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
+    </ScrollView>
+
+    <SlidingDrawer
+        android:id="@+id/slidingdrawer"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentBottom="true"
+        android:content="@+id/vpContent"
+        android:handle="@+id/handle"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/handle"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp" />
+
+        <com.miqtech.master.client.view.MyPagerView
+            android:id="@+id/vpContent"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="#323232"
+            android:flipInterval="30"
+            android:persistentDrawingCache="animation" >
+        </com.miqtech.master.client.view.MyPagerView>
+    </SlidingDrawer>
+
+</RelativeLayout>

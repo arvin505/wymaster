@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/blacklist_header"
+        layout="@layout/layout_include_header" />
+
+    <include
+        layout="@layout/exception_page"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvfinish"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:background="@drawable/btn_auchcode_selector"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="完成"
+        android:textColor="#7d7d7d"
+        android:textSize="15sp" />
+
+    <com.miqtech.master.client.view.MyGridView
+        android:id="@+id/gvBlack"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/tvfinish"
+        android:layout_below="@id/blacklist_header"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        android:horizontalSpacing="10dp"
+        android:numColumns="4"
+        android:scrollbars="none"
+        android:verticalSpacing="15dp" />
+
+</RelativeLayout>

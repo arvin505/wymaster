@@ -1,0 +1,72 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="80dp"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:visibility="visible"
+    android:descendantFocusability="blocksDescendants"
+     >
+<RelativeLayout 
+     android:layout_width="fill_parent"
+    android:layout_height="79dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:gravity="center_vertical">
+    <TextView
+        android:id="@+id/teamName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:gravity="center_vertical"
+        android:text="大荷兰战队"
+        android:maxLength="16"
+        android:ellipsize="end"
+        android:textColor="@color/blue_gray"
+        android:layout_alignParentTop="true"
+        android:textSize="15sp" />
+    
+<TextView 
+    android:layout_alignParentBottom="true"
+    android:id="@+id/faqi"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="发起者:"/>
+<TextView 
+    android:id="@+id/header"
+    android:layout_alignParentBottom="true"
+    android:layout_toRightOf="@+id/faqi"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:maxLength="8"
+    android:ellipsize="end"
+    android:text="张三"/>
+<TextView 
+   android:id="@+id/total"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:layout_alignParentRight="true"
+   android:layout_alignParentTop="true"
+   android:textColor="@color/blue_gray"
+   android:text="3/5"/>
+        <Button
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/joinCorps"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/corps_edit"
+            android:padding="5dp"
+            android:text="加入战队"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+</RelativeLayout>
+   <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/gray" />
+</LinearLayout>

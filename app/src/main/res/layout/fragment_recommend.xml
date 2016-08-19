@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.miqtech.master.client.view.pullToRefresh.PullToRefreshScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/wyscroll_recommend"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:fillViewport="false"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.miqtech.master.client.view.HeadLinesView
+            android:id="@+id/recommend_head"
+            android:layout_width="match_parent"
+            android:layout_height="175dp" />
+
+        <!--<include layout="@layout/recommend_entry" />-->
+        <com.miqtech.master.client.view.EntrysView
+            android:id="@+id/entry"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/white" />
+
+        <include
+            android:id="@+id/content_hotmatch"
+            layout="@layout/view_hotmatch" />
+
+        <include
+            android:id="@+id/content_mid1"
+            layout="@layout/view_mid1" />
+
+        <include layout="@layout/view_hotbattle" />
+
+        <include
+            android:id="@+id/rl_mid2"
+            layout="@layout/view_mid2" />
+
+        <include layout="@layout/view_recommend_netbar" />
+
+    </LinearLayout>
+
+</com.miqtech.master.client.view.pullToRefresh.PullToRefreshScrollView>

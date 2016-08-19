@@ -1,0 +1,3 @@
+include ':app', ':baselibrary', ':sweetsheet'
+project(':baselibrary').projectDir = new File('extras_anim/baselibrary')
+project(':sweetsheet').projectDir = new File('extras_anim/sweetsheet')

@@ -1,0 +1,13 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:id="@android:id/background" android:drawable="@drawable/video_volume_primary"
+        >
+    </item>
+    <item android:id="@android:id/progress">
+         <scale
+             android:drawable="@drawable/video_volume_bg"
+            android:scaleWidth="100%"
+             /> 
+    </item>
+
+</layer-list>

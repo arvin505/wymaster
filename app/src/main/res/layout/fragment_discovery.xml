@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/shop_bg_color">
+
+    <include layout="@layout/layout_include_header" />
+    <com.miqtech.master.client.view.pullToRefresh.PullToRefreshScrollView
+        android:id="@+id/discoveryScrollview"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="false"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <include
+                android:id="@+id/discoveryNearbyNetbar"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                layout="@layout/fragment_discovery_item" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/shop_gray_bg" />
+            <include android:id="@+id/netBarItem"
+                   layout="@layout/nearbybaritem"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+              />
+            <View
+                android:id="@+id/spliteLine"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/shop_gray_bg"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone"/>
+            <View
+                android:id="@+id/spliteLine2"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/shop_gray_bg"
+                android:visibility="gone"
+               />
+            <include
+                android:id="@+id/discoveryGoldCoinShop"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                layout="@layout/fragment_discovery_item" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/shop_gray_bg" />
+            <include
+                android:id="@+id/discoveryLivePlay"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                layout="@layout/fragment_discovery_item" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/shop_gray_bg" />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                ></android.support.v7.widget.RecyclerView>
+            <com.miqtech.master.client.view.HeadLinesView
+                android:id="@+id/discoveryRecommend"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:background="@color/black"/>
+        </LinearLayout>
+    </com.miqtech.master.client.view.pullToRefresh.PullToRefreshScrollView>
+
+</LinearLayout>

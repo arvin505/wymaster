@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialog_title_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:gravity="center"
+        android:text="您输入的邀请码有误"
+        android:textColor="@color/lv_item_content_text"
+        android:textSize="@dimen/text_size_18"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/dialog_content_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="请重新发送"
+        android:textColor="@color/dark_gray"
+        android:textSize="@dimen/text_size_14"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/dialog_content_register_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        android:singleLine="true"
+        android:gravity="center"
+        android:textColor="@color/dark_gray"
+        android:textSize="@dimen/text_size_14"
+        android:visibility="gone"
+        tools:ignore="TextFields" />
+
+
+    <View
+        android:id="@+id/dialog_register_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dialog_register_no_pact"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="取消"
+            android:visibility="gone"
+            android:textColor="@color/dark_gray"
+            android:textSize="17sp" />
+
+        <View
+            android:id="@+id/dialog_line_no_pact"
+            android:layout_width="0.5dp"
+            android:visibility="gone"
+            android:layout_height="fill_parent"
+            android:background="@color/gray" />
+
+
+        <TextView
+            android:id="@+id/dialog_register_yes_pact"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/orange"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ignore="http://schemas.android.com/tools"
+    android:id="@+id/rewardUpCardRl"
+    android:layout_width="281dp"
+    android:layout_height="428dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rewardUpCardLl"
+        android:layout_width="fill_parent"
+        android:layout_height="379dp"
+        android:background="@drawable/wanted_parchment"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/rewardUpFlCardNavigationBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp">
+
+            <ImageView
+                android:id="@+id/rewardUpCardIvRuleOne"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center_horizontal|left"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/wanted_rule" />
+
+            <ImageView
+                android:id="@+id/rewardUpCardIvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/wanted_headline" />
+
+            <ImageView
+                android:id="@+id/rewardUpCardIvShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|right"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/wanted_share" />
+        </FrameLayout>
+
+
+        <ImageView
+            android:id="@+id/rewardUpCardIvRuleTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/rewardUpFlCardNavigationBar"
+            android:layout_marginLeft="16.5dp"
+            android:layout_marginTop="-0.5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/wanted_rule02" />
+
+
+        <RelativeLayout
+            android:id="@+id/rewwarUpCardRlImg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rewardUpCardIvRuleTwo"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <ImageView
+                android:id="@+id/rewardUpCardIvCardImg"
+                android:layout_width="123dp"
+                android:layout_height="97dp"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/wanted_killer" />
+
+            <ImageView
+                android:id="@+id/rewardUpCardIvPass"
+                android:layout_width="74dp"
+                android:layout_height="74dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="23dp"
+                android:layout_marginTop="42dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/wanted_pass"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/rewwarUpCardLlGold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rewwarUpCardRlImg"
+            android:layout_marginTop="26dp"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/goal"
+                android:textColor="@color/card_text_color"
+                android:textSize="@dimen/text_size_13" />
+
+            <TextView
+                android:id="@+id/rewardUpCardTvGold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:ellipsize="end"
+                android:gravity="left"
+                android:maxLines="2"
+                android:textColor="@color/card_text_color"
+                android:textSize="@dimen/text_size_13"
+                ignore:text="使用左轮在一场比赛中击杀使用左轮在一场比赛中击杀使用左轮在一场比赛中击杀使用左轮在一场比赛中击杀使用左轮在一场比赛中击杀" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rewwarUpCardLlReward"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rewwarUpCardLlGold"
+            android:layout_marginTop="13dp"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reward"
+                android:textColor="@color/card_text_color"
+                android:textSize="@dimen/text_size_13" />
+
+            <TextView
+                android:id="@+id/rewardUpCardTvReward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:gravity="left"
+                android:textColor="@color/card_text_color"
+                android:textSize="@dimen/text_size_13"
+                ignore:text="使用左轮在一场比赛中击杀100人并获得胜利场比赛中击杀10场比赛中击杀10场比赛中击杀10场比赛中击杀10场比赛中击杀10" />
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/rewwarUpCardLlReward"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="48dp"
+                android:src="@drawable/wanted_separate" />
+
+            <LinearLayout
+                android:id="@+id/rewardUpCardLlCardStatu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="18dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="6dp"
+                android:paddingTop="6dp">
+
+                <TextView
+                    android:id="@+id/rewardUpCardTvCardStatuExplain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/card_text_color_9d7a4c"
+                    android:textSize="@dimen/text_size_12"
+                    ignore:text="剩余时间" />
+
+                <LinearLayout
+                    android:id="@+id/rewardUpCardIvCardStatuImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9dp"
+                        android:text="@string/get_at_once"
+                        android:textColor="@color/colorActionBarSelected"
+                        android:textSize="@dimen/text_size_13" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9dp"
+                        android:src="@drawable/wanted_front" />
+                </LinearLayout>
+
+                <com.miqtech.master.client.view.RewardTimeTaskLinearLayout
+                    android:id="@+id/rewardUpCardLlTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone"></com.miqtech.master.client.view.RewardTimeTaskLinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/rewardUpCardItemLv"
+            android:layout_width="281dp"
+            android:layout_height="231dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/wanted_spread_bg"
+            android:scrollbars="none"
+            android:visibility="gone"></ListView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/rewardUpCardLlBottom"
+        android:layout_width="fill_parent"
+        android:layout_height="49dp"
+        android:layout_below="@id/rewardUpCardLl"
+        android:background="@drawable/shape_orange_bg_corner"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/rewardUpCardIvBottomImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="9dp"
+            android:scaleType="centerCrop"
+            android:visibility="visible"
+            ignore:src="@drawable/wanted_fight" />
+
+        <TextView
+            android:id="@+id/rewardUpCardTvBottomStatu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_17"
+            android:visibility="visible"
+            ignore:text="@string/brought_the_bounty" />
+
+        <TextView
+            android:id="@+id/rewardUpCardTvBottomStatuSee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_17"
+            android:visibility="gone"
+            android:text="@string/pack_up" />
+
+        <ViewStub
+            android:id="@+id/rewardUpCardBottomViewStub"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!--<RelativeLayout
+            android:id="@+id/rewardUpCardBottomViewStub"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/rewardUpCardRlBottomHeadIcon"
+                android:layout_width="41dp"
+                android:layout_height="36dp"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/wanted_champion" />
+
+                <com.miqtech.master.client.view.CircleImageView
+                    android:id="@+id/rewardUpCardIvBottomHeadIcon"
+                    android:layout_width="32dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="3dp"
+                    android:src="@drawable/default_head" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/rewardUpCardTvBottomSee"
+                android:layout_width="44dp"
+                android:layout_height="18dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/shape_corners_2_stroke_white"
+                android:gravity="center"
+                android:text="@string/look_at"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_13" />
+
+            <TextView
+                android:id="@+id/rewardUpCardTvBottomName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toLeftOf="@id/rewardUpCardTvBottomSee"
+                android:layout_toRightOf="@id/rewardUpCardRlBottomHeadIcon"
+                android:gravity="left"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_15"
+                ignore:text="我要辣死你" />
+        </RelativeLayout>-->
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="370.5dp"
+        android:maxLines="1"
+        android:text="@string/transverse_line"
+        android:textColor="@color/shop_font_black"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

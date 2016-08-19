@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlShopDetailParentview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.miqtech.master.client.view.layoutmanager.FullScrollView
+        android:id="@+id/fullScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rlAdvertisement"
+                    android:layout_width="fill_parent"
+                    android:layout_height="260dp">
+
+                    <com.miqtech.master.client.view.BannerPagerView
+                        android:id="@+id/adBanner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"></com.miqtech.master.client.view.BannerPagerView>
+
+                    <LinearLayout
+                        android:id="@+id/llAdvertiseDots"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"></LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/ibBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:padding="12dp"
+                        android:src="@drawable/shop_detail_back" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/shop_splite_line"></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvGoodName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:lineSpacingExtra="4dp"
+                        android:maxLines="2"
+                        android:text=""
+                        android:textColor="@color/shop_font_black"
+                        android:textSize="@dimen/text_size_16" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tvGoodCost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/coins_total"
+                        android:drawablePadding="6dp"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        android:textColor="@color/orange"
+                        android:textSize="24sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/totalGoldCoins"
+                            android:textColor="@color/shop_font_black_light"
+                            android:textSize="@dimen/text_size_12"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="2dp"
+                            android:layout_gravity="bottom"/>
+                    </LinearLayout>
+
+                    <com.miqtech.master.client.view.CornerProgressView
+                        android:id="@+id/pbGood"
+                        android:layout_width="match_parent"
+                        android:layout_height="6dp"
+                        android:layout_marginTop="9dp"
+                        android:visibility="visible"
+                        app:endColor="@color/crowd_pb_end"
+                        app:progressBackground="#e4e4e4"
+                        app:startColor="@color/crowd_pb_start" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp">
+
+                        <TextView
+                            android:id="@+id/tvSurplusPeople"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:gravity="center_vertical"
+                            android:text=""
+                            android:textColor="@color/shop_font_black"
+                            android:textSize="@dimen/text_size_12" />
+
+                        <TextView
+                            android:id="@+id/tvProgressNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center_vertical"
+                            android:text=""
+                            android:textColor="@color/shop_font_black"
+                            android:textSize="@dimen/text_size_12" />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/ivOpeningPrize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="-1dp"
+                        android:layout_marginTop="15dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/shop_detail_opening_priaze"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlLuckyer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="15dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/ivLuckyer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/shop_detail_luckyer" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingTop="13dp"
+                            android:paddingLeft="25dp"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/luckyerUser"
+                                android:textColor="@color/orange"
+                                android:textSize="@dimen/text_size_13" />
+                            <TextView
+                                android:id="@+id/tvUserTelNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:includeFontPadding="false"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_15" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:includeFontPadding="false"
+                                android:text="@string/luckyerNum"
+                                android:textColor="@color/orange"
+                                android:textSize="@dimen/text_size_13" />
+                            <TextView
+                                android:id="@+id/tvNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:includeFontPadding="false"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_15" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvActivityTimes"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/shop_gray_btn_shape"
+                        android:gravity="center"
+                        android:text="您未参与本次活动哦！"
+                        android:textColor="@color/shop_font_black_light"
+                        android:textSize="@dimen/text_size_12" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llShopDetailTab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/llShopDetail"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tvShopDetail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:gravity="center"
+                                android:paddingBottom="10dp"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:paddingTop="15dp"
+                                android:text="@string/shop_detail"
+                                android:textColor="@color/shop_font_black"
+                                android:textSize="@dimen/text_size_15" />
+
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:id="@+id/ivShopDetailTab"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@null"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/select_tab_bottom_orger"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llExpiryRule"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tvExpiryRule"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:gravity="center"
+                                android:paddingBottom="10dp"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:paddingTop="15dp"
+                                android:text="@string/expiry_rule"
+                                android:textColor="@color/shop_font_black"
+                                android:textSize="@dimen/text_size_15" />
+
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:id="@+id/ivExpiryRuleTab"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@null"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/select_tab_bottom_orger"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llBuyRecord"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tvBuyRecord"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:gravity="center"
+                                android:paddingBottom="10dp"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:paddingTop="15dp"
+                                android:text="@string/buy_record"
+                                android:textColor="@color/shop_font_black"
+                                android:textSize="@dimen/text_size_15" />
+
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:id="@+id/ivBuyRecordTab"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@null"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/select_tab_bottom_orger"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/shop_splite_line"></View>
+
+                <RelativeLayout
+                    android:id="@+id/fragmentContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   ></RelativeLayout>
+               <View
+                    android:layout_width="match_parent"
+                    android:layout_height="76dp"
+                    android:background="@color/shop_bg_color"></View>
+            </LinearLayout>
+        </RelativeLayout>
+    </com.miqtech.master.client.view.layoutmanager.FullScrollView>
+
+    <LinearLayout
+        android:id="@+id/llInstantBuy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/shop_splite_line"></View>
+
+        <TextView
+            android:id="@+id/tvInstantBuy"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="12dp"
+            android:background="@drawable/btn_instan_buy_shape"
+            android:gravity="center"
+            android:text="@string/instant_buy"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_15" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/shop_transparent_black_bg"
+        android:visibility="gone"></View>
+
+    <ViewStub
+        android:id="@+id/vsPay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

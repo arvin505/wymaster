@@ -1,0 +1,81 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="text_size_10">10sp</dimen>
+    <dimen name="text_size_11">11sp</dimen>
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="text_size_13">13sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_15">15sp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_17">17sp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+    <dimen name="text_size_19">19sp</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+    <dimen name="text_size_21">21sp</dimen>
+
+    <dimen name="cpb_stroke_width">4dp</dimen>
+
+    <!-- text size-->
+    <dimen name="toolbar_text_size">18sp</dimen>
+
+    <dimen name="toolbar_text_padding">14dp</dimen>
+    <dimen name="toolbar_padding">12dp</dimen>
+    <dimen name="toolbar_left_img_padding">5dp</dimen>
+
+    <!-- recommend fragment-->
+    <dimen name="recommend_head_height">255dp</dimen>
+    <dimen name="recommend_head_lable_margin">12dp</dimen>
+    <dimen name="recommend_head_imageview_height">175dp</dimen>
+    <dimen name="recommend_head_second_height">80dp</dimen>
+    <dimen name="recommend_head_textsize">12sp</dimen>
+
+    <!--information fragment-->
+    <dimen name="information_head_height">200dp</dimen>
+    <dimen name="information_head_image_height">175dp</dimen>
+    <dimen name="information_head_text_height">25dp</dimen>
+    <dimen name="information_toleft_toright">12dp</dimen>
+    <dimen name="information_lv_toTop_toBottom">10dp</dimen>
+    <dimen name="information_lv_image_with">90dp</dimen>
+    <dimen name="information_lv_image_height">66dp</dimen>
+
+    <dimen name="information_head">45dp</dimen>
+
+    <dimen name="distance_20dp">20dp</dimen>
+
+    <dimen name="joiner_margin">30dp</dimen>
+    <dimen name="dimen_15dp">15dp</dimen>
+    <dimen name="dimen_7_5dp">7.5dp</dimen>
+
+    <dimen name="weekly_view_margin">5dp</dimen>
+
+    <dimen name="button_item_padding">12dp</dimen>
+    <dimen name="ten_dp">10dp</dimen>
+    <dimen name="text_size_small">13sp</dimen>
+    <dimen name="text_size_normal">15sp</dimen>
+    <dimen name="text_size_big">17sp</dimen>
+    <dimen name="text_size_large">19sp</dimen>
+    <dimen name="text_size_great">21sp</dimen>
+    <dimen name="text_size_biggest">27sp</dimen>
+    <dimen name="text_size_tiny">11sp</dimen>
+
+    <dimen name="dialog_margin">44dp</dimen>
+    <dimen name="index_bar_view_margin">10dp</dimen>
+    <dimen name="view_item_margin4">16dp</dimen>
+    <dimen name="view_item_margin2">8dp</dimen>
+
+    <dimen name="image_width">80dp</dimen>
+    
+    <dimen name="athletics_add_height">175dp</dimen>
+    <dimen name="gallery_height">290dp</dimen>
+    <dimen name="margin_25dp">25dp</dimen>
+    <dimen name="margin_20dp">20dp</dimen>
+
+    <dimen name="margin_50dp">50dp</dimen>
+
+    <dimen name="margin_19dp">19dp</dimen>
+
+    <dimen name="exclusive_money_heigh">200dp</dimen>
+
+</resources>

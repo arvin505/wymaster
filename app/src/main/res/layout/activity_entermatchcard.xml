@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/layout_include_header" />
+
+    <LinearLayout
+        android:id="@+id/llContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:orientation="vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="真实姓名"
+                android:textColor="#7d7d7d"
+                android:textSize="@dimen/text_size_14" />
+            <EditText
+                android:id="@+id/edtName"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size_14"
+                android:textColorHint="#B3B3B3"
+                android:gravity="end"
+                android:hint="请填写您的真实姓名"
+                android:textColor="#585858"
+                android:maxLength="6"
+                android:singleLine="true"
+                android:textCursorDrawable="@null"
+                android:background="@null"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="身份证号"
+                android:textColor="#7d7d7d"
+                android:textSize="@dimen/text_size_14" />
+            <EditText
+                android:id="@+id/edtIDcard"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size_14"
+                android:textColorHint="#B3B3B3"
+                android:gravity="end"
+                android:hint="请填写您的身份证号"
+                android:textCursorDrawable="@null"
+                android:digits="1234567890Xx"
+                android:textColor="#585858"
+                android:maxLength="18"
+                android:background="@null"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="手机号码"
+                android:textColor="#7d7d7d"
+                android:textSize="@dimen/text_size_14" />
+            <EditText
+                android:id="@+id/edtPhoneNum"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size_14"
+                android:textColorHint="#B3B3B3"
+                android:gravity="end"
+                android:inputType="number"
+                android:hint="请填写您的手机号码"
+                android:textColor="#585858"
+                android:textCursorDrawable="@null"
+                android:maxLength="11"
+                android:background="@null"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="常用QQ"
+                android:textColor="#7d7d7d"
+                android:textSize="@dimen/text_size_14" />
+            <EditText
+                android:id="@+id/edtQQ"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size_14"
+                android:textColorHint="#B3B3B3"
+                android:gravity="end"
+                android:inputType="number"
+                android:hint="请填写您的常用QQ"
+                android:textColor="#585858"
+                android:textCursorDrawable="@null"
+                android:maxLength="15"
+                android:background="@null"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="35dp"
+        android:background="@color/orange"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        android:textSize="@dimen/text_size_16"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:text="保存"
+        />
+
+</RelativeLayout>

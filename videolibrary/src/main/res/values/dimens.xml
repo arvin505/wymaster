@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- play area -->
+
+    <dimen name="detail_play_title_height">40dp</dimen>
+    <dimen name="detail_play_title_margin_left_right">17.5dp</dimen>
+
+    <!-- 详情页播放器底部控制区 -->
+    <dimen name="detail_play_progress_margin_left">7.5dp</dimen>
+    <!-- pop up middle -->
+
+
+    <!-- 全屏播放 剧集选择 -->
+    <dimen name="fullscreen_player_episode_item_text_size">10sp</dimen>
+    <dimen name="fullscreen_player_episode_item_small_text_size">8sp</dimen>
+    <dimen name="homepage_item_title_first">14dp</dimen> 
+
+  
+
+    <!-- Text Size -->
+
+    <dimen name="text_size_a">8sp</dimen>
+    <dimen name="text_size_b">10sp</dimen>
+    <dimen name="text_size_c">12sp</dimen>
+    <dimen name="text_size_d">14sp</dimen>
+    <dimen name="text_size_e">18sp</dimen>
+    <dimen name="text_size_f">22sp</dimen>
+    <dimen name="text_size_g">29sp</dimen>
+    <dimen name="text_size_h">32sp</dimen>
+    <dimen name="text_size_i">36sp</dimen>
+    <dimen name="text_size_l">20sp</dimen>
+    <dimen name="text_size_j">16sp</dimen>
+    <dimen name="text_size_1">9sp</dimen>
+    <dimen name="text_size_2">11sp</dimen>
+    <dimen name="text_size_3">12sp</dimen>
+    <dimen name="text_size_4">13sp</dimen>
+    <dimen name="text_size_5">14sp</dimen>
+    <dimen name="text_size_6">15sp</dimen>
+    <dimen name="text_size_7">18sp</dimen>
+    <dimen name="text_size_8">25sp</dimen>
+
+    <!-- 播放广告 -->
+    
+    <dimen name="player_ad_go_full_padding">5dp</dimen>
+    <dimen name="player_ad_skip_width_youku">69.5dp</dimen>
+    <dimen name="player_ad_count_text_padding_youku">4dp</dimen>
+
+    <!-- 播放广告 youku -->
+    <dimen name="player_ad_count_text_size_youku">14dp</dimen>
+    <dimen name="player_ad_text_height_youku">32dp</dimen>
+    <!-- <dimen name="player_ad_skip_width_youku">72dp</dimen> -->
+    <dimen name="player_ad_more_width_youku">80dp</dimen>
+    <dimen name="player_ad_go_full_width_youku">35dp</dimen>
+    <dimen name="player_ad_more_padding_youku">2dp</dimen>
+    <!-- youku dialog -->
+    <dimen name="yp_youku_dialog_txt_cancel_textsize">15dp</dimen>
+    <dimen name="yp_edittext_add_txt_linespacingextra">3dp</dimen>
+    <dimen name="yp_normal_content_textsize">17dp</dimen>
+    <dimen name="paytip_close_width">37dp</dimen>
+    <dimen name="paytip_close_height">32dp</dimen>
+    <dimen name="paytip_close_margin">8dp</dimen>
+   
+
+    <!-- tudou encrypt dialog -->
+    <dimen name="tudou_dialog_height">175dp</dimen>
+    <dimen name="tudou_dialog_width">300dp</dimen>
+    
+    <dimen name="channeltab_txt_textsize">14dp</dimen>
+    
+    
+    <dimen name="toolbar_btn_txt_textsize">12dp</dimen>    
+    
+      
+    <dimen name="history_item_txt_first_textsize">14dp</dimen>
+    <dimen name="history_item_txt_second_textsize">10dp</dimen>  
+    
+   
+</resources>

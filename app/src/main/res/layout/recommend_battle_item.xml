@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llRecommendBattle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="12dp">
+
+    <com.miqtech.master.client.view.CircleImageView
+        android:id="@+id/battle_item_head"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:layout_marginRight="12dp"
+        android:src="@drawable/default_head" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/battle_item_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/icon_girl"
+                android:singleLine="true"
+                android:text="飞鸟冰河"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/battle_item_starttime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="3dp"
+                android:drawableLeft="@drawable/icon_battle_time"
+                android:drawablePadding="5dp"
+                android:text="12/23 13:20"
+                android:textColor="@color/textColorBattle"
+                android:textSize="13sp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/battle_item_nickname"
+                android:layout_toLeftOf="@+id/battle_item_starttime"
+                android:layout_toRightOf="@+id/battle_item_nickname" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/battle_item_server"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:paddingLeft="3dp"
+                android:text="英雄联盟-艾欧里亚"
+                android:textColor="@color/colorActionBarSelected"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/battle_item_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawableLeft="@drawable/icon_battle_person_count"
+                android:drawablePadding="5dp"
+                android:text="200/200"
+                android:textColor="@color/textColorBattle"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/battle_item_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:drawableLeft="@drawable/icon_loc_battle"
+            android:drawablePadding="2dp"
+            android:text="线上"
+            android:textColor="@color/textColorBattle"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

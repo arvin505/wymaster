@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ll_item2_information"
+    android:orientation="vertical"
+    android:colorControlHighlight="@color/orange"
+    android:background="?android:attr/selectableItemBackground"
+    android:paddingLeft="@dimen/information_toleft_toright"
+    android:paddingRight="@dimen/information_toleft_toright">
+
+    <TextView
+        android:id="@+id/tv_buttom_title_infor_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/information_lv_toTop_toBottom"
+        android:singleLine="true"
+        android:text="从刺客信条.枭雄看维多利亚时期的英雄"
+        android:textColor="@color/black_extend_intro"
+        android:textSize="@dimen/text_size_15" />
+
+    <FrameLayout
+        android:id="@+id/fl_imgs_infor_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp">
+
+        <ImageView
+            android:id="@+id/iv1_infor_fragment"
+            android:layout_width="105dp"
+            android:layout_height="76dp"
+            android:layout_gravity="center|left"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_img"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/iv2_infor_fragment"
+            android:layout_width="105dp"
+            android:layout_height="76dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_img"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/iv3_infor_fragment"
+            android:layout_width="105dp"
+            android:layout_height="76dp"
+            android:layout_gravity="center|right"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_img"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/information_lv_toTop_toBottom"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_several_image_infor_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="20图"
+            android:textColor="@color/lv_item_content_text"
+            android:textSize="@dimen/text_size_12" />
+
+        <TextView
+            android:id="@+id/tv_yue_several_image_infor_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="7025阅"
+            android:textColor="@color/lv_item_content_text"
+            android:textSize="@dimen/text_size_12" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/last_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray" />
+</LinearLayout>

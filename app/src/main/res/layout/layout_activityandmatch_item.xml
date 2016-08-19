@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llActivityMatch"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tvActivityTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="3dp"
+            android:drawableLeft="@drawable/personal_time_icon"
+            android:text="2015.1.1"
+            android:layout_centerVertical="true"
+            android:textColor="@color/font_gray"
+            android:textSize="@dimen/text_size_small" />
+
+        <TextView
+            android:id="@+id/tvActivityType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/shape_yellow_bg"
+            android:paddingBottom="2dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:paddingTop="2dp"
+            android:text="发起约战"
+            android:layout_toRightOf="@+id/tvActivityTime"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_small" />
+
+        <TextView
+            android:id="@+id/tvLine"
+            android:layout_width="100dp"
+            android:layout_height="0.5dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tvActivityType"
+            android:background="@color/line" />
+
+        <TextView
+            android:id="@+id/tvActivityEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/shape_lightgray_bg"
+            android:padding="1.5dp"
+            android:text="已过期"
+            android:layout_centerVertical="true"
+            android:textColor="@color/font_gray"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+            android:textSize="@dimen/text_size_small"
+             />
+        <TextView
+            android:id="@+id/tvLine2"
+            android:layout_width="100dp"
+            android:layout_height="0.5dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tvLine"
+            android:background="@color/line" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvActivityAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:drawablePadding="3dp"
+        android:drawableLeft="@drawable/person_gps_icon"
+        android:text="德玛西亚"
+        android:textColor="@color/font_gray"
+        android:textSize="@dimen/text_size_small" />
+
+    <TextView
+        android:id="@+id/tvActivityTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:paddingLeft="15dp"
+        android:textColor="@color/blue_gray"
+        android:textSize="@dimen/text_size_normal" />
+
+    <TextView
+        android:id="@+id/tvActivityDescribe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:paddingLeft="15dp"
+        android:textColor="@color/font_gray"
+        android:textSize="@dimen/text_size_small" />
+
+    <ImageView
+        android:id="@+id/ivActivityImg"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="8dp"
+        android:paddingLeft="15dp"
+        android:scaleType="centerCrop"
+         />
+
+</LinearLayout>

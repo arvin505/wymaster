@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_custom="http://schemas.android.com/apk/res/com.miqtech.master.client"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_title_and_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/tvTitle"
+            android:textColor="@color/orange"
+            android:textSize="12sp" />
+        <TextView
+            android:id="@+id/tvSource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvDate"
+            android:layout_toRightOf="@+id/tvDate"
+            android:layout_marginLeft="25dp"
+            android:textColor="@color/font_black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvReadNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvDate"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/font_black"
+            android:textSize="@dimen/text_size_12" />
+    </RelativeLayout>
+
+    <!--<TextView-->
+        <!--android:id="@+id/tvContent"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="20dp"-->
+        <!--android:textColor="@color/black_extend_intro"-->
+        <!--android:textSize="14sp" />-->
+    <RelativeLayout
+        android:id="@+id/rl__video_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black"
+        android:visibility="gone"
+       >
+
+        <ImageView
+            android:id="@+id/iv_video_pic"
+            android:layout_width="match_parent"
+            android:layout_height="202.5dp"
+           />
+
+        <ImageView
+            android:id="@+id/iv_video_play_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/vedio_start_play" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/llContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"></LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/stroke_gray_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="34.5dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvPraise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/information_praised" />
+
+            <TextView
+                android:id="@+id/tvPraiseNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="358(58%)"
+                android:textColor="@color/red_1"
+                android:textSize="@dimen/text_size_12" />
+        </LinearLayout>
+
+        <com.miqtech.master.client.view.RoundProgressBar
+            android:id="@+id/rpbScale"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android_custom:roundColor="@color/blue"
+            android_custom:roundProgressColor="@color/red_1"
+            android_custom:roundWidth="4dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="34.5dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvUnPraise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/information_unpraise" />
+
+            <TextView
+                android:id="@+id/tvUnPraiseNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="358(58%)"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/text_size_12" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_marginRight="14dp"
+            android:layout_weight="1"
+            android:background="@color/dark_gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="推荐阅读"
+            android:textColor="@color/textColorBattle"
+            android:textSize="@dimen/text_size_15" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="14dp"
+            android:layout_weight="1"
+            android:background="@color/dark_gray" />
+    </LinearLayout>
+</LinearLayout>

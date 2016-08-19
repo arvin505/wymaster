@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/shop_bg_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_include_header" />
+
+    <com.miqtech.master.client.view.pullToRefresh.PullToRefreshRecyclerView
+        android:id="@+id/wypszfmatch2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/shop_bg_color"
+        ptr:ptrHeaderBackground="@android:color/transparent"
+        ptr:ptrHeaderTextColor="@color/lv_item_content_text"
+        ptr:ptrMode="both"
+        ptr:ptrRefreshableViewBackground="#fafafa"
+        ptr:ptrShowIndicator="false" />
+
+</LinearLayout>

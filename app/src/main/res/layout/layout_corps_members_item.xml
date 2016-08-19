@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.miqtech.master.client.view.MyScanItemLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/MyScanLlCorpsDetailsV2Item"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:visibility="visible">
+
+        <com.miqtech.master.client.view.CircleImageView
+            android:id="@+id/ivCorpsDetailsV2ItemMemberIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_head" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp">
+
+            <ImageView
+                android:id="@+id/ivCorpsDetailsV2ItemMemberPhone"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/internet_bar_phone" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_toLeftOf="@id/ivCorpsDetailsV2ItemMemberPhone"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvCorpsDetailV2ItemMemberName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textColor="@color/black_extend_intro"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <TextView
+                        android:id="@+id/tvCorpsDetailV2ItemMember"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:singleLine="true"
+                        android:text="@string/corpsDetailsV2Member"
+                        android:textColor="@color/font_gray"
+                        android:textSize="@dimen/text_size_14"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/ivCorpsDetailV2ItemCaptain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/icon_captain"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvCorpsDetailV2ItemGoodLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:singleLine="true"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/text_size_12" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/font_gray" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvCorpsDetailV2ItemRemoveMember"
+        android:layout_width="90dp"
+        android:layout_height="fill_parent"
+        android:background="@color/red_fc4547"
+        android:drawableLeft="@drawable/remove_member"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/corpsDetailsV2RemoveMember"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_12" />
+
+</com.miqtech.master.client.view.MyScanItemLinearLayout>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_atlas"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.viewpagerindicator.HackyViewPager
+        android:id="@+id/pager"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <com.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="4dp"
+        android:background="@android:color/transparent" />
+
+    <LinearLayout
+        android:id="@+id/rl_bottom_hurdle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/distance_20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/information_toleft_toright"
+        android:paddingRight="@dimen/information_toleft_toright">
+
+        <LinearLayout
+            android:id="@+id/praise_ll_atlas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/praise_iv_atlas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/distance_20dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/praise_no" />
+
+            <TextView
+                android:id="@+id/praise_number_tv_atlas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_commend"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dimen_15dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:background="@drawable/shape_info_comment_bg"
+            android:gravity="center_vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:text="我来说两句"
+                android:textSize="12sp"
+                android:layout_weight="1"
+                android:textColor="@color/textColorBattle"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:src="@drawable/reply_comment"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_rednum"
+                android:layout_marginLeft="4dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/collect_ll_atlas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/collect_iv_atlas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:layout_marginLeft="@dimen/margin_25dp"
+                android:src="@drawable/collect_no" />
+
+            <TextView
+                android:id="@+id/collect_number_tv_atlas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/share_iv_atlas"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center|right"
+            android:layout_marginLeft="@dimen/margin_25dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_share" />
+
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/scrollView_atlas"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_above="@id/rl_bottom_hurdle"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="@dimen/information_toleft_toright"
+        android:layout_marginRight="@dimen/information_toleft_toright"
+        android:scrollbars="none">
+
+        <TextView
+            android:id="@+id/content_tv_atlas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/title_rl_atlas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/scrollView_atlas"
+        android:layout_marginBottom="15dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/information_toleft_toright"
+        android:paddingRight="@dimen/information_toleft_toright">
+
+        <TextView
+            android:id="@+id/title_tv_atlas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_15" />
+
+        <TextView
+            android:id="@+id/img_numbet_tv_atlas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/title_tv_atlas"
+            android:gravity="right|center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_15" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/back_atlas"
+            android:layout_width="26dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/information_toleft_toright"
+            android:src="@drawable/back_white" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_40"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view_hidden"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent_40"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="60dp"
+        android:paddingTop="30dp"
+        android:background="@color/mobile_login_gray"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <EditText
+                android:id="@+id/et_pop_content"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_pop_game_item_normal"
+                android:hint="输入直播内容"
+                android:textSize="14sp"
+                android:textColorHint="@color/c7_gray"
+                android:textColor="@color/shop_font_black"
+                android:singleLine="true"
+                android:padding="10dp" />
+
+            <Button
+                android:id="@+id/btn_pop_sure"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:padding="0dp"
+                android:textSize="14sp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/shape_orange_bg_corner"
+                android:layout_marginLeft="12dp"
+                android:text="确定" />
+        </LinearLayout>
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray"
+            android:layout_marginTop="15dp"/>
+
+        <GridView
+            android:id="@+id/gv_pop_game"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:horizontalSpacing="12dp"
+            android:numColumns="3"
+            android:padding="12dp"
+            android:verticalSpacing="12dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

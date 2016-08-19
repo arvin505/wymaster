@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_netbar_header" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/cpb_grey" />
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <!-- 比赛状态-->
+
+        <LinearLayout
+            android:id="@+id/ll_enjoytype"
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/shape_gray_bg_rectangle_stroke"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_enjoytype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@drawable/icon_filter_enjoytype"
+                    android:gravity="center"
+                    android:text="@string/enjoytype"
+                    android:textColor="@color/textColorBattle" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/cpb_grey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_enjoytype_all"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="0dp"
+                    android:text="@string/allenjoytype"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/text_size_14" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/cpb_grey" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_enjoytype_personal"
+                        android:layout_width="118dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:gravity="center"
+
+                        android:padding="0dp"
+                        android:text="@string/enjoytype_personal"
+                        android:textColor="@color/font_gray"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/cpb_grey" />
+
+                    <TextView
+                        android:id="@+id/tv_enjoytype_team"
+                        android:layout_width="118dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:gravity="center"
+                        android:padding="0dp"
+                        android:text="@string/enjoytype_team"
+                        android:textColor="@color/font_gray"
+                        android:textSize="@dimen/text_size_14" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!-- 约战范围-->
+
+        <LinearLayout
+            android:id="@+id/ll_battle"
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/shape_gray_bg_rectangle_stroke"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_battle_area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@drawable/icon_filter_location"
+                    android:gravity="center"
+                    android:text="@string/battle_area"
+                    android:textColor="@color/textColorBattle" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/cpb_grey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_ballte_all"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+
+                    android:gravity="center"
+                    android:text="@string/allbattle"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/text_size_14" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/cpb_grey" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_battle_area_local"
+                        android:layout_width="118dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:padding="0dp"
+                        android:text="当前城市约战"
+                        android:textColor="@color/font_gray"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/cpb_grey" />
+
+                    <TextView
+                        android:id="@+id/tv_battle_all_online"
+                        android:layout_width="118dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+
+                        android:padding="0dp"
+                        android:text="@string/allonlinebattle"
+                        android:textColor="@color/font_gray"
+                        android:textSize="@dimen/text_size_14" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <!-- 地理位置-->
+
+        <LinearLayout
+            android:id="@+id/ll_location"
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/shape_gray_bg_rectangle_stroke"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@drawable/icon_filter_location"
+
+                    android:text="@string/location"
+                    android:textColor="@color/textColorBattle"
+                    android:textSize="@dimen/text_size_15" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/cpb_grey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_loc_local"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="0dp"
+                    android:text="@string/native_city_game"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/text_size_14" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/cpb_grey" />
+
+                <TextView
+                    android:id="@+id/tv_loc_all"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="0dp"
+                    android:text="@string/game_all"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/text_size_14" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <!-- 游戏分类-->
+        <LinearLayout
+            android:id="@+id/ll_game"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/shape_gray_bg_rectangle_stroke"
+            android:paddingBottom="1px"
+            android:paddingRight="1px"
+            android:paddingTop="1px">
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_game_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@drawable/icon_filter_game"
+                    android:gravity="center"
+                    android:text="@string/game_type"
+                    android:textColor="@color/textColorBattle" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/cpb_grey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_game_name_all"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:gravity="center"
+                    android:text="@string/allgametype"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/text_size_14">
+
+                </TextView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/cpb_grey" />
+
+                <GridView
+                    android:id="@+id/gv_game"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:horizontalSpacing="0dp"
+                    android:numColumns="3"
+                    android:paddingBottom="1px"
+                    android:scrollbars="none"
+                    android:verticalSpacing="0dp"
+
+                    >
+
+                </GridView>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!-- 比赛状态-->
+
+        <LinearLayout
+            android:id="@+id/ll_state"
+            android:layout_width="match_parent"
+            android:layout_height="132dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/shape_gray_bg_rectangle_stroke"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@drawable/icon_filter_state"
+                    android:gravity="center"
+                    android:text="@string/game_state"
+                    android:textColor="@color/textColorBattle" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/cpb_grey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_game_state_all"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+
+                    android:padding="0dp"
+                    android:text="@string/battlestate_all"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/text_size_14" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/cpb_grey" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_state_signing"
+                        android:layout_width="118dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:gravity="center"
+                        android:padding="0dp"
+                        android:text="@string/signing"
+                        android:textColor="@color/font_gray"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/cpb_grey" />
+
+                    <TextView
+                        android:id="@+id/tv_state_preheating"
+                        android:layout_width="118dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:gravity="center"
+                        android:padding="0dp"
+                        android:text="@string/preheating"
+                        android:textColor="@color/font_gray"
+
+                        android:textSize="@dimen/text_size_14" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/cpb_grey" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/cpb_grey" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_state_processing"
+                        android:layout_width="118dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:gravity="center"
+                        android:padding="0dp"
+                        android:text="@string/processing"
+                        android:textColor="@color/font_gray"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/cpb_grey" />
+
+                    <TextView
+                        android:id="@+id/tv_state_end"
+                        android:layout_width="118dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:gravity="center"
+                        android:padding="0dp"
+                        android:text="@string/overed"
+                        android:textColor="@color/font_gray"
+                        android:textSize="@dimen/text_size_14" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <!-- 奖品-->
+        <LinearLayout
+            android:id="@+id/ll_reward"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/shape_gray_bg_rectangle_stroke"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_reward"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@drawable/icon_filter_reward"
+                    android:gravity="center"
+                    android:text="@string/reward_type"
+                    android:textColor="@color/textColorBattle" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/cpb_grey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_reward_all"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:gravity="center"
+                    android:text="@string/reward_all"
+                    android:textColor="@color/font_gray"
+                    android:textSize="@dimen/text_size_14">
+
+                </TextView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/cpb_grey" />
+
+                <GridView
+                    android:id="@+id/gv_award"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:horizontalSpacing="0dp"
+                    android:numColumns="3"
+                    android:paddingBottom="1px"
+                    android:scrollbars="none"
+                    android:verticalSpacing="0dp"
+
+                    >
+
+                </GridView>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

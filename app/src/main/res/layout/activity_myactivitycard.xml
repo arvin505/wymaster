@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_include_header" />
+
+    <LinearLayout
+        android:id="@+id/ll_join_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="@dimen/distance_20dp"
+            android:paddingLeft="27.5dp"
+            android:paddingRight="27.5dp"
+            android:paddingTop="@dimen/distance_20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/corner_gray_bg"
+                android:orientation="vertical"
+                android:paddingBottom="23dp"
+                android:paddingLeft="13dp"
+                android:paddingTop="23dp">
+
+                <TextView
+                    android:id="@+id/tv_cardname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/card_name"
+                    android:textColor="@color/textColorBattle"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_cardmobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/card_mobile"
+                    android:textColor="@color/textColorBattle"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_cardqq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/card_qq"
+                    android:textColor="@color/textColorBattle"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/id_card"
+                    android:textColor="@color/textColorBattle"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/tv_cardId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColorBattle"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:id="@+id/tv_contact_wy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                android:text="@string/contact_wy"
+                android:textColor="@color/font_gray"
+                android:textSize="@dimen/text_size_12" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/tv_contact_wy"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="@string/guarantee"
+                android:textColor="@color/font_gray"
+                android:textSize="@dimen/text_size_12" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_nocard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/textColorBattle"
+            android:textSize="15sp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/distance_20dp"
+
+            android:textColor="@color/textColorBattle"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btn_addcard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_corner_orange_bg"
+            android:drawableLeft="@drawable/icon_add"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="@string/add_card"
+            android:textColor="@color/orange" />
+
+    </LinearLayout>
+
+</LinearLayout>

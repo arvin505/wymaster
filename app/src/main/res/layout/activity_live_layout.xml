@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/llBack"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ibLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:background="@color/transparent"
+                android:paddingLeft="12dp"
+                android:paddingRight="6dp"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:id="@+id/tvLeftHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/ibLeft"
+                android:text="返回"
+                android:textColor="@color/shop_font_black"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="全部直播"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_15"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivIndicate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/coin_down"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/shop_splite_line"></View>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.miqtech.master.client.view.pullToRefresh.PullToRefreshRecyclerView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/prrvLivePlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            ptr:ptrHeaderBackground="@android:color/transparent"
+            ptr:ptrMode="both"
+            ptr:ptrShowIndicator="false" />
+
+        <View
+            android:id="@+id/viewHidden"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#7F000000"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>

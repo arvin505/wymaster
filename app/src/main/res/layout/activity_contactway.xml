@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_include_netbarhead" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/tvYY"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="YY房间号:"
+                android:padding="20dp"
+                android:textColor="@color/black_extend_intro"
+                android:textSize="@dimen/text_size_normal" />
+
+            <EditText
+                android:id="@+id/edtYY"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="right"
+                android:hint="请输入YY房间号"
+                android:inputType="number"
+                android:padding="20dp"
+                android:maxLength="15"
+                android:singleLine="true"
+                android:textColor="@color/black_extend_intro"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/tvQQ"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="QQ:"
+                android:padding="20dp"
+                android:textColor="@color/black_extend_intro"
+                android:textSize="@dimen/text_size_normal" />
+
+            <EditText
+                android:id="@+id/edtQQ"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:padding="20dp"
+                android:gravity="right"
+                android:hint="请输入QQ号"
+                android:inputType="number"
+                android:maxLength="15"
+                android:singleLine="true"
+                android:textColor="@color/black_extend_intro"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/tvWeChat"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="微信:"
+                android:padding="20dp"
+                android:textColor="@color/black_extend_intro"
+                android:textSize="@dimen/text_size_normal" />
+
+            <EditText
+                android:id="@+id/edtWechat"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="right"
+                android:hint="请输入微信号"
+                android:maxLength="15"
+                android:singleLine="true"
+                android:padding="20dp"
+                android:textColor="@color/black_extend_intro"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/line" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="至少输入一种联系方式" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:background="@drawable/btn_login"
+        android:text="保存"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_small" />
+
+</RelativeLayout>

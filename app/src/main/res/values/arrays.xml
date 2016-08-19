@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 游戏列表 -->
+    <string-array name="games">
+        <item>英雄联盟</item>
+        <item>DOTA2</item>
+        <item>风暴英雄</item>
+        <item>守望先锋</item>
+        <item>穿越火线</item>
+        <item>炉石传说</item>
+    </string-array>
+
+    <!-- 众筹夺宝状态 -->
+    <string-array name="crowdstate">
+        <item>未开奖</item>
+        <item>开奖中</item>
+        <item>未中奖</item>
+        <item>已中奖</item>
+        <item>兑奖中</item>
+        <item>兑奖成功</item>
+        <item>兑奖失败</item>
+        <item>异常</item>
+        <item>异常已处理</item>
+        <item>失效</item>
+    </string-array>
+
+    <!-- 转盘或商品兑奖状态 -->
+    <string-array name="exchangestate">
+        <item>未兑奖</item>
+        <item>兑奖中</item>
+        <item>兑奖成功</item>
+        <item>兑奖失败</item>
+        <item>异常</item>
+        <item>异常已处理</item>
+        <item>失效</item>
+    </string-array>
+
+    <string-array name="emulator">
+        <item>unknown</item>
+        <item>yiwanplayer</item>
+        <item>nox</item>
+        <item>ttVM_Hdragon</item>
+    </string-array>
+</resources>

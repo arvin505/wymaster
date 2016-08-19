@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <include layout="@layout/layout_include_header" />
+
+        <EditText
+            android:id="@+id/edtFeedBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/stroke_gray_bg"
+            android:maxHeight="200dp"
+            android:maxLength="200"
+            android:minHeight="200dp"
+            android:gravity="start"
+            android:textColor="@color/blue_gray"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/text_size_normal"
+            tools:ignore="TextFields" />
+
+        <EditText
+            android:id="@+id/edtContactWay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/stroke_gray_bg"
+            android:hint="填写你的手机或邮箱"
+            android:textColorHint="@color/gray"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/blue_gray"
+            android:textSize="@dimen/text_size_normal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="尊敬的客户您好，如果您在使用过程中遇到问题，请及时反馈给我们，您的支持是我们最大的努力"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_login"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_small" />
+
+</RelativeLayout>

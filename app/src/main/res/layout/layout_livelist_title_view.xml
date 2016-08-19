@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlTitle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:paddingBottom="12dp"
+    android:paddingTop="9dp">
+
+    <TextView
+        android:id="@+id/tvHotLivePlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dp"
+        android:drawableLeft="@drawable/live_play_more"
+        android:drawablePadding="6dp"
+        android:paddingTop="9dp"
+        android:paddingBottom="6dp"
+        android:gravity="center"
+        android:text="@string/hot_liveplay"
+        android:textColor="@color/shop_font_black"
+        android:textSize="@dimen/text_size_15" />
+
+    <TextView
+        android:id="@+id/tvMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:drawablePadding="6dp"
+        android:drawableRight="@drawable/live_play_dicovery_more"
+        android:gravity="center"
+        android:paddingTop="9dp"
+        android:paddingBottom="6dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:text="@string/more"
+        android:textColor="@color/shop_font_black_light"
+        android:textSize="@dimen/text_size_12" />
+</RelativeLayout>

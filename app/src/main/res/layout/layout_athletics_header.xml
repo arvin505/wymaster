@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:gravity="center_horizontal"
+    android:background="@color/white"
+    >
+
+    <ImageView
+        android:id="@+id/ivImg"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/corner_image_bg"
+        android:scaleType="centerCrop"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:id="@+id/tv_recomment_title"
+        android:text=""
+        android:gravity="center"
+        android:textSize="15sp"
+        android:textColor="@color/cpb_gray"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:id="@+id/tv_recomment_time"
+        android:text=""
+        android:gravity="center"
+        android:textSize="13sp"
+        android:textColor="@color/line"
+        />
+
+    <TextView
+        android:id="@+id/tvHandleTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawableRight="@drawable/icon_more"
+        android:gravity="center"
+        android:text="热门约战"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/cpb_gray"
+        android:drawablePadding="5dp"
+        android:textSize="17sp" />
+</LinearLayout>

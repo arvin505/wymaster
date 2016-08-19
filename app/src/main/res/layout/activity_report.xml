@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/report_head_"
+        layout="@layout/layout_include_netbarhead" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/report_head_"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/report_detail_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical"
+                android:paddingLeft="17dp"
+                android:paddingRight="17dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:gravity="center"
+                    android:text="请选择一项"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+                <com.miqtech.master.client.view.ForbidSlipGridView
+                    android:id="@+id/select_category_gd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:horizontalSpacing="7dp"
+                    android:numColumns="4"
+                    android:scrollbars="none"
+                    android:verticalSpacing="10dp" >
+                </com.miqtech.master.client.view.ForbidSlipGridView>
+
+                <EditText
+                    android:id="@+id/remark_ed"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/shape_gray_frame_white_bg"
+                    android:gravity="top"
+                    android:hint="你可以列举一些具体的举报原因，以便我们更好的审核"
+                    android:padding="10dp"
+                    android:textColor="@color/blue_gray"
+                    android:textColorHint="@color/gray"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/report_shuoming"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/report_detail_ll"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="45dp"
+                android:layout_marginTop="20dp"
+                android:text="您对争议言论的举报提交后，网娱大师将核实情况并作出相应举措，感谢您对网娱大师的支持"
+                android:textColor="@color/blue_gray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/submit_tv"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/report_shuoming"
+                android:layout_marginBottom="35dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_auchcode_selector"
+                android:enabled="true"
+                android:gravity="center"
+                android:text="确认提交"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

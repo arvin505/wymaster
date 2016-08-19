@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="transparent">#00000000</color>
+
+
+    <!-- 通用默认颜色 -->
+    <color name="text_color_blue">#2bb5fc</color>
+    <color name="text_color_blue_1">#29abe2</color>
+    
+    <color name="text_color_white">#ffffff</color>
+    <color name="text_color_white_d">#ccffffff</color>
+    
+    <color name="text_color_black">#000000</color>
+    
+    <color name="text_color_gray_9">#333333</color>
+    <color name="text_color_gray_7">#666666</color>
+    <color name="text_color_gray_5">#8c8c8c</color>
+    <color name="text_color_gray_3">#999999</color>
+    <color name="text_color_gray_2">#909fa8</color>
+    <color name="text_color_gray_1">#e2e2e2</color>
+    
+    <color name="text_color_red_1">#ff5a5a</color>
+	
+	<!-- tudou dialog color -->
+	<color name="tudou_dialog_title">#3c3c3c</color>
+    <color name="tudou_dialog_sub_title">#898989</color>
+    <color name="tudou_dialog_line">#d9d9d9</color>
+    <color name="tudou_dialog_button">#ff6600</color>
+
+    <!-- youku ad icon background color -->
+    <color name="yp_ad_background_color_youku">#cc292929</color>
+    
+	
+    
+</resources>

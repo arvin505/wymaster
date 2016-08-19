@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ignore="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/shop_bg_color"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/llBack"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="left|center_horizontal"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/nav_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="@string/back"
+                android:textColor="@color/shop_font_black"
+                android:textSize="@dimen/text_size_14" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="提交成绩"
+            android:textColor="@color/shop_font_black"
+            android:textSize="@dimen/text_size_17"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/submitGradesTv"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal|right"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="@string/submit"
+            android:textColor="@color/shop_font_black"
+            android:textSize="@dimen/text_size_14" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/shop_pay_splite_line" />
+
+    <EditText
+        android:id="@+id/etRemark"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginTop="18dp"
+        android:background="@color/white"
+        android:gravity="top|left"
+        android:hint="@string/share_the_mood"
+        android:maxLength="150"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="12dp"
+        android:textColor="@color/shop_font_black_light"
+        android:textColorHint="@color/reward_comment_color_c7c7c7"
+        android:textSize="@dimen/text_size_14" />
+
+    <TextView
+        android:id="@+id/tvWords"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="right"
+        android:paddingBottom="12dp"
+        android:paddingRight="12dp"
+        android:textColor="@color/reward_comment_color_c7c7c7"
+        android:textSize="@dimen/text_size_11"
+        ignore:text="还剩150个字" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/shop_gray_bg" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="18dp"
+        android:paddingLeft="12dp"
+        android:paddingTop="18dp">
+
+        <ImageView
+            android:id="@+id/ivSubmitCamera"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/wanted_camera" />
+
+        <ImageView
+            android:id="@+id/ivSubmitGrades"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="25dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/wanted_dashedframe" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/shop_gray_bg" />
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="10dp" >
+
+    <com.miqtech.master.client.view.CircleImageView
+        android:id="@+id/ivHeader"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/default_head" />
+
+    <TextView
+        android:id="@+id/tvApplyName"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/ivHeader"
+        android:layout_alignBottom="@+id/ivHeader"
+        android:layout_marginLeft="5dp"
+        android:textSize="@dimen/text_size_big" />
+
+    <ImageView
+        android:id="@+id/ivDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:visibility="invisible"
+        android:src="@drawable/delete_icon" />
+    
+    <ImageView
+        android:id="@+id/ivPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/ivDelete"
+        android:layout_centerVertical="true"
+        android:visibility="invisible"
+        android:src="@drawable/phone_icon" />
+
+</RelativeLayout>

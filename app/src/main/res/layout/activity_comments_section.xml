@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/header_comments_section"
+        layout="@layout/layout_include_header" />
+
+    <LinearLayout
+        android:id="@+id/buttom_send_comments_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/no_read"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/font_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="17dp">
+
+            <EditText
+                android:id="@+id/edtComment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:background="@null"
+                android:hint="发表评论(限200字)"
+                android:maxLength="200"
+                android:maxLines="3"
+                android:textColor="@color/black_extend_intro"
+                android:textColorHint="@color/font_gray"
+                android:textCursorDrawable="@null"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvSend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="发送"
+                    android:textColor="@color/font_gray"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:textColor="@color/font_gray"
+                    android:textSize="10sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/buttom_send_comments_section"
+        android:layout_below="@id/header_comments_section"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fragmentRewardCommentRvQuickComment"
+            android:layout_width="match_parent"
+            android:layout_height="109dp"
+            android:background="@color/white"
+            android:paddingBottom="15dp"
+            android:paddingLeft="9.5dp"
+            android:paddingRight="9.5dp"
+            android:paddingTop="15dp"></android.support.v7.widget.RecyclerView>
+
+        <View
+            android:id="@+id/fragmentRewardCommentLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/reward_comment_color_e2e2e2" />
+
+
+        <com.miqtech.master.client.view.pullToRefresh.PullToRefreshRecyclerView
+            android:id="@+id/prrvCommentList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></com.miqtech.master.client.view.pullToRefresh.PullToRefreshRecyclerView>
+    </LinearLayout>
+</RelativeLayout>

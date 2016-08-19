@@ -1,0 +1,21 @@
+<resources>
+
+    
+    <string name="tips_not_responding">网络不给力，请稍后再试。</string>
+    <string name="player_error_native">本地文件已损坏</string> <!-- 返回 -->
+    <string name="Player_error_timeout">网络不太给力哦,如需观看,请重试。</string> <!-- 重新加载 / 返回 -->
+    
+    <string name="player_tip_loading">即将为您播放</string>
+    <string name="playersdk_ad_skip">跳过广告</string>
+    <string name="playersdk_ad_descrip_youku">了解详情</string>
+    <string name="playersdk_ad_descrip_second">秒</string>
+
+    <string name="alert_dialog_ok">确定</string>
+    <string name="alert_dialog_cancel">取消</string>
+    <string name="player_tips_no_network">当前无网络连接</string>
+    
+    <string name="tudou_dialog_title">"该视频已加密"</string>
+    <string name="tudou_dialog_sub_title">"请输入密码观看"</string>
+     <string name="player_error_dialog_password_required">请输入视频密码</string>
+    
+</resources>

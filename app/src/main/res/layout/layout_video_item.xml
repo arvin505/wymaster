@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llVideoItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <com.miqtech.master.client.view.RoundedImageView
+            android:id="@+id/ivVideoPic"
+            android:layout_width="140dp"
+            android:layout_height="78dp"
+            android:layout_marginLeft="12dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_img"
+            app:riv_corner_radius="4dp" />
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/ivVideoPic"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/tvVideoTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="好人"
+                android:textColor="@color/shop_font_black"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:id="@+id/tvVideoContent"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvVideoTitle"
+                android:layout_marginTop="14dp"
+                android:text="名字"
+                android:textColor="@color/shop_font_black_light"
+                android:textSize="@dimen/text_size_13" />
+
+            <LinearLayout
+                android:id="@+id/llVideoNum"
+                android:layout_marginTop="13dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvVideoContent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvPlayNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="6dp"
+                    android:drawableLeft="@drawable/live_play_num"
+                    android:textColor="@color/shop_buy_record_gray"
+                    android:text="2322"
+                    android:textSize="@dimen/text_size_12" />
+
+                <TextView
+                    android:id="@+id/tvCommentNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="46"
+                    android:textColor="@color/shop_buy_record_gray"
+                    android:textSize="@dimen/text_size_12"
+                    android:drawablePadding="6dp"
+                    android:drawableLeft="@drawable/live_play_comment_icon"
+                 />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    <View
+        android:id="@+id/last_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/shop_splite_line" />
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/report_ll_item"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#00FFFFFF"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/report_tv_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="19dp"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/report"
+        android:clickable="true"
+        android:gravity="center"
+        android:paddingTop="3dp"
+        android:text="举报"
+        android:textColor="@color/gray"
+        android:textSize="15sp" />
+
+</RelativeLayout>

@@ -1,0 +1,211 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rlSurfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:gravity="center">
+
+        <SurfaceView
+            android:id="@+id/surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center" />
+        <LinearLayout
+            android:id="@+id/llNodata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/black_70_percent"
+            android:layout_marginBottom="33dp"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/tvNoAnchorHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_15"
+                android:text="@string/anchor_leave"/>
+
+            <TextView
+                android:id="@+id/tvContinue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="27dp"
+                android:layout_marginBottom="8dp"
+                android:textSize="@dimen/text_size_16"
+                android:textColor="@color/light_orange"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:background="@drawable/shape_no_wifi_bg"
+                android:text="@string/no_wifi_continue"
+                android:visibility="gone"/>
+             <LinearLayout
+                 android:id="@+id/llGamePic"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="21dp"
+                 android:orientation="horizontal"
+                 android:visibility="gone">
+                 <ImageView
+                     android:id="@+id/ivGamePic1"
+                     android:layout_width="100dp"
+                     android:layout_height="56dp"
+                     android:background="@drawable/shape_game_pic"
+                     android:src="@drawable/default_img"
+                     android:visibility="gone"/>
+                 <ImageView
+                     android:id="@+id/ivGamePic2"
+                     android:layout_marginLeft="15dp"
+                     android:layout_width="100dp"
+                     android:layout_height="56dp"
+                     android:background="@drawable/shape_game_pic"
+                     android:src="@drawable/default_img"
+                     android:visibility="gone"/>
+
+             </LinearLayout>
+
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/llBufferingIndicator"
+            layout="@layout/activity_buffer_indicator_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:src="@drawable/back_white_img" />
+
+            <com.miqtech.master.client.view.CustomMarqueeTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_15" />
+
+            <ImageView
+                android:id="@+id/ivShareIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:src="@drawable/live_play_share"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivFullScreenBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="9dp"
+            android:paddingRight="15dp"
+            android:src="@drawable/live_play_fullscreen" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llMoretabIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlSurfaceView"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvTab1"
+                style="@style/live_play_tab_textview_style"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/live_play_information_tab" />
+
+            <TextView
+                android:id="@+id/tvTab2"
+                style="@style/live_play_tab_textview_style"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/live_play_ralk_tab" />
+
+            <TextView
+                android:id="@+id/tvTab3"
+                style="@style/live_play_tab_textview_style"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/live_play_history_tab" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/shop_splite_line" />
+
+        <LinearLayout
+            android:id="@+id/llIndex"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-3.25dp"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/tabTag"
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/light_orange" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/moretabViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/llMoretabIndicator"
+        android:background="@color/white" />
+
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:paddingLeft="12dp"
+
+    android:gravity="center_vertical"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="5dp"
+        android:layout_height="12dp"
+        android:background="@color/colorActionBarSelected"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="6"
+        android:text="历史搜索"
+        android:textColor="@color/gray"
+        android:padding="10dp"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/tv_clean"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:padding="10dp"
+
+        android:src="@drawable/icon_trash"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -1,0 +1,157 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llmaster"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/mobile_login_gray"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp">
+
+    <ImageView
+        android:id="@+id/imgGoodIcon"
+        android:layout_width="94dp"
+        android:layout_height="94dp"
+        android:background="@color/white"
+        android:scaleType="fitXY"
+        android:src="@drawable/default_img" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="9dp"
+                android:paddingRight="6dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:id="@+id/tvGoodName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="2dp"
+                    android:maxLines="2"
+                    android:minLines="2"
+                    android:paddingBottom="7dp"
+                    android:text="大疆无人机航拍偷拍\n监控"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvGoodCost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="4dp"
+                        android:drawableRight="@drawable/icon_gold_coin"
+                        android:gravity="center_vertical"
+                        android:text="1000"
+                        android:textColor="@color/orange"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvGoodCount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right|center_vertical"
+                        android:text="还剩9人"
+                        android:textColor="@color/textColorGray"
+                        android:textSize="12sp" />
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp">
+
+                    <com.miqtech.master.client.view.CornerProgressView
+                        android:id="@+id/pbGood"
+                        android:layout_width="match_parent"
+                        android:layout_height="6dp"
+                        android:layout_centerVertical="true"
+                        android:visibility="visible"
+                        app:endColor="@color/crowd_pb_end"
+                        app:progressBackground="#e4e4e4"
+                        app:startColor="@color/crowd_pb_start" />
+
+                    <LinearLayout
+                        android:id="@+id/llCrowdWinning"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:visibility="invisible">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/winningnumber"
+                            android:textColor="@color/textColorGray"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvCrowdWinNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:text="138****8888"
+                            android:textColor="@color/orange"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:paddingBottom="4dp">
+
+                <ImageView
+                    android:id="@+id/imgCrowdRush"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:padding="12dp"
+                    android:src="@drawable/icon_rush" />
+
+                <TextView
+                    android:id="@+id/tvPercent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="70%"
+                    android:textColor="@color/orange" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgCrowdState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/icon_stamp_begin"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+
+</LinearLayout>

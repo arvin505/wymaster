@@ -1,0 +1,207 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="translucent">
+        <item name="android:windowBackground">@color/translucent_background</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <declare-styleable name="CircularProgressButton">
+        <attr name="cpb_selectorIdle" format="string" />
+        <attr name="cpb_selectorComplete" format="reference" />
+        <attr name="cpb_selectorError" format="reference" />
+        <attr name="cpb_textComplete" format="string" />
+        <attr name="cpb_textIdle" format="string" />
+        <attr name="cpb_textError" format="string" />
+        <attr name="cpb_textProgress" format="string" />
+        <attr name="cpb_colorProgress" format="color" />
+        <attr name="cpb_colorIndicator" format="color" />
+        <attr name="cpb_colorIndicatorBackground" format="color" />
+        <attr name="cpb_iconError" format="reference" />
+        <attr name="cpb_iconComplete" format="reference" />
+        <attr name="cpb_cornerRadius" format="dimension" />
+        <attr name="cpb_paddingProgress" format="dimension" />
+    </declare-styleable>
+
+    <!-- 对话框的透明背景效果 -->
+    <style name="dialog_transparent">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="CustomActionBarTheme" parent="AppTheme">
+        <item name="actionBarPopupTheme">@null</item>
+        <item name="actionBarTheme">@null</item>
+        <item name="colorControlNormal">#ff6600</item>
+        <item name="android:actionBarSize">45dp</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="delete_style" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="register_style" parent="@android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowBackground">@color/half_transparent</item>
+    </style>
+
+    <style name="RatingBarBig" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/evaluation_star_big</item>
+        <item name="android:maxHeight">16dp</item>
+        <item name="android:minHeight">16dp</item>
+    </style>
+
+    <style name="RatingBarYellowBig" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/evaluation_yellow</item>
+        <item name="android:maxHeight">16dp</item>
+        <item name="android:minHeight">16dp</item>
+    </style>
+
+    <style name="RatingBarSmall" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/evaluation_star_small</item>
+        <item name="android:maxHeight">12dp</item>
+        <item name="android:minHeight">12dp</item>
+    </style>
+
+    <style name="AnimBottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+
+    <style name="internetInfo_sponTitle_style">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="internetInfo_sponsor_style">
+        <item name="android:textColor">#b3b3b3</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="internetInfo_sponTime_style">
+        <item name="android:textColor">#3e4156</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Dialog_Fullscreen">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+
+    <!--        <style name="dialog" parent="@android:style/Theme.Dialog">
+                <item name="android:windowFrame">@null</item>&lt;!&ndash;边框&ndash;&gt;
+                <item name="android:windowIsFloating">true</item>&lt;!&ndash;是否浮现在activity之上&ndash;&gt;
+                <item name="android:windowIsTranslucent">true</item>&lt;!&ndash;半透明&ndash;&gt;
+                <item name="android:windowNoTitle">true</item>&lt;!&ndash;无标题&ndash;&gt;
+                <item name="android:windowBackground">@color/transparent</item>&lt;!&ndash;背景透明&ndash;&gt;
+                <item name="android:backgroundDimEnabled">true</item>&lt;!&ndash;模糊&ndash;&gt;
+            </style>-->
+
+    <style name="pop_anim">
+        <item name="android:windowEnterAnimation">@anim/anim_pop_show</item>
+        <item name="android:windowExitAnimation">@anim/anim_pop_close</item>
+    </style>
+
+    <style name="venvy_media_controller_SeekBar_Style" parent="android:Widget.SeekBar">
+        <item name="android:progressDrawable">@drawable/progress_video_progressdrawable</item>
+        <!-- <item name="android:indeterminateDrawable">@drawable/progress_video_progressdrawable
+         </item>-->
+        <item name="android:thumb">@drawable/vedio_schedule_ball</item>
+        <item name="android:thumbOffset">8dp</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:focusable">true</item>
+        <item name="android:max">1000</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="live_play_controller_SeekBar_Style" parent="android:Widget.SeekBar">
+        <item name="android:progressDrawable">@drawable/progress_video_progressdrawable</item>
+        <item name="android:thumb">@drawable/live_play_schedule_ball</item>
+        <item name="android:thumbOffset">8dp</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:focusable">true</item>
+        <item name="android:max">1000</item>
+        <item name="android:maxHeight">2dp</item>
+        <item name="android:minHeight">2dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="apply_num_style1">
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:textColor">@color/light_orange</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="apply_num_style2">
+        <item name="android:textSize">@dimen/text_size_18</item>
+        <item name="android:textColor">@color/light_orange</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="RushBuyCountDownTimerViewStyle">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:background">@drawable/corner_black_bg</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">0</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="live_play_tab_textview_style">
+        <item name="android:textColor">@color/shop_font_black</item>
+        <item name="android:textSize">@dimen/text_size_15</item>
+    </style>
+
+    <style name="anim_pop_game">
+        <item name="android:windowEnterAnimation">@anim/anim_pop_game_enter</item>
+        <item name="android:windowExitAnimation">@anim/anim_pop_game_exit</item>
+    </style>
+
+    <style name="toastAnimine">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+
+
+</resources>

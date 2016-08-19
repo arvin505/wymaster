@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ignore="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/shop_bg_color"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/reawrdDetailLlBack"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="left|center_horizontal"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/nav_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="@string/back"
+                android:textColor="@color/shop_font_black"
+                android:textSize="@dimen/text_size_14" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/shop_font_black"
+            android:textSize="@dimen/text_size_17"
+            android:textStyle="bold"
+            android:text="获奖详情"  />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/rewardDetailLlStatue"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@id/header"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp">
+
+        <ImageView
+            android:id="@+id/rewardDetailIvIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="15dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/check_icon"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/rewardDetailTvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorActionBarSelected"
+            android:textSize="@dimen/text_size_19"
+            ignore:text="未填写信息" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/header"
+        android:background="@color/reward_comment_color_aeaeae" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rewardDetailLlStatue"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bounty_information"
+                android:textColor="@color/shop_font_black_light"
+                android:textSize="@dimen/text_size_13" />
+
+            <TextView
+                android:id="@+id/rewardDetailTvRewardInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/shop_font_black"
+                android:textSize="@dimen/text_size_14"
+                ignore:text="LOL英雄手办" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/shop_splite_line" />
+
+        <LinearLayout
+            android:id="@+id/rewardDetailLlMatchRanking"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/match_ranking"
+                android:textColor="@color/shop_font_black_light"
+                android:textSize="@dimen/text_size_13" />
+
+            <TextView
+                android:id="@+id/rewardDetailTvMatchRanking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/shop_font_black"
+                android:textSize="@dimen/text_size_14"
+                ignore:text="LOL英雄手办" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/rewardDetailLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/shop_splite_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/match_reward"
+                android:textColor="@color/shop_font_black_light"
+                android:textSize="@dimen/text_size_13" />
+
+            <TextView
+                android:id="@+id/rewardDetailTvMatchReward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/shop_font_black"
+                android:textSize="@dimen/text_size_14"
+                ignore:text="LOL英雄手办" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/shop_splite_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/transaction_number"
+                android:textColor="@color/shop_font_black_light"
+                android:textSize="@dimen/text_size_13" />
+
+            <TextView
+                android:id="@+id/rewardDetailTvTransactionNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:textColor="@color/shop_font_black"
+                android:textSize="@dimen/text_size_14"
+                ignore:text="LOL英雄手办" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/rewardDetailTvBottomStatue"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="33dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/shape_orange_bg_corner"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_15"
+        ignore:text="立即填写" />
+
+
+    <ViewStub
+        android:id="@+id/ViewStub"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header" />
+
+</RelativeLayout>

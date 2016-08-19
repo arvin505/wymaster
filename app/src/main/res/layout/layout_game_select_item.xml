@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:id="@+id/llParent"
+    >
+
+    <ImageView
+        android:id="@+id/ivGamePic"
+        android:layout_marginTop="12dp"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/tvGameName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:singleLine="true"
+        android:textColor="@color/shop_font_black"
+        android:textSize="@dimen/text_size_14"
+        android:text="穿越火线"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="12dp">
+        <TextView
+            android:id="@+id/tvLivePlayNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/shop_buy_record_gray"
+            android:textSize="@dimen/text_size_11"
+            android:text="300"
+            android:drawableLeft="@drawable/live_play_mack"
+            android:drawablePadding="6dp"
+            />
+        <TextView
+            android:id="@+id/tvVideoNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:textColor="@color/shop_buy_record_gray"
+            android:textSize="@dimen/text_size_11"
+            android:text="1k"
+            android:drawableLeft="@drawable/live_play_num"
+            android:drawablePadding="6dp"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

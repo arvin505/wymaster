@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/view_pop_down"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/transparent" />
+
+        <LinearLayout
+            android:id="@+id/ll_info_menu"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_video_label"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <HorizontalScrollView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="1"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/ll_cata_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" />
+
+
+            </HorizontalScrollView>
+
+            <ImageView
+                android:id="@+id/img_pop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:src="@drawable/icon_pop" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.miqtech.master.client.view.pullToRefresh.PullToRefreshRecyclerView
+                android:id="@+id/recycleVideo"
+                xmlns:ptr="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                ptr:ptrMode="both"
+                ptr:ptrHeaderBackground="@android:color/transparent"
+                ptr:ptrRefreshableViewBackground="#fafafa"
+                ptr:ptrHeaderTextColor="@color/lv_item_content_text"
+                ptr:ptrShowIndicator="false" />
+            <View
+                android:id="@+id/view_hidden"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#66000000"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

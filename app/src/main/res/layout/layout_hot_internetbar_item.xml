@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="7.5dp"
+    android:paddingRight="7.5dp"
+    android:paddingTop="10dp">
+
+    <ImageView
+        android:id="@+id/img_netbar_icon"
+        android:layout_width="95dp"
+        android:layout_height="72dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_img" />
+
+    <TextView
+        android:id="@+id/tv_netbat_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7.5dp"
+        android:textColor="@color/black_extend_intro"
+        android:textSize="@dimen/text_size_14" />
+
+    <TextView
+        android:id="@+id/tv_get_discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/corner_whitebg_bluegsolid"
+        android:gravity="center"
+        android:paddingBottom="2dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="2dp"
+        android:text="@string/get_the_discount"
+        android:textColor="@color/colorActionBarSelected"
+        android:textSize="@dimen/text_size_11" />
+
+</LinearLayout>

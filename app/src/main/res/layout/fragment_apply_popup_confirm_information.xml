@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/no_read"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_match_popupwindow_header" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/line" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="14dp"
+                android:paddingLeft="28dp"
+                android:paddingRight="28dp"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:id="@+id/tvFragmentInfoMatchCorpsName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/FragmentInfoTitle"
+                    android:textColor="@color/orange"
+                    android:textSize="@dimen/text_size_15" />
+
+                <TextView
+                    android:id="@+id/tvFragmentInfoMatchTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:singleLine="true"
+                    android:text="@string/fragmentMatchTitle"
+                    android:textColor="@color/lv_item_content_text"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:id="@+id/tvFragmentInfoMatchTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/fragmentMatchTime"
+                    android:textColor="@color/lv_item_content_text"
+                    android:textSize="@dimen/text_size_14" />
+
+
+                <TextView
+                    android:id="@+id/tvFragmentInfoMatchAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/fragmentMatchAddress"
+                    android:textColor="@color/lv_item_content_text"
+                    android:textSize="@dimen/text_size_14" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/FragmentInfoMatchAddress1"
+                        android:textColor="@color/lv_item_content_text"
+                        android:textSize="@dimen/text_size_14"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/tvFragmentInfoNetBarName"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:textColor="@color/lv_item_content_text"
+                        android:textSize="@dimen/text_size_14" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/line" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/line" />
+
+            <LinearLayout
+                android:id="@+id/llFragmentInfoMatchCard"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="28dp"
+                android:paddingRight="25dp"
+                android:paddingTop="15dp"
+                android:visibility="gone">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|left"
+                        android:gravity="left"
+                        android:text="@string/FragmentInfoCompetingInformation"
+                        android:textColor="@color/orange"
+                        android:textSize="@dimen/text_size_15" />
+
+
+                    <TextView
+                        android:id="@+id/tvFragmentInfoChangeCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:drawablePadding="2dp"
+                        android:drawableRight="@drawable/icon_show_remark"
+                        android:text="@string/FragmentInfoChange"
+                        android:textColor="@color/orange"
+                        android:textSize="@dimen/text_size_13" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/corner_gray_bg"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="20dp"
+                    android:paddingBottom="23dp"
+                    android:paddingLeft="13dp"
+                    android:paddingTop="23dp">
+
+                    <TextView
+                        android:id="@+id/tvFragmentInfoCardName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/card_name"
+                        android:textColor="@color/textColorBattle"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvFragmentInfoCareMobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/card_mobile"
+                        android:textColor="@color/textColorBattle"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvFragmentInfoCardQQ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/card_qq"
+                        android:textColor="@color/textColorBattle"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/id_card"
+                        android:textColor="@color/textColorBattle"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tvFragmentInfoCardID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/textColorBattle"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llFragmentInfoAddMatchCard"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/white"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingLeft="28dp"
+                android:paddingRight="25dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:gravity="center"
+                    android:text="@string/entry_card_that_1"
+                    android:textColor="@color/textColorBattle"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="@string/entry_card_that_2"
+                    android:textColor="@color/textColorBattle"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btnFragmentInfoAddCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/shape_corner_orange_bg"
+                    android:drawableLeft="@drawable/icon_add"
+                    android:padding="12dp"
+                    android:text="@string/add_card"
+                    android:textColor="@color/orange" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

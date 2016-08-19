@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+        <com.miqtech.master.client.view.pullToRefresh.PullToRefreshListView
+            android:id="@+id/prlvMyHistoryBag"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="12dp"
+            android:divider="@color/bg_gray"
+            android:dividerHeight="12dp"
+            android:scrollbars="none"
+            android:paddingRight="12dp"
+            android:paddingTop="@dimen/dimen_15dp" />
+
+</LinearLayout>

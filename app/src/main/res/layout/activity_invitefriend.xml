@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/layout_include_netbarhead" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/lvInviteFriend"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            android:background="@color/white"
+            android:divider="@null"
+            android:listSelector="@color/transparent"
+            android:scrollbars="none" >
+        </ListView>
+
+        <include
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            layout="@layout/layout_include_contact_bottom"
+            tools:ignore="IncludeLayoutParam" />
+    </LinearLayout>
+
+</LinearLayout>

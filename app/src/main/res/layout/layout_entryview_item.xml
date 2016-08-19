@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/im_entry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/icon_red_envelope" />
+
+    <TextView
+        android:id="@+id/tv_entry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/im_entry"
+        android:layout_centerHorizontal="true"
+        android:text="给老子红包"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/textColorBattle"
+        android:textSize="@dimen/text_size_12" />
+
+    <ImageView
+        android:id="@+id/im_hot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/im_entry"
+        android:scaleType="centerCrop"
+        android:src="@drawable/rec_hot"
+        android:visibility="gone" />
+
+</RelativeLayout>

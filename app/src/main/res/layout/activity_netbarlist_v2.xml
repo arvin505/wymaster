@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/reserations_Title"
+        layout="@layout/view_netbar_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/reserations_Title"
+        android:background="@color/line" />
+
+        <com.miqtech.master.client.view.pullToRefresh.PullToRefreshScrollView
+            android:id="@+id/prsvScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_below="@id/view_line"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/llview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/layout_hot_netbat_list" />
+
+                <include layout="@layout/layout_internet_select" />
+
+                <com.miqtech.master.client.view.HasErrorForNetBarListView
+                    android:id="@+id/lv_netbarlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:divider="@null"></com.miqtech.master.client.view.HasErrorForNetBarListView>
+            </LinearLayout>
+        </com.miqtech.master.client.view.pullToRefresh.PullToRefreshScrollView>
+
+    <include
+        layout="@layout/layout_netbar_list_top_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_line" />
+</RelativeLayout>

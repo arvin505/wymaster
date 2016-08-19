@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ignore="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/bountyTvNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/shop_font_black"
+        android:textSize="@dimen/text_size_15"
+        ignore:text="1" />
+
+    <com.miqtech.master.client.view.CircleImageView
+        android:id="@+id/bountyIvHead"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="39dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_head" />
+
+
+    <TextView
+        android:id="@+id/bountyTvSeeRecord"
+        android:layout_width="73dp"
+        android:layout_height="24dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/netbar_btn_to_marking"
+        android:gravity="center"
+        android:text="@string/look_at_record"
+        android:textColor="@color/colorActionBarSelected"
+        android:textSize="@dimen/text_size_13" />
+
+
+    <TextView
+        android:id="@+id/bountyTvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dp"
+        android:layout_toLeftOf="@id/bountyTvSeeRecord"
+        android:layout_toRightOf="@id/bountyIvHead"
+        android:gravity="center_vertical|left"
+        android:textColor="@color/shop_font_black"
+        android:textSize="@dimen/text_size_15"
+        ignore:text="我要辣死你" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="81dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/shop_splite_line" />
+
+</RelativeLayout>

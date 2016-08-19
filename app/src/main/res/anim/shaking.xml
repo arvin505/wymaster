@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@anim/cycle6" >
+
+    <translate
+        android:duration="500"
+        android:fromXDelta="0"
+        android:fromYDelta="0"
+        android:toXDelta="-5"
+        android:toYDelta="0" />
+
+</set>

@@ -1,0 +1,82 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.2'
+
+    defaultConfig {
+        applicationId "com.miqtech.master.client"
+        minSdkVersion 14
+        targetSdkVersion 22
+        versionCode 30300
+        versionName "3.3.0"
+        multiDexEnabled true
+        ndk {
+            abiFilters 'armeabi', 'armeabi-v7a'
+        }
+    }
+    dexOptions {
+        jumboMode true
+        javaMaxHeapSize "2g"
+        preDexLibraries = false
+    }
+    signingConfigs {
+        release {
+            storeFile file("../master-release-key.keystore")
+            storePassword "111111"
+            keyAlias "master"
+            keyPassword "111111"
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            signingConfig signingConfigs.release
+        }
+    }
+
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.zhy:autolayout:1.3.4'
+    compile 'com.android.support:support-v4:23.0.1'
+    compile 'com.android.support:support-v13:23.0.1'
+    compile 'com.feezu.liuli:timeselector:1.0.8+'
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4-beta2'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+    //    compile 'cn.jiajixin.nuwa:nuwa:1.0.0'
+    compile 'com.android.support:multidex:'
+    compile 'com.bugtags.library:bugtags-lib:latest.integration'
+    compile 'com.google.code.gson:gson:2.7'
+    compile project(':sweetsheet')
+    compile project(':baselibrary')
+    debugCompile 'com.github.moduth:blockcanary-android:1.2.1'
+    releaseCompile 'com.github.moduth:blockcanary-no-op:1.2.1'
+    compile 'com.qiniu:happy-dns:0.2.7'
+
+//apply plugin: "cn.jiajixin.nuwa"
+    apply plugin: 'com.bugtags.library.plugin'
+}
+bugtags {
+    //自动上传符号表功能配置，如果需要根据 build varint 配置，请参考插件详细使用说明
+    appKey "52a10a4f9910e4da9f9c6f845b9118fc"  //这里是你的 appKey
+    appSecret "84bfeaa4a4d45f8adafb6a7571e2bb6b"    //这里是你的 appSecret，管理员在设置页可以查看
+    mappingUploadEnabled true
+
+    //网络跟踪功能配置(企业版)
+    trackingNetworkEnabled true
+
+}

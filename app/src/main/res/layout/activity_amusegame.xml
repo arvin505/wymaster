@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_include_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:id="@+id/llOfficialActivity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_game_official_online"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:text="@string/game_official_online"
+                android:textColor="@color/colorActionBarSelected"
+                android:textSize="@dimen/text_size_14" />
+
+
+
+            <TextView
+                android:id="@+id/tvOnlineBottom"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/orange" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llRecreationlMatch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_game_official_offline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:text="@string/game_official_offline"
+                android:textColor="@color/colorActionBarUnSelected"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvOfflineBottom"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/orange"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llPlayerYuezhan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_game_netbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:text="@string/game_netbar"
+                android:textColor="@color/colorActionBarUnSelected"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_netbarBottom"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/orange"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_game_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

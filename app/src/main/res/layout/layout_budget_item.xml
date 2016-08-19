@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlBudgetItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="15dp">
+
+    <ImageView
+        android:id="@+id/ivGoldType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/task_icon"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:id="@+id/tvGoldTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/ivGoldType"
+        android:ellipsize="end"
+        android:maxLength="14"
+        android:maxLines="2"
+        android:singleLine="false"
+        android:textColor="@color/font_gray"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tvGoldNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:drawableRight="@drawable/goldcoin_blue_icon"
+        android:drawablePadding="3dp"
+        android:textColor="@color/blue_gray"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tvfinish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:drawablePadding="3dp"
+        android:text="已完成"
+        android:textColor="@color/blue_gray"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/tvGoldType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="3dp"
+        android:layout_toLeftOf="@+id/tvGoldNum"
+        android:src="@drawable/icon_coin_add"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_below="@id/ivGoldType"
+        android:layout_marginTop="15dp"
+        android:background="@color/gary_bg" />
+
+</RelativeLayout>

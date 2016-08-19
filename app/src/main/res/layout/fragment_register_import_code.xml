@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="验证码短信已发送到"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/text_size_11" />
+
+            <TextView
+                android:id="@+id/receive_telephone_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/text_size_11" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="38dp"
+            android:layout_marginRight="38dp"
+            android:layout_marginTop="35dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/auth_code"
+                android:textColor="@color/lv_item_content_text"
+                android:textSize="@dimen/text_size_15" />
+
+            <EditText
+                android:id="@+id/import_auth_code_et"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:background="@null"
+                android:hint="@string/import_receice_auth_code"
+                android:singleLine="true"
+                android:textColor="@color/lv_item_content_text"
+                android:textColorHint="@color/dark_gray"
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="17dp"
+            android:background="@color/blue_gray" />
+
+        <TextView
+            android:id="@+id/auth_code_error_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/auth_code_is_error"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/text_size_11"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submit_auth_code_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/btn_login"
+        android:text="@string/submit_auth_code" />
+
+</RelativeLayout>

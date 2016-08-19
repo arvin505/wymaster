@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llMatchJoinTeam"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingBottom="7.5dp"
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp"
+    android:paddingTop="7.5dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTeamName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLength="12"
+            android:singleLine="true"
+            android:text="1111111111111111111111111111"
+            android:textColor="#7d7d7d"
+            android:textSize="@dimen/text_size_17" />
+        <TextView
+            android:id="@+id/tvMatchCaptain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_12"
+            android:textColor="#b3b3b3"
+            android:drawableLeft="@drawable/icon_captain"
+            android:drawablePadding="5dp"
+            android:text="我是你爸爸"
+            android:minLines="1"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginTop="5dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="right|center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvHasApplyNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/text_size_17" />
+
+        <TextView
+            android:id="@+id/tvTeamNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="6dp"
+            android:drawableRight="@drawable/register_right_gray"
+            android:text="/5"
+            android:textColor="#7d7d7d"
+            android:textSize="@dimen/text_size_17" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

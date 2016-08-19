@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="50dp"
+    android:background="@drawable/popup"
+    android:orientation="horizontal"
+   >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="7dp"
+     >
+     <RelativeLayout
+         android:id="@+id/rel_left"
+         android:layout_width="wrap_content"
+         android:layout_height="match_parent" >
+         <ImageView 
+             android:padding="3dp"
+             android:layout_alignParentLeft="true"
+             android:layout_width="50dp"
+             android:layout_height="50dp"
+             android:id="@+id/netbatIcon"
+             android:scaleType="fitCenter"
+             />
+     <LinearLayout 
+          android:layout_toRightOf="@+id/netbatIcon"
+         android:layout_width="wrap_content"
+         android:layout_height="match_parent"
+         android:orientation="vertical"
+         android:paddingLeft="3dp"
+         >
+     <TextView 
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:id="@+id/node_netbar_name"
+         android:lines="2"
+         android:ellipsize="end"
+         android:textSize="13sp"
+         android:textColor="@color/white"
+         android:gravity="left|center_vertical"
+         android:text=""/>
+     <TextView 
+         android:textColor="@color/white"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:id="@+id/node_netbar_price"
+         android:gravity="left|center_vertical"
+         android:textSize="12sp"
+         android:ellipsize="end"
+         android:text="网吧名称"/>
+     </LinearLayout>
+     </RelativeLayout>
+     <LinearLayout 
+         android:layout_toRightOf="@+id/rel_left"
+         android:layout_alignParentRight="true"
+         android:layout_width="20dp"
+         android:layout_height="match_parent">
+   <ImageView 
+       android:id="@+id/node_slipt"
+       android:layout_width="2dp"
+       android:layout_height="match_parent"
+       android:src="@drawable/ver_slipt"
+       android:scaleType="fitXY"/>
+	<ImageView 
+	    android:paddingLeft="5dp"
+	    android:id="@+id/sendToNetbar"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:scaleType="center"
+	    android:src="@drawable/send_netbar"/>
+	</LinearLayout>
+</RelativeLayout>  
+</LinearLayout>

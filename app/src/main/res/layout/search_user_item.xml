@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <com.miqtech.master.client.view.CircleImageView
+            android:id="@+id/im_header"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/default_head" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:text="战斗结束了书法家"
+            android:textColor="@color/colorActionBarUnSelected"
+            android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+</LinearLayout>

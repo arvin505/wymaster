@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llLivePlayItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+  <View
+      android:id="@+id/topView"
+      android:layout_width="match_parent"
+      android:layout_height="18dp"
+      android:background="@color/white"
+      android:visibility="gone"></View>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.miqtech.master.client.view.RoundedImageView
+            android:id="@+id/ivLivePlayPoster"
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:layout_marginTop="15dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_img"
+            app:riv_corner_radius="4dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="8dp">
+
+            <RelativeLayout
+                android:id="@+id/rlAnchorHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.miqtech.master.client.view.CircleImageView
+                    android:id="@+id/anchorHeader"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/default_head"
+                    app:border_color="@color/white"
+                    app:border_width="2dp" />
+
+                <ImageView
+                    android:id="@+id/anchorSex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/anchorHeader"
+                    android:layout_alignRight="@id/anchorHeader"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/live_play_men" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="-3dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:layout_toRightOf="@id/rlAnchorHeader"
+                android:text="我爱我姥姥"
+                android:textColor="@color/shop_buy_record_gray"
+                android:textSize="@dimen/text_size_12" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/live_play_bottom_bg">
+
+            <TextView
+                android:id="@+id/tvGameName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:drawableLeft="@drawable/live_play_game_icon"
+                android:drawablePadding="4dp"
+                android:text="英雄联盟"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_11" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
+        android:layout_marginTop="9dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="类容"
+        android:textColor="@color/shop_font_black"
+        android:textSize="@dimen/text_size_14" />
+
+</LinearLayout>

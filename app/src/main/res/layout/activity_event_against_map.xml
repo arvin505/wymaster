@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ignore="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/shop_bg_color">
+
+    <FrameLayout
+        android:id="@+id/eventAgainstMapFyTitle"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/fight_background_against">
+
+        <TextView
+            android:id="@+id/eventAgainstMapTvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_marginLeft="24dp"
+            android:ellipsize="end"
+            android:gravity="left|center_vertical"
+            android:maxEms="15"
+            android:maxLines="1"
+            android:textColor="@color/shop_font_black"
+            android:textSize="@dimen/text_size_16"
+            android:textStyle="bold"
+            ignore:text="DOTA2--线上SOLO大赛" />
+
+        <LinearLayout
+            android:id="@+id/eventAgainstMapLlClose"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="24dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/eventAgainstMapIvClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/all_close" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/eventAgainstBg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fight_trophy" />
+
+    <View
+        android:id="@+id/evemtAgainstMapWhite"
+        android:layout_width="match_parent"
+        android:layout_height="27dp"
+        android:layout_below="@id/eventAgainstMapFyTitle"
+        android:background="@color/white"
+        android:visibility="gone" />
+
+    <com.miqtech.master.client.view.HVScrollView
+        android:id="@+id/hvScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/eventAgainstMapFyTitle">
+
+        <com.miqtech.master.client.view.EventAgainstLinearLayout
+            android:id="@+id/evemtAgainstMapLlAgainst"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"></com.miqtech.master.client.view.EventAgainstLinearLayout>
+    </com.miqtech.master.client.view.HVScrollView>
+
+
+    <ViewStub
+        android:id="@+id/eventAgainstViewStub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp" />
+</RelativeLayout>

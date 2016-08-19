@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp" >
+
+    <RelativeLayout
+        android:id="@+id/rl_seek"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:background="#BF000000" >
+
+        <ImageButton
+            android:id="@+id/ib_detail_play_full"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="17.5dp"
+            android:paddingLeft="7.5dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/veido_full_screen_btn" />
+         <ImageButton
+            android:id="@+id/ib_mute_sound"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingRight="5dp"
+            android:paddingLeft="2dp"
+             android:layout_centerVertical="true"
+            android:layout_alignBottom="@id/ib_detail_play_full"
+            android:layout_alignTop="@id/ib_detail_play_full"
+            android:layout_toLeftOf="@id/ib_detail_play_full"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/vedio_sound_open" />
+ -->
+  <ImageButton
+            android:id="@+id/ib_play_pause_vedio"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="17.5dp"
+            android:paddingRight="10dp"
+            android:background="@android:color/transparent" 
+            android:scaleType="fitCenter"
+            android:src="@drawable/play_btn_pause_big_detail_down" />
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_toLeftOf="@id/ib_mute_sound"
+            android:layout_toRightOf="@id/ib_play_pause_vedio"
+             >
+
+            <SeekBar
+                android:id="@+id/sb_detail_play_progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:layout_centerInParent="true"
+                android:progressDrawable="@drawable/yp_progress_holo_light"
+                android:thumb="@drawable/vedio_schedule_ball" />
+           <LinearLayout
+            android:id="@+id/ll_current_total_play_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:paddingRight="8dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+            
+       <TextView
+            android:id="@+id/current_time"
+            style="@style/player_total_time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:text="00:00/"
+            android:textSize="11sp" />
+        <TextView
+            android:id="@+id/total_time"
+            style="@style/player_total_time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:text="00:00"
+            android:textSize="11dp" /> 
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <include
+        android:id="@+id/miantop"
+        layout="@layout/layout_include_header" />
+        <com.miqtech.master.client.view.pullToRefresh.PullToRefreshListView
+            android:id="@+id/prlvOrderlist"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="@null"
+            android:focusableInTouchMode="true"
+            android:listSelector="@color/transparent"></com.miqtech.master.client.view.pullToRefresh.PullToRefreshListView>
+</LinearLayout>

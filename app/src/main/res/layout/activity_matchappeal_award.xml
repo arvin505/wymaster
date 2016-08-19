@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_include_header" />
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <RelativeLayout
+            android:id="@+id/rl_other"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="15dp"
+            android:visibility="gone"
+            android:background="@drawable/shape_thin_gray_line_bg"
+            android:padding="6dp">
+
+            <EditText
+                android:id="@+id/et_other_content"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@null"
+                android:gravity="start"
+                android:hint="请描述您遇到的问题,这将有效帮助客服人员解决您的问题"
+                android:maxLength="150"
+                android:textColor="@color/black"
+                android:textColorHint="#b3b3b3"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:id="@+id/tvSurplus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/ivImg3"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+
+                android:text="剩余150字"
+                android:textColor="#b3b3b3"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="35dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/shape_orange_bg_corner"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="提交申诉"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_15" />
+
+</RelativeLayout>

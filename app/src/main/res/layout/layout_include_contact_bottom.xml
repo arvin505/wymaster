@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp" >
+
+        <HorizontalScrollView
+            android:id="@+id/hsvContent"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:scrollbars="none"
+            android:layout_weight="4" >
+
+            <LinearLayout
+                android:id="@+id/llHasChoose"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/tvHasChoose"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="3"
+            android:drawableRight="@drawable/btn_go_right"
+            android:drawablePadding="3dp"
+            android:ellipsize="start"
+            android:gravity="right|center_vertical"
+            android:singleLine="true"
+            android:text="已选择0人"
+            android:textColor="@color/black_extend_intro"
+            android:textSize="@dimen/text_size_big" />
+
+    </LinearLayout>
+
+</LinearLayout>

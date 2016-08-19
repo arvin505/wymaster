@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.miqtech.master.client">
+
+    <!-- JPush权限 -->
+    <permission
+        android:name="com.miqtech.master.client.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="com.miqtech.master.client.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <!--
+       <uses-permission           android:name="android.permission.INSTALL_PACKAGES"
+           tools:ignore="ProtectedPermissions,ProtectedPermissions" >
+       </uses-permission>
+    -->
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAG" />
+
+    <!-- 往sdcard中写入数据的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 电话服务添加 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 获取task服务 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- 获取联系人权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <!--录屏直播-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <application
+        android:name=".application.WangYuApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:persistent="true"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+
+        <activity
+            android:name=".ui.LoginActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ui.BaiduMapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.InformationTopicActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.RecreationMatchDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="stateUnchanged|adjustPan" />
+        <activity
+            android:name=".ui.SubjectActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+        <activity
+            android:name=".ui.GameCenterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.GameDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.GameListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.LivePlayLineSelectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.InformationAtlasActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+        <activity
+            android:name=".ui.InformationDetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar"></activity>
+        <activity
+            android:name=".ui.LiveRoomActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar"></activity>
+        <activity
+            android:name=".ui.PlayVideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar"></activity>
+        <activity
+            android:name=".ui.SearchGameListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.GoldCoinsStoreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ShopDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.NewPeopleTaskActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.CoinsTaskActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.MyGoldCoinsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ExchangeDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.FeedBackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.MyCollectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.MyRedBagActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.MyMessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.MsgTypeSystemDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.MyMatchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.MyWarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.MyOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.NetbarEvaluateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.NetbarEvaluatePhotoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ThankEvaluateActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.AboutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.IntimacySettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.BlackListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.RecreationMatchScheduleActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.RecreationMatchScheduleActivityV2"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.RecreationMatchAppealActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.RecreationMatchAppealStatusActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.RecreationMatchAppealStatusActivityV2"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.CityListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.LatestOfficalActivity"
+
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.GuideActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.NetbarListV2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.EventDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.InfoListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.LivePlayAndVideoListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.LivePlayListActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.PLMediaPlayerActivity" />
+        <activity
+            android:name=".ui.MyCorpsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"></activity>
+
+        <activity
+            android:name=".ui.ShareWeiboActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.CommentsSectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.OfficePopupWindowActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".ui.ApplyPopupWindowActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
+        <activity
+            android:name=".ui.PersonalCommentDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ZifaMatchListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.HostSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.StartActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.RewardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"></activity>
+
+        <activity
+            android:name=".ui.RewardDetailActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ui.SubmitGradesActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ui.RewardThePrizeActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ui.EventAgainstListActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ui.EventAgainstMapActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:screenOrientation="portrait"></activity>
+
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"></activity>
+
+        <!-- 无内容 负责网页端传递数据的跳转-->
+        <activity android:name=".appmanager.JumpManager">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="wydsopen" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.AmusementGameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ExpiryListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.CompositiveMatchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.FilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.JoinerListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.RecreationMatchUploadActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.SearchActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.MyHistoryRedBagActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.CardDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.AddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.LiveVideoListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.MyRewardActivity"
+            android:screenOrientation="portrait" />
+
+        <!--
+             这里输入申请的百度地图的key
+        	   测试key:SSw8VsbM0nFb5dO4wBCqwC8F
+        	  发布key:iTiIqsmXdXRqbUBKDO4Q1xvn
+        -->
+
+        <!--<meta-data-->
+        <!--android:name="com.baidu.lbsapi.API_KEY"-->
+        <!--android:value="j0KTAtnrNaF0UiSUOMESWnf7" />-->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="iTiIqsmXdXRqbUBKDO4Q1xvn" />
+
+        <activity
+            android:name=".ui.YueZhanListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.SearchMapActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.ImagePagerActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".ui.PaymentActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.PayOrderActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.YueZhanDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+
+        <activity
+            android:name=".ui.YueZhanHasApplyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.PersonalHomePageActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.ReportActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.FansListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.AttentionListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.ReleaseWar2TaActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.EditDataActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.LocationCityActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.UserGameDataActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.GameServersActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.NetbarCommentDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.ReleaseWarActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.ContactWayActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.InviteFriendsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.InviteAddPhoneActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.ChooseAttentionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ContactsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.CorpsDetailsV2Activity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.JoinCorpsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.MatchApplyListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.PersonalHomePhotoActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.MatchCorpsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.MatchCorpsActivityV2"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.MatchAddressActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.IndividualMatchJoinActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.CorpsMatchJoinActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.OfficalEventActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+        <activity
+            android:name=".ui.RecreationMatchAppealAwardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.EnterMatchCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.MyActivityCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.InternetBarActivityV2"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar">
+
+            <!--<intent-filter>-->
+            <!--<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />-->
+            <!--<category android:name="android.intent.category.DEFAULT" />-->
+            <!--</intent-filter>-->
+        </activity>
+
+        <activity
+            android:name=".ui.DownloadWebView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.MobileLoginOrBindingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.SetThePasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.ImputOldPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.MatchLobbyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.MatchOverdueActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.CaptureActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.MatchCorpsInviteCodingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar"></activity>
+
+        <activity
+            android:name=".ui.CrowdfundingListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <!-- 防止锁屏时横竖屏切换-->
+        <activity
+            android:name=".ui.RaceCardActivity"
+            android:configChanges="screenSize|keyboardHidden|orientation"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"></activity>
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        <service
+            android:name=".service.MyLocationService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+
+        <!-- 必须注册在微博授权，分享微博时候用到 -->
+        <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name="com.screenrecorder.ui.ScreenRecorderActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <service android:name="com.screenrecorder.services.PiliPushService">
+            <intent-filter android:priority="1000">
+                <action android:name="com.screenrecorder.services.PiliPushServic" />
+            </intent-filter>
+        </service>
+
+        <!--<service-->
+        <!--android:name="com.sina.weibo.sdk.net.DownloadService"-->
+        <!--android:exported="false" >-->
+        <!--</service>-->
+
+        <!--<activity android:name="com.sina.weibo.sdk.demo.WBShareResponseActivity" >-->
+        <!--<intent-filter>-->
+        <!--<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_RESP_ACTIVITY" />-->
+        <!--<category android:name="android.intent.category.DEFAULT" />-->
+        <!--</intent-filter>-->
+        <!--</activity>-->
+
+        <!-- 这里是微信分享回调界面，本程序的Activity 请在此处以上添加 -->
+        <activity
+            android:name="com.miqtech.master.client.wxapi.WXEntryActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent" />
+        <!-- QQ分享注册 -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1104513102" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!--<receiver-->
+        <!--android:name="com.tencent.sample.AppRegister"-->
+        <!--android:permission="com.tencent.mm.plugin.permission.SEND" >-->
+        <!--<intent-filter>-->
+        <!--<action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />-->
+        <!--</intent-filter>-->
+        <!--</receiver>-->
+        <!-- 微信支付注册 -->
+        <activity
+            android:name="com.miqtech.master.client.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+
+        <!--<activity-->
+        <!--android:name="com.jpush"-->
+        <!--android:label="@string/app_name" >-->
+        <!--</activity>-->
+
+        <!-- Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.miqtech.master.client" />
+            </intent-filter>
+        </activity>
+
+        <!-- youk_usdk   client_id及client_secret配置  -->
+        <meta-data
+            android:name="client_id"
+            android:value="36e36a65da71718c" />
+        <meta-data
+            android:name="client_secret"
+            android:value="34593773313abf5b0c397eb49be21b6e" />
+
+        <!--suppress AndroidDomInspection -->
+        <service
+            android:name="com.youku.service.acc.AcceleraterService"
+            android:process=":accelerater"></service>
+
+        <service android:name=".service.DownloadService"></service>
+        <!-- Required  SDK核心功能 -->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <!-- Required SDK 核心功能 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+                <!-- Required  显示通知栏 -->
+                <category android:name="com.miqtech.master.client" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能 -->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" />
+
+        <!-- User defined.  For test only  用户自定义的广播接收器 -->
+        <receiver
+            android:name=".jpush.service.MyReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" />
+                <!-- Optional 用户接受Rich Push Javascript 回调函数的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.miqtech.master.client" />
+            </intent-filter>
+        </receiver>
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="628c53b5691aae4d0a8c62ae" />
+        <!-- </>值来自开发者平台取得的AppKey -->
+
+
+        <meta-data
+            android:name="design_width"
+            android:value="1080" />
+        <meta-data
+            android:name="design_height"
+            android:value="1920" />
+
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="uc" />
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="556be9be67e58edb71004e16" />
+
+    </application>
+
+</manifest>

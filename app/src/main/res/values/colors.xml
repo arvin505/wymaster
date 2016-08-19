@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/orange</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#FFFFFF</color>
+
+    <color name="bg_gray">#f0f0f0</color>
+
+    <color name="cpb_grey">#ffdedede</color>
+    <color name="cpb_blue">#ff0099cc</color>
+    <color name="cpb_blue_dark">#ff00719b</color>
+    <color name="cpb_red">#ffff4444</color>
+    <color name="cpb_red_dark">#ffcd3a3a</color>
+    <color name="cpb_green">#ff99cc00</color>
+    <color name="cpb_green_dark">#ff6d9b00</color>
+    <color name="cpb_white">@android:color/white</color>
+    <color name="cpb_gray">#505050</color>
+    <!-- 深灰 -->
+    <color name="dark_gray">#b3b3b3</color>
+    <!-- 透明 -->
+    <color name="transparent">#01000000</color>
+
+    <color name="orange">#ff6600</color>
+    <color name="colorActionBarSelected">#ff5f00</color>
+    <color name="colorActionBarUnSelected">#b3b3b3</color>
+
+    <color name="gray">@android:color/darker_gray</color>
+
+    <color name="textColorGray">#666666</color>
+    <color name="textColorBattle">#7d7d7d</color>
+    <color name="black">#000000</color>
+
+    <color name="line">#b3b3b3</color>
+    <!-- 灰色背景 -->
+    <color name="gary_bg">#dcdcdc</color>
+
+    <!--information fragment -->
+    <color name="black_extend_intro">#585858</color>
+    <color name="lv_bg_gray">#eeeeee</color>
+    <color name="lv_item_content_text">#7d7d7d</color>
+
+    <color name="font_gray">#b3b3b3</color>
+    <color name="orange_juice">#ffae00</color>
+
+    <color name="gray_bg">#e0dfdf</color>
+    <!-- 蓝灰色 -->
+    <color name="blue_gray">#ff6600</color>
+    <!-- 浅灰 -->
+    <color name="light_gray">#eeeeee</color>
+    <!-- 淡灰 -->
+    <color name="little_gray">#d7d7d7</color>
+    <!-- 黄 -->
+    <color name="yellow">#ffd900</color>
+    <color name="red_money">#ef6363</color>
+    <!-- 红 -->
+    <color name="red">#eb726f</color>
+
+    <color name="buttom_line">#dcdcdc</color>
+
+    <color name="no_read">#f5f5f5</color>
+    <color name="font_black">#7d7d7d</color>
+
+    <color name="half_transparent">#88000000</color>
+    <color name="transparent_two">#44000000</color>
+    <color name="half_transparent_white">#88ffffff</color>
+    <color name="dark_black">#3a3a3a</color>
+
+    <color name="translucent_background">#60000000</color>
+    <color name="reveal_color">#1b000000</color>
+
+    <color name="light_orange">#ff5f00</color>
+    <color name="light_orange_percent_70">#b2ff5f00</color>
+
+    <color name="light_red">#EF3F3F</color>
+
+
+    <color name="mobile_login_gray">#f1f1f1</color>
+
+    <color name="information_item">#ededed</color>
+    <color name="bg_info">#f7f7f7</color>
+
+    <color name="red_1">#fb4646</color>
+
+    <color name="blue">#57beff</color>
+
+    <color name="shop_splite_line">#e4e4e4</color>
+    <color name="shop_font_black">#333333</color>
+    <color name="shop_bg_color">#f1f1f1</color>
+    <color name="shop_bg_color_alpha">#11f1f1f1</color>
+    <color name="shop_font_green">#8cc000</color>
+    <color name="shop_font_black_light">#666666</color>
+    <color name="shop_font_red">#de008d</color>
+    <color name="shop_gray_bg">#e4e4e4</color>
+    <color name="shop_buy_record_gray">#9a9a9a</color>
+    <color name="shop_pay_splite_line">#adadad</color>
+    <color name="shop_transparent_black_bg">#66000000</color>
+
+    <color name="transparent_60">#60000000</color>
+    <color name="transparent_20">#20000000</color>
+    <color name="transparent_30">#30000000</color>
+    <color name="transparent_40">#40000000</color>
+
+    <color name="red_fc4547">#fc4547</color>
+
+    <color name="black_gray_title">#343434</color>
+
+    <color name="crowd_pb_start">#FFBB5C</color>
+    <color name="crowd_pb_end">#FC8F4E</color>
+    <color name="address_hint">#9a9a9a</color>
+
+    <color name="red_show_fail_progress">#f0413e</color>
+    <color name="red_earn_gold_coin">#f45a92</color>
+    <color name="orgran_finish_coin_task">#ff9658</color>
+
+    <color name="blue_comment_title">#334f8b</color>
+    <color name="light_gray1">#dddddd</color>
+    <color name="gray_event_detail_btn">#cdcdcd</color>
+    <color name="c7_gray">#c7c7c7</color>
+
+    <color name="card_text_color">#64461f</color>
+    <color name="card_text_color_9d7a4c">#9d7a4c</color>
+    <color name="card_line_color_bdab8f">#bdab8f</color>
+    <color name="reward_comment_color_c7c7c7">#c7c7c7</color>
+    <color name="reward_comment_color_e2e2e2">#e2e2e2</color>
+    <color name="reward_comment_color_aeaeae">#aeaeae</color>
+    <color name="reward_card_color_time">#c1a989</color>
+
+    <color name="all_match_num_bg">#adadad</color>
+    <color name="black_70_percent">#B2000000</color>
+</resources>

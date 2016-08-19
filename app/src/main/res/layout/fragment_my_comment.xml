@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_comment_fragment_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.miqtech.master.client.view.pullToRefresh.PullToRefreshRecyclerView
+            android:id="@+id/prrvFragmentComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    </com.miqtech.master.client.view.pullToRefresh.PullToRefreshRecyclerView>
+
+    <LinearLayout
+        android:id="@+id/buttom_send_personal_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/no_read"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/font_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="17dp">
+
+            <EditText
+                android:id="@+id/edtComment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:background="@null"
+                android:maxLength="200"
+                android:maxLines="3"
+                android:textColor="@color/black_extend_intro"
+                android:textColorHint="@color/font_gray"
+                android:textCursorDrawable="@null"
+                android:textSize="16sp"
+                tools:ignore="TextFields" />
+
+            <TextView
+                android:id="@+id/tvSend"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="发送"
+                android:textColor="@color/font_gray"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

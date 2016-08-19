@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="pr_default_anim_duration">250</integer>
+
+    <string name="pr_server_app_name" translatable="false">videoandroid</string>
+    <string name="pr_server_yingbang_name" translatable="false">videoyingbang</string>
+
+</resources>

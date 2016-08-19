@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_topic_infor_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/information_head_image_height"
+        android:layout_marginBottom="@dimen/information_lv_toTop_toBottom"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_img" />
+</LinearLayout>

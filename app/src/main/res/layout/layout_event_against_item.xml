@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ignore="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/eventAgsinstLlitem"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/eventAgsinstTvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:background="@drawable/fight_background_match"
+        android:gravity="center"
+        android:textColor="@color/shop_font_black"
+        android:textSize="@dimen/text_size_12"
+        android:textStyle="bold"
+        ignore:text="小组赛阶段-第一轮" />
+
+</LinearLayout>

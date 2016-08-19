@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_match_poster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:background="@drawable/corner_image_bg"
+            android:src="@drawable/img_test" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="17dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:gravity="right|center_vertical"
+            android:background="#33000000"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_battle_person_count"
+                android:layout_marginRight="4dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_match_count"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingRight="4dp"
+                android:singleLine="true"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_match_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:maxLines="2"
+        android:minLines="2"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_match_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_loc_battle"
+            android:drawablePadding="4dp"
+            android:text="2854"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_marginBottom="3dp"
+            android:textColor="@color/textColorBattle"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_match_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_battle_time"
+            android:drawablePadding="4dp"
+            android:singleLine="true"
+            android:text="2015/12/16"
+            android:textColor="@color/textColorBattle"
+            android:textSize="12sp" />
+    </LinearLayout>
+</LinearLayout>

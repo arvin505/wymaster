@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/eventAgainstTop"
+        layout="@layout/layout_include_header" />
+
+
+    <com.miqtech.master.client.view.PinnedHeaderExpandableListView
+        android:id="@+id/eventAgainstPinnedListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/eventAgainstTop"
+        android:cacheColorHint="@null"
+        android:childIndicatorLeft="0dp"
+        android:divider="@null"
+        android:dividerHeight="1dp"
+        android:groupIndicator="@null"
+        android:scrollbars="none"></com.miqtech.master.client.view.PinnedHeaderExpandableListView>
+
+    <ViewStub
+        android:id="@+id/eventAgainstListViewStub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/eventAgainstTop"
+        android:layout_marginTop="30dp" />
+
+</RelativeLayout>

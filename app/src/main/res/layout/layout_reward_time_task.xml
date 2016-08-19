@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ignore="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tvDay"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:gravity="center"
+        android:textColor="@color/card_text_color"
+        android:textSize="@dimen/text_size_13"
+        android:visibility="gone"
+        ignore:text="08" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="21dp"
+        android:layout_height="18dp"
+        android:background="@drawable/shape_stoke_cla989"
+        android:gravity="center"
+        android:textColor="@color/card_text_color"
+        android:textSize="@dimen/text_size_13"
+        ignore:text="08" />
+
+    <TextView
+        android:id="@+id/tvColonCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:gravity="center"
+        android:text=":"
+        android:textColor="@color/card_text_color"
+        android:textSize="@dimen/text_size_13" />
+
+    <TextView
+        android:id="@+id/tvMinute"
+        android:layout_width="21dp"
+        android:layout_height="18dp"
+        android:background="@drawable/shape_stoke_cla989"
+        android:gravity="center"
+        android:textColor="@color/card_text_color"
+        android:textSize="@dimen/text_size_13"
+        ignore:text="25" />
+
+    <TextView
+        android:id="@+id/tvColonRight"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:gravity="center"
+        android:text=":"
+        android:textColor="@color/card_text_color"
+        android:textSize="@dimen/text_size_13" />
+
+    <TextView
+        android:id="@+id/tvSecond"
+        android:layout_width="21dp"
+        android:layout_height="18dp"
+        android:background="@drawable/shape_stoke_cla989"
+        android:gravity="center"
+        android:textColor="@color/card_text_color"
+        android:textSize="@dimen/text_size_13"
+        ignore:text="38" />
+
+
+</LinearLayout>

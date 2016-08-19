@@ -1,0 +1,606 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">网娱大师</string>
+
+    <string name="recommend">推荐</string>
+    <string name="competitive">竞技</string>
+    <string name="information">资讯</string>
+
+    <!-- recommend fragment-->
+    <string name="red_envelope">每周红包</string>
+    <string name="goldmall">金币商城</string>
+    <string name="nearbynetbar">附近网吧</string>
+    <string name="hotinformation">自发赛事</string>
+
+    <string name="hotbattle">热门约战</string>
+    <string name="hotmatch">热门赛事</string>
+    <string name="recommend_netbar">网吧推荐</string>
+    <string name="price_per_hour"><xliff:g id="NAME">%s</xliff:g>元/小时</string>
+
+    <string name="price_per_hour_v3">￥<xliff:g id="NAME">%s</xliff:g>元/小时</string>
+
+    <string name="type_online">线上</string>
+    <string name="type_offline">线下</string>
+    <string name="type_online_offline">线上/线下</string>
+    <string name="login">登录</string>
+
+    <!--information fragment -->
+    <string name="banner_extend">推广</string>
+    <string name="banner_banner_intro">老婆被杀儿子被抢，男子沉迷捡破烂究竟为哪般</string>
+    <string name="read">阅</string>
+    <string name="topic">专题</string>
+    <string name="atlas">图集</string>
+    <string name="picture">图</string>
+    <string name="wread">万阅</string>
+    <string name="noNeteork">网络异常!</string>
+    <string name="unknownException">未知异常</string>
+    <string name="wan">万</string>
+    <string name="yi">亿</string>
+
+    <!--informationAtlas-->
+    <string name="operationFailure">操作失败</string>
+    <string name="pleaseLogin">请登陆</string>
+
+
+    <string name="pull_to_refresh">下拉刷新</string>
+    <string name="release_to_refresh">释放立即刷新</string>
+    <string name="refreshing">正在刷新...</string>
+    <string name="refresh_succeed">刷新成功</string>
+    <string name="refresh_fail">刷新失败</string>
+    <string name="pullup_to_load">上拉加载更多</string>
+    <string name="release_to_load">释放立即加载</string>
+    <string name="loading">正在加载...</string>
+    <string name="load_succeed">加载成功</string>
+    <string name="load_fail">加载失败</string>
+
+    <string name="load_no">已无更多数据</string>
+
+    <string name="game_official">官方比赛</string>
+    <string name="game_entertain">娱乐比赛</string>
+    <string name="game_official_online">官方线上</string>
+    <string name="game_official_offline">官方线下</string>
+    <string name="game_netbar">网吧发起</string>
+    <string name="all">全部</string>
+    <string name="filter">筛选</string>
+    <string name="start_time">开始时间:</string>
+
+    <string name="match_time">比赛时间:</string>
+    <string name="match_address">比赛地点:</string>
+    <string name="nomore">没有更多了</string>
+    <string name="filter_default">默认</string>
+    <string name="game_composite">综合比赛</string>
+    <string name="allenjoytype">全部参与方式</string>
+    <string name="allgametype">全部游戏分类</string>
+    <string name="game_lol">英雄联盟</string>
+    <string name="game_dota2">DOTA2</string>
+    <string name="game_stormhero">风暴英雄</string>
+    <string name="game_overwatch">守望先锋</string>
+    <string name="game_corssfire">穿越火线</string>
+    <string name="game_bfs">炉石传说</string>
+    <string name="overed">已结束</string>
+    <string name="signing">报名中</string>
+    <string name="enjoytype_personal">个人参与</string>
+    <string name="enjoytype_team">团队参与</string>
+    <string name="enjoytype">参与方式</string>
+    <string name="game_state">比赛状态</string>
+    <string name="battlestate_all">全部约战状态</string>
+    <string name="reward_all">全部奖品类型</string>
+    <string name="game_type">游戏分类</string>
+    <string name="location">地理位置</string>
+    <string name="game_all">全部比赛</string>
+    <string name="native_city_game">当前城市比赛</string>
+    <string name="native_city">当前城市</string>
+    <string name="reward_dj">游戏点券</string>
+    <string name="reward_other">其他奖励</string>
+    <string name="reward_type">奖品类型</string>
+    <string name="battle_area">约战范围</string>
+    <string name="allbattle">全部约战</string>
+    <string name="allonlinebattle">全部线上约战</string>
+    <string name="filter_match">比赛筛选</string>
+    <string name="filter_battle">约战筛选</string>
+    <string name="filter_composite_match">综合比赛筛选</string>
+    <string name="yuezhan_personal">个人约战</string>
+
+    <string name="allnetbar">全部网吧</string>
+
+    <string name="errcode_success">微信分享成功</string>
+    <string name="errcode_cancel">微信分享取消</string>
+    <string name="errcode_deny">微信分享被拒绝</string>
+    <string name="errcode_unknown">微信分享返回</string>
+    <string name="errcode_failed">微信分享失败</string>
+
+
+    <string name="weibo_share_success">微博分享成功</string>
+    <string name="weibo_share_cancel">微博分享取消</string>
+    <string name="weibo_share_fail">微博分享失败</string>
+    <!-- WXPayEntryActivity -->
+    <string name="pay_result_tip">这个界面用于显示第三方app通过微信支付的结果</string>
+    <string name="pay_result_callback_msg" formatted="false">微信支付结果：%s</string>
+    <string name="cancel">取消</string>
+    <string name="ok">确定</string>
+    <!-- 金币商城 -->
+    <string name="coinstask">金币任务</string>
+    <string name="duihuanrecord">兑换记录</string>
+    <string name="qiandao">天天签dap</string>
+    <string name="coinsarea">金币专区</string>
+    <string name="xiaochou">小抽怡情</string>
+    <string name="AdvertiseIntroduc">金克丝皮肤5折优惠!快来买买买!</string>
+    <string name="duihuandetail">兑换详情</string>
+    <string name="feedback">反馈</string>
+    <string name="signGetPrize">签到抽大奖</string>
+    <string name="snatch">众筹夺宝</string>
+    <string name="expiryArea">兑奖专区</string>
+    <string name="more">更多</string>
+    <string name="goldCoinNum"> %1$s金币</string>
+    <string name="gameHall">游戏大厅</string>
+    <string name="cdkExchange">CDK兑换</string>
+    <string name="sureBtn">确定</string>
+    <string name="luckyerUser">幸运用户</string>
+    <string name="luckyerNum">幸运号码</string>
+    <string name="participation_time">你已参与%1$s次</string>
+    <string name="buySuccess">购买成功</string>
+    <string name="buyFail">购买失败,请重新购买</string>
+    <string name="tips">哎哟,金币不够,快去赚取金币吧!</string>
+    <string name="earnBtn">赚金币</string>
+    <string name="totalGoldCoins">总金币</string>
+
+    <!-- 我的消息-->
+    <string name="msg_order">订单</string>
+    <string name="msg_activitis">活动</string>
+    <string name="msg_system">系统</string>
+    <string name="msg_comment">评论</string>
+    <string name="netbarInfoTitle">网吧详情</string>
+    <string name="custmer_tel">037155336615</string>
+
+    <string name="gopay">去支付</string>
+    <string name="delete_order">删除</string>
+    <string name="invitation_explain">通过手机号码添加队友，需要队友已下载并注册网娱大师app，在我的各人资料中完善参赛资料。</string>
+
+    <!-- 商品详情-->
+    <string name="shop_detail">商品详情</string>
+    <string name="expiry_rule">兑奖规则</string>
+    <string name="buy_record">已购记录</string>
+    <string name="instant_buy">立即购买</string>
+
+
+    <!-- 网吧详情-->
+    <string name="internetbar_info">基本信息</string>
+    <string name="internetbar_activity">竞技活动</string>
+    <string name="internetbar_evaluate">评价</string>
+    <!--设置-->
+    <string name="setting">设置</string>
+    <string name="exit_success">退出成功</string>
+    <string name="exit_from_the_current_account">确认退出当前账号吗</string>
+    <string name="please_imput_invate_code">请输入邀请码</string>
+    <string name="invate_code_is_error">邀请码输入有误</string>
+    <string name="whether_to_clear_the_cache">是否清除缓存?</string>
+
+    <string name="uploadfail">上传失败</string>
+    <string name="uploadfsuccess">上传成功</string>
+
+    <!--我的-->
+    <string name="show">提示</string>
+    <string name="on">确定</string>
+    <string name="off">取消</string>
+    <string name="delect_info">是否删除该条收藏</string>
+    <string name="my_collect">我的收藏</string>
+    <string name="appling">报名中</string>
+    <string name="proceeding">进行中</string>
+    <string name="overing">已结束</string>
+    <string name="clear_up_unread_messages">确认清除未读消息</string>
+
+
+    <!--注册-->
+    <string name="register">注册</string>
+    <string name="findPassword">找回密码</string>
+    <string-array name="register_titles">
+        <item>1.输入手机号</item>
+        <item>2.输入验证码</item>
+        <item>3.设置密码</item>
+        <item>4.完成注册</item>
+    </string-array>
+    <string-array name="retrieve_password">
+        <item>1.输入手机号</item>
+        <item>2.输入验证码</item>
+        <item>3.重置密码</item>
+    </string-array>
+    <string name="import_phone">请输入您的手机号</string>
+    <string name="phone_number">手机号:</string>
+    <string name="register_agree">点击获取验证码即同意</string>
+    <string name="register_pact">网娱大师客户端协议</string>
+    <string name="phone_form_no">手机号码格式不对</string>
+    <string name="auth_code">验证码</string>
+    <string name="import_receice_auth_code">请您输入收到的验证码</string>
+    <string name="auth_code_is_error">验证码过期/验证码错误</string>
+    <string name="submit_auth_code">提交验证码</string>
+    <string name="get_auth_code">获取验证码</string>
+    <string name="login_code">登陆密码</string>
+    <string name="import_login_code">请输入您的登陆密码</string>
+    <string name="import_login_code_againe">请再次输入您的登陆密码</string>
+    <string name="countersign">确认</string>
+
+    <string name="tag_hint">Tag为大小写字母，数字，下划线,中文， 多个用以逗号分隔</string>
+    <string name="alias_hint">Alias为大小写字母，数字，下划线</string>
+    <string name="style_hint">style为数字</string>
+    <string name="error_style_empty">style不能为空</string>
+    <string name="error_alias_empty">alias不能为空</string>
+    <string name="error_tag_empty">tag不能为空</string>
+    <string name="error_tag_gs_empty">格式不对</string>
+    <string name="error_network">网络连接异常,初始化失败 请检查网络！</string>
+    <string name="logining">程序在后台执行, 请查看日志！</string>
+    <string name="setting_su">设置成功</string>
+
+    <string name="alias_test">test_member_</string>
+    <string name="alias">member_</string>
+
+    <!--极光tag-->
+    <string name="tag">members</string>
+    <string name="test_tag">test_members</string>
+    <string name="tag_area">members_area_</string>
+    <string name="test_tag_area">test_members_area_</string>
+    <string name="tag_area_infomodule">members_area_info_module_</string>
+    <string name="test_tag_area_infomodule">test_members_area_info_module_</string>
+    <string name="tag_infomodule">members_info_module_</string>
+    <string name="test_tag_infomodule">test_members_info_module_</string>
+
+
+    <string name="activitys">赛事活动</string>
+    <string name="netbar">网吧</string>
+    <string name="user">用户</string>
+    <string name="confirm_order_info">确认支付信息</string>
+    <string name="red_bag">红包抵扣</string>
+    <string name="price"><xliff:g id="NAME">%s</xliff:g>元</string>
+
+    <string name="notice">注意事项：\n请您确认目标店为网娱大师合作店并在柜台当面进行支付，记得核对上网金额与实际网费哟~</string>
+    <string name="verify_phone">验证您的手机</string>
+    <string name="verify_notice">我们需要验证您登录的账号是否是当前使用的手机号</string>
+
+    <string name="search_key">搜索“<xliff:g id="NAME">%s</xliff:g>”</string>
+    <string name="remark_detail">备注详情</string>
+
+    <!--评论-->
+    <string name="hot_comment">热门评论</string>
+    <string name="newest_comment">最新评论</string>
+
+    <string name="card_name">姓名：<xliff:g id="NAME">%s</xliff:g></string>
+    <string name="card_mobile">手机号：<xliff:g id="NAME">%s</xliff:g></string>
+    <string name="card_qq">QQ号：<xliff:g id="NAME">%s</xliff:g></string>
+
+    <string name="id_card">身份证</string>
+    <string name="modify_card">去修改参赛卡</string>
+    <string name="no_card">您还没有个人参赛信息卡</string>
+    <string name="go_add_card">快去添加，报名比赛一劳永逸</string>
+    <string name="add_card">添加参赛卡</string>
+    <string name="no_crops">本场比赛还没有战队报名</string>
+    <string name="create_crops">去创建临时战队</string>
+    <string name="captain">队长：<xliff:g id="NAME">%s</xliff:g></string>
+    <string name="preheating">预热中</string>
+    <string name="processing">进行中</string>
+    <string name="corp_name_explain">您将是队长，临时战队创建后，您可以在我的赛事-战队中进入战队详情页面处理申请加入请求</string>
+    <string name="corp_name">请输入战队名称</string>
+    <string name="entry_card_that_1">您还没有个人参赛信息卡</string>
+    <string name="entry_card_that_2">快去添加，报名比赛一劳永逸</string>
+    <string name="select_corps">选择战队</string>
+    <string name="creation_corps">创建临时战队</string>
+    <string name="join_corps">加入临时战队</string>
+    <string name="creation_corps_name">设置战队名</string>
+    <string name="affirm_card">确认参赛卡</string>
+    <string name="affirm_information">确认信息</string>
+    <string name="back">返回</string>
+    <string name="sign_up">报名</string>
+    <string name="team_name">战队名称:</string>
+    <string name="registrants">个人报名</string>
+    <string name="entrants">报名参赛</string>
+    <string name="no_apply_way">该赛事未提供报名方式</string>
+    <string name="guarantee">网娱大师保证不会将您的信息泄露</string>
+    <string name="contact_wy">如果您有疑问请联系我们400-690-2530</string>
+    <string name="open_location_service">开启定位服务</string>
+    <string name="open_loc_descirbe">开启才能查询到身边网吧优惠和赛事活动</string>
+    <string name="open_for_me">请帮我开启</string>
+    <string name="i_know">我知道了</string>
+    <string name="has_new_version">检测到新版本</string>
+    <string name="update_des">网娱大师升级到<xliff:g id="NAME">%s</xliff:g>啦</string>
+    <string name="do_update">去更新</string>
+    <string name="not_update">将就用用</string>
+    <string name="member_price">会员价</string>
+    <string name="normal_price">普通价</string>
+    <string name="discount">公告与优惠</string>
+    <string name="interested_count"><xliff:g id="NAME">%s</xliff:g>人感兴趣</string>
+    <string name="report">举报</string>
+    <string name="anonymous_users">匿名用户</string>
+    <string name="no_comment">该用户不善言表，只默默打了个分</string>
+    <string name="get_the_discount">领取优惠</string>
+    <string name="hot_netbar">人气网吧</string>
+
+    <!-- 网吧 -->
+    <string name="exclusive_title">增值券已放入账户,请在-我的-页面查看</string>
+
+    <string name="exclusive_info">增值券可以在支付时获得额外网费金额</string>
+    <string name="my_card">我的卡券</string>
+    <string name="my_redbag">我的红包</string>
+    <string name="use_now">立即使用</string>
+
+    <!--登陆界面-->
+    <string name="mobile_register">手机注册</string>
+    <string name="mobile_shortcut_login">手机号快捷登录</string>
+    <string name="mobile_binding">绑定手机号</string>
+    <string name="please_imput_mobile">请输入手机号</string>
+    <string name="qq_login_success">qq登陆成功</string>
+    <string name="qq_login_error">qq登陆失败</string>
+    <string name="qq_login_cancel">qq登陆被取消</string>
+    <string name="wechat_login_success">微信登陆成功</string>
+    <string name="wechat_login_error">微信登陆失败</string>
+    <string name="wechat_login_cancel">微信登陆被取消</string>
+    <string name="weibo_login_success">微博登陆成功</string>
+    <string name="weibo_login_error">微博登陆失败</string>
+    <string name="weibo_login_cancel">微博登陆被取消</string>
+    <string name="choose_cata">选择资讯栏目</string>
+    <string name="imput_original_password">请输入原密码</string>
+    <string name="setting_password">设置密码</string>
+    <string name="old_password">原密码:</string>
+    <string name="new_password">新密码:</string>
+    <string name="affirm_new_password">确认密码:</string>
+    <string name="change_password">修改密码</string>
+
+    <!--扫一扫页面-->
+    <string name="capture_scan">扫一扫</string>
+    <string name="capture_photo_album">相册</string>
+    <string name="capture_open_flash">闪光灯</string>
+
+    <!--战队详情-->
+    <string name="corpsDetailsV2TeamDetails">战队详情</string>
+    <string name="corpsDetailsV2CodeForInviting">二维码邀请</string>
+    <string name="corpsDetailsV2TeamName">战队名称</string>
+    <string name="corpsDetailsV2ApplyMatch">已报赛事</string>
+    <string name="corpsDetailsV2TeamMambers">队员名单</string>
+    <string name="corpsDetailsV2CheckTheList">查看申请列表</string>
+    <string name="corpsDetailsV2Member">队员</string>
+    <string name="corpsDetailsV2RemoveMember">移除队员</string>
+    <string name="corpsDetailsV2IsRemoveMember">是否移除该队员</string>
+    <string name="corpsDetailsV2NoMemberPhone">该成员无电话</string>
+    <string name="corpsDetailsV2DeleteTheSuccess">删除成功</string>
+    <string name="corpsDetailsV2InvateTheSuccess">邀请成功</string>
+    <string name="corpsDetailsV2AcceptTheInvitation">接受邀请</string>
+    <string name="corpsDetailsV2JoinFailMessage">太迟啦...战队人员已经满了</string>
+    <string name="corpsDetailsV2TeamFull">战队已满</string>
+    <string name="corpsDetailsV2JoinFail">加入失败</string>
+    <string name="corpsDetailsV2JoinTheTeam">加入战队</string>
+    <string name="corpsDetailsV2QuitTheSuccess">退出战队</string>
+    <string name="corpsDetailsV2IsQuitTheSuccess">确定退出战队!</string>
+    <string name="corpsDetailsV2EndTheSuccess">解散战队</string>
+    <string name="corpsDetailsV2IsEndTheSuccess">确定解散战队!</string>
+    <string name="corpsDetailsV2EventEnding">赛事已结束</string>
+    <string name="corpsDetailsV2EventHasApplied">已申请</string>
+    <string name="corpsDetailsV2ApplyEnding">报名已截止</string>
+    <string name="corpsDetailsV2TheNumberHasReachedThe">人数已满</string>
+    <string name="corpsDetailsV2NoMatchaddress">主办方忘记了</string>
+    <string name="corpsDetailsV2GoodLocation">擅长位置 : <xliff:g id="NAME">%s</xliff:g></string>
+    <string name="corpsDetailsV2MatchNum">比赛场次 : 第 <xliff:g id="NAME">%s</xliff:g> 场</string>
+    <string name="corpsDetailsV2MatchTime">比赛时间 :  <xliff:g id="NAME">%s</xliff:g></string>
+    <string name="corpsDetailsV2MatchAddress">比赛地点 :  <xliff:g id="NAME">%s</xliff:g></string>
+    <string name="corpsDetailsV2MatchCorpsName">战队信息 :  <xliff:g id="NAME">%s</xliff:g></string>
+
+    <!--战队邀请-->
+    <string name="corps_invite_title">战队邀请</string>
+    <string name="corps_entertain_token">您的娱号令已经生成</string>
+    <string name="corps_qq_paste">去QQ粘贴</string>
+    <string name="corps_wx_paste">去微信粘贴</string>
+
+    <!--众筹夺宝-->
+    <string name="crowdfunding">众筹夺宝</string>
+    <string name="winningnumber">中奖号码</string>
+    <string name="expiry_area">兑奖专区</string>
+    <string name="address_hint">•  为了准确邮寄给您，请如实填写信息</string>
+    <string name="receiver">收货人</string>
+    <string name="phonenumber">电话号码</string>
+    <string name="address">详细地址</string>
+    <string name="add_address">填写地址</string>
+    <string name="receiver_null">收件人不能为空</string>
+    <string name="phonenumber_null">电话号码不能为空</string>
+    <string name="count_null">充值账号不能为空</string>
+    <string name="address_null">地址不能为空</string>
+    <string name="address_detail_hint">请填写详细地址，不少于5个字</string>
+
+    <!--扫码报名流程-->
+    <string name="ApplyPopupQrcodeError">扫码解析错误</string>
+    <string name="FragmentInfoTitle">您将报名参加该场比赛</string>
+    <string name="FragmentInfoCompetingInformation">确认您的参赛信息</string>
+    <string name="FragmentInfoChange">修改</string>
+    <string name="FragmentInfoCorpsInfo">确认战队信息</string>
+    <string name="FragmentInfoActivityInfo">确认场次信息</string>
+    <string name="FragmentInfojoin">加入</string>
+    <string name="FragmentInfoClose">关闭</string>
+    <string name="FragmentInfoMatchAddress1">比赛地点 :  </string>
+    <string name="fragmentMatchTitle">赛事名称 :  <xliff:g id="NAME">%s</xliff:g></string>
+    <string name="fragmentMatchTime">比赛时间 :  <xliff:g id="NAME">%s</xliff:g></string>
+    <string name="fragmentMatchAddress">比赛地点 :  <xliff:g id="NAME">%s</xliff:g></string>
+
+    <string name="FragmentIdentityInstructions">本场比赛为团队比赛\n请加入或创建一个战队参与比赛</string>
+    <string name="FragmentIdentityCaptain">我是队长</string>
+    <string name="FragmentIdentityIronman">我是队员</string>
+    <string name="FragmentIdentityCreateCorps">我要创建战队</string>
+    <string name="FragmentIdentityJoinCorps">我要加入已有战队</string>
+    <string name="FragmentIdentitySelectIdentity">选择参与身份</string>
+    <string name="FragmentIdentityCorpNameExplain">本场比赛暂无参赛队伍\n您将是队长，临时战队创建后，您可以在我的赛事-战队中进入战队详情页面处理申请加入请求</string>
+
+    <string name="FragmentThreeNext">下一步</string>
+
+
+    <string name="FragmentIsFailCompleteRegistration">完成报名</string>
+    <string name="FragmentIsFailCreateCorps">创建战队成功,完成报名</string>
+    <string name="FragmentIsFailCreateCorpsFail">创建战队失败,报名失败</string>
+    <string name="FragmentIsFailApplySuccess">申请成功,等待队长通过</string>
+    <string name="FragmentIsFailApplyFail">申请失败,战队人数已满</string>
+    <string name="FragmentIsFailJoinFail">加入成功</string>
+    <string name="FragmentIsFailSuccess">报名成功</string>
+    <string name="FragmentIsFailFail">报名失败</string>
+    <string name="write_now">立即填写</string>
+    <string name="count">充值账户</string>
+    <string name="exchange_now">立即兑换奖品</string>
+
+    <string name="duihuanException">兑换商品异常</string>
+    <string name="duihuanChuliFinish">异常已处理,点击查看</string>
+    <string name="duihuanChuli">异常订单正在处理</string>
+
+
+    <string name="agree">同意</string>
+    <string name="disagree">不同意</string>
+    <string name="no_member_apply">"T_T  还木有小伙伴申请呀，赶紧去招募机油，一起装X一起飞 ~~"</string>
+
+
+    <!--下拉刷新-->
+    <string name="pr_pull_to_refresh_pull_label">下拉刷新</string>
+    <string name="pr_pull_up_to_refresh_pull_label">上拉加载更多</string>
+    <string name="pull_up_to_refresh_release_label">松开加载</string>
+    <string name="pull_up_to_refresh_refreshing_label">加载中&#8230;</string>
+    <string name="pull_to_refresh_pull_label">下拉刷新</string>
+    <string name="pr_pull_to_refresh_release_label">松开后刷新</string>
+    <string name="pr_pull_to_refresh_refreshing_label">刷新中&#8230;</string>
+    <string name="pull_up_to_refresh_pull_label">上拉加载更多</string>
+    <string name="pull_up_last_refresh">上次加载：</string>
+    <string name="pull_to_refresh_from_bottom_pull_label">@string/pr_pull_to_refresh_pull_label</string>
+    <string name="pr_pull_to_refresh_from_bottom_release_label">松开即可加载</string>
+    <string name="pr_pull_to_refresh_from_bottom_refreshing_label">加载中&#8230;</string>
+    <string name="pr_pull_to_refresh_refresh_lable">正在加载中</string>
+
+    <string name="coin_task_remark">任务内容</string>
+    <string name="match_start_time">开赛时间：</string>
+    <string name="match_team">参赛人数</string>
+    <string name="zifamatch">自发赛</string>
+
+
+    <!--赛事详情-->
+    <string name="event_detail_flag">by 网娱大师</string>
+    <string name="event_detail_apply_time">报名时间:</string>
+    <string name="event_detail_begin_match_time">开赛时间:</string>
+    <string name="event_detail_match_team">参赛人数:</string>
+    <string name="event_detail_match_award">赛事奖励:</string>
+    <string name="event_detail_match_rule">赛事规则</string>
+    <string name="event_detail_more">展开</string>
+    <string name="event_detail_sponsor">by <xliff:g id="NAME">%s</xliff:g></string>
+    <string name="event_detail_apply_num"> %1$s/%2$s</string>
+    <string name="match_progress">赛事进程</string>
+    <string name="see_match_pic">查看对阵图</string>
+    <string name="match_end">已完结</string>
+    <string name="match_unstart">未开始</string>
+    <string name="match_begining">进行中</string>
+    <string name="match_see_more">点击查看更多</string>
+    <string name="info_dynamic">资讯动态</string>
+    <string name="see_whole">查看全部</string>
+
+    <!--EventAgainstListActivity-->
+    <string name="look_at_event_against">查看对阵图</string>
+    <string name="unstart">未开始</string>
+    <string name="the_event_process">赛事进程</string>
+    <string name="the_event_process_no">非常抱歉，该赛事暂无赛事进程</string>
+
+    <!--RewardActivity-->
+    <string name="love">喜欢</string>
+    <string name="leave_a_message">留言</string>
+    <string name="goal">目标 :</string>
+    <string name="reward">奖励 :</string>
+    <string name="brought_the_bounty">揭皇榜, 领赏金!</string>
+    <string name="no_brought_the_bounty">无人揭榜成功</string>
+    <string name="look_at_list">查看赏金猎人榜</string>
+    <string name="look_at_ranking_list">查看赏金猎人排行榜</string>
+    <string name="pack_up">收起</string>
+    <string name="transverse_line">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </string>
+    <string name="no_reward">很遗憾,大侠离赏金只差一步</string>
+    <string name="reward_is_haved">赏金已为大侠备好,</string>
+    <string name="reward_is_successFul">赏金发放成功</string>
+    <string name="reward_is_exchanging">赏金正在兑换中</string>
+    <string name="get_at_once">马上领取</string>
+    <string name="look_at">查看</string>
+    <string name="look_at_record">查看战绩</string>
+    <string name="send">发送</string>
+    <string name="speak">我来说两句...</string>
+    <string name="no_reward_list">非常抱歉，暂无悬赏令</string>
+    <string name="no_reward_info">非常抱歉，暂无获奖详情</string>
+    <string name="a_bounty_hunter_list">赏金猎人名单</string>
+    <string name="no_bounty_hunter_list">非常抱歉，没有人得奖</string>
+    <string name="rule_description">规则说明</string>
+    <string name="fav_fiald">收藏失败</string>
+    <string name="are_you_go">就问你：敢来不！！！</string>
+    <string name="bounty">悬赏令</string>
+    <string name="bounty_information">奖品信息:</string>
+    <string name="match_ranking">赛事排名:</string>
+    <string name="match_reward">赛事名称:</string>
+    <string name="transaction_number">交易号:</string>
+    <string name="surplus_time">剩余时间</string>
+    <string name="have_no_info">未填写信息</string>
+    <string name="file_in">立即填写</string>
+    <string name="issued">已发放</string>
+    <string name="in_conversion">正在兑换中</string>
+    <string name="expired">已过期</string>
+    <string name="day">天</string>
+    <string name="is_under_review">正在统计结果中，请稍后</string>
+    <string name="share_the_mood">来跟大家分享一下此时此刻的心情吧</string>
+    <string name="get_img_fail">获取图片失败</string>
+    <string name="please_upload_img">请先上传图片</string>
+    <string name="character">字</string>
+    <string name="also_you_can_enter">还可以输入</string>
+    <string name="submit">提交</string>
+    <string name="submit_fail">提交失败</string>
+    <string name="submit_success">提交成功</string>
+    <string name="reward_end">当前悬赏令已结束</string>
+    <string name="comment_success">评论成功</string>
+    <string name="comment_fail">评论失败</string>
+    <string name="please_click_often">请不要频繁点击</string>
+    <string name="banned_to_post">您已被禁言，请稍候提交</string>
+    <string name="up_phone">正在上传照片</string>
+
+
+    <!--LivePlayAndVideoListActivity-->
+    <string-array name="discovery_item_tilte">
+        <item>附近网吧</item>
+        <item>金币商城</item>
+        <item>直播平台</item>
+    </string-array>
+    <string-array name="discovery_item_hint">
+        <item>更多网吧</item>
+        <item>每天更新商品</item>
+        <item> %1$s个直播</item>
+    </string-array>
+    <string name="hot_liveplay">热门直播</string>
+    <string name="hot_video">热门视屏</string>
+    <string name="live_play_information_tab">信息</string>
+    <string name="live_play_ralk_tab">聊天</string>
+    <string name="live_play_history_tab">往期</string>
+    <string name="live_play_attention_btn">+ 关注</string>
+    <string name="live_play_hint"> %1$s个直播</string>
+    <string name="live_play_fans_num">粉丝 %1$s</string>
+    <string name="live_online_num">在线 %1$s</string>
+
+    <string name="my_match_card">我的参赛卡</string>
+    <string name="my_match_wallet">我的钱包</string>
+    <string name="my_order">我的订单</string>
+    <string name="my_match">我的赛事</string>
+    <string name="game_center">手游中心</string>
+    <string name="my_reward">我的悬赏令</string>
+    <string name="my_team">我的战队</string>
+
+    <string name="main_bar_match">赛事</string>
+    <string name="main_bar_find">发现</string>
+    <string name="main_bar_mine">我的</string>
+    <string name="live_play_hall_title">直播大厅</string>
+    <string name="live_play_hall_video">全部视屏</string>
+    <string name="live_video_new">最新视频</string>
+    <string name="live_video_hot">最热视频</string>
+
+    <string name="live_room_attention">+ 关注</string>
+    <string name="live_room_attentioned">已关注</string>
+    <string name="comment_hint">发表评论</string>
+    <string name="anchor_leave">主播当前不在线,看看其别的吧</string>
+    <string name="no_wifi_hint">现在没有wifi,再看要花流量费哦</string>
+    <string name="no_wifi_continue">土豪请继续</string>
+
+
+    <string-array name="spinner_live_play_line">
+        <item>wyds_player</item>
+        <item>wyds_test_android_01</item>
+        <item>wyds/wyds_test4</item>
+        <item>wyds_test03</item>
+        <item>wyds_test02</item>
+        <item>wyds_test1</item>
+    </string-array>
+
+</resources>

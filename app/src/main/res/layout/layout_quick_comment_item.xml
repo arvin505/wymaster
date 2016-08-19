@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ignore="http://schemas.android.com/tools"
+    android:id="@+id/quickCommentLlItem"
+    android:layout_width="84dp"
+    android:layout_height="79dp"
+    android:layout_marginLeft="2.5dp"
+    android:layout_marginRight="2.5dp"
+    android:background="@color/shop_bg_color"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="6dp"
+    android:paddingTop="6dp">
+
+    <ImageView
+        android:id="@+id/quickCommentIvImgItem"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/comment01" />
+
+    <TextView
+        android:id="@+id/quickCommentTvTextItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/quickCommentIvImgItem"
+        android:gravity="bottom|center_horizontal"
+        android:singleLine="true"
+        android:textColor="@color/shop_font_black_light"
+        android:textSize="@dimen/text_size_11"
+        ignore:text="吓死宝宝了" />
+
+</RelativeLayout>

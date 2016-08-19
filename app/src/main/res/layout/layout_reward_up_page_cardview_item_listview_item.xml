@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ignore="http://schemas.android.com/tools"
+    android:layout_width="281dp"
+    android:layout_height="64dp"
+    android:paddingLeft="9.5dp"
+    android:paddingRight="15dp">
+
+    <RelativeLayout
+        android:id="@+id/rewardUpCardListItemRlHeadIcon"
+        android:layout_width="45dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true">
+
+             <com.miqtech.master.client.view.CircleImageView
+                 android:id="@+id/rewardUpCardListItemIvHeadIcon"
+                 android:layout_width="40dp"
+                 android:layout_height="40dp"
+                 android:layout_centerVertical="true"
+                 android:layout_marginLeft="5dp"
+                 android:src="@drawable/default_head" />
+
+        <!--        <ImageView
+                    android:id="@+id/rewardUpCardListItemIvHeadIcon"
+                    android:layout_width="42dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/default_head" />-->
+
+        <ImageView
+            android:id="@+id/rewardUpCardListItemIvRanking"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/wanted_first"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@id/rewardUpCardListItemRlHeadIcon"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/rewardUpCardListItemTvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/card_text_color"
+                android:textSize="@dimen/text_size_15"
+                ignore:text="我要辣死你" />
+
+            <ImageView
+                android:id="@+id/rewardUpCardListItemIvIdTags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:scaleType="center"
+                android:src="@drawable/wanted_golden" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/rewardUpCardListItemTvExplain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:textColor="@color/card_text_color_9d7a4c"
+            android:textSize="@dimen/text_size_13"
+            ignore:text="我要辣死你" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/rewardUpCardListItemTvSee"
+        android:layout_width="44dp"
+        android:layout_height="18dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/netbar_btn_to_marking"
+        android:gravity="center"
+        android:text="@string/look_at"
+        android:textColor="@color/colorActionBarSelected"
+        android:textSize="@dimen/text_size_12" />
+
+    <TextView
+        android:id="@+id/rewardUpCardListItemTvRanking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textColor="@color/shop_font_black"
+        android:textSize="@dimen/text_size_12" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="55.5dp"
+        android:background="@color/card_line_color_bdab8f" />
+</RelativeLayout>

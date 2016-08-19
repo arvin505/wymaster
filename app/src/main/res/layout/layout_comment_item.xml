@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ignore="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/comment_top_title_ll_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/shop_gray_bg" />
+
+        <TextView
+            android:id="@+id/comment_top_title_tv_item"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/mobile_login_gray"
+            android:gravity="center_vertical|left"
+            android:paddingLeft="12dp"
+            android:text="@string/hot_comment"
+            android:textColor="@color/shop_buy_record_gray"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/shop_gray_bg" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/comment_detail_ll_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <com.miqtech.master.client.view.CircleImageView
+            android:id="@+id/ivUserHeader"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/default_head" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue_comment_title"
+                    android:textSize="@dimen/text_size_14"
+                    ignore:text="我要辣死你" />
+
+                <ImageView
+                    android:id="@+id/ivHunter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:src="@drawable/wanted_hunter_icon"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/shop_font_black"
+                    android:textSize="@dimen/text_size_14" />
+
+                <ImageView
+                    android:id="@+id/ivCommentImg"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="15dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/default_img"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7.5dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/shop_pay_splite_line"
+                    android:textSize="@dimen/text_size_12" />
+
+                <TextView
+                    android:id="@+id/tvDelect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/tvTime"
+                    android:text="删除"
+                    android:textColor="@color/orange"
+                    android:textSize="@dimen/text_size_12"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/reply_comment_ll_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/reply_comment" />
+
+                    <TextView
+                        android:id="@+id/reply_comment_tv_item"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="回复"
+                        android:textColor="@color/lv_item_content_text"
+                        android:textSize="@dimen/text_size_12" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/praise_comment_ll_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="36dp"
+                    android:layout_toLeftOf="@id/reply_comment_ll_item"
+                    android:gravity="center_vertical|right"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp">
+
+                    <ImageView
+                        android:id="@+id/praise_comment_iv_item"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/comment_praise_no" />
+
+                    <TextView
+                        android:id="@+id/praise_comment_tv_item"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/shop_font_black_light"
+                        android:textSize="@dimen/text_size_12" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/reply_reply_comment_ll_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/reply_frame_icom"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"></LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_view_comment_item"
+        android:layout_width="match_parent"
+        android:layout_height="0.55dp"
+        android:layout_marginLeft="48dp"
+        android:background="@color/dark_gray" />
+
+
+</LinearLayout>

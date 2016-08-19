@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="#aa000000"
+    android:orientation="horizontal">
+    <!-- 暂停播放按钮 -->
+    <ImageButton
+        android:id="@+id/ibPause"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@null"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="12dp"
+        android:src="@drawable/live_play_play_btn" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical">
+        <SeekBar
+            android:id="@+id/sbProgress"
+            style="@style/live_play_controller_SeekBar_Style" />
+    </RelativeLayout>
+    <!-- 播放过去时间 -->
+    <ImageButton
+        android:id="@+id/ibFullscreen"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:src="@drawable/live_play_fullscreen" />
+
+
+</LinearLayout>

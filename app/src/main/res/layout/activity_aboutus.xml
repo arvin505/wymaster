@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/tabBar"
+        layout="@layout/layout_include_header" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="31dp"
+        android:text="Copyright © 2015"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_size_small" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:text="浙江网竞网络科技有限公司"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_size_small" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:text="网娱大师是一款为一亿游戏用户量身打造的专属APP。每周150000红包抢到手软，网咖消费一键搞定，多重竞技赛事，在线约战，金币换购，游戏福利，更有最新最有趣的游戏资讯，游戏娱乐尽在网娱大师"
+        android:textSize="@dimen/text_size_small"
+        android:textColor="@color/black" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tabBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/blue_gray"
+        android:textSize="@dimen/text_size_small" />
+
+</RelativeLayout>

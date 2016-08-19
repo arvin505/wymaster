@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlBudgetItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="12dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="53dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/llGoldType"
+                android:layout_width="34dp"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="3dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/lineTop"
+                    android:layout_width="1dp"
+                    android:layout_height="10dp"
+                    android:background="@color/bg_gray" />
+
+                <ImageView
+                    android:id="@+id/ivGoldType"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/task_icon" />
+
+                <View
+                    android:id="@+id/lineBotton"
+                    android:layout_width="1dp"
+                    android:layout_height="10dp"
+                    android:background="@color/bg_gray" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvGoldTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:singleLine="true"
+                android:textColor="@color/black_extend_intro"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llGoldRight"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical|right"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="12dp">
+
+            <TextView
+                android:id="@+id/tvGoldNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="3dp"
+                android:drawableRight="@drawable/unfinish_icon"
+                android:textColor="@color/blue_gray"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/ivGoldRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/coin_right" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/framelayout"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@color/gary_bg"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/llGoldTypeRamark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/framelayout"
+        android:background="@color/bg_gray"
+        android:orientation="vertical"
+        android:paddingBottom="8dp"
+        android:paddingLeft="54dp"
+        android:paddingRight="12dp"
+        android:paddingTop="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="任务说明"
+            android:textColor="@color/black_extend_intro"
+            android:textSize="@dimen/text_size_12" />
+
+        <TextView
+            android:id="@+id/tvGoldTypeRamark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/font_gray"
+            android:textSize="@dimen/text_size_12" />
+    </LinearLayout>
+
+
+</RelativeLayout>

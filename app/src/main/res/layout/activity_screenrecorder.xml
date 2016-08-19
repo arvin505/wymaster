@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/ll_root"
+    android:background="@color/mobile_login_gray"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_include_header" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/mobile_login_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+
+            <EditText
+                android:id="@+id/et_live_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:maxLength="18"
+                android:hint="请输入直播标题"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:singleLine="true"
+                android:textColor="@color/shop_font_black"
+                android:textColorHint="@color/c7_gray"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/img_clear"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_clean"
+                android:padding="15dp"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/shop_splite_line" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+
+            <EditText
+                android:id="@+id/et_live_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:hint="请输入/选择直播内容"
+                android:maxLength="12"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:singleLine="true"
+                android:textColor="@color/shop_font_black"
+                android:textColorHint="@color/c7_gray"
+                android:textSize="15sp" />
+            <ImageView
+                android:id="@+id/img_choose_game"
+                android:layout_width="wrap_content"
+                android:src="@drawable/coin_right"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dimen_15dp"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/shop_splite_line" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/mobile_login_gray" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/shop_splite_line" />
+
+        <RadioGroup
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:id="@+id/rg_orientation"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_orientation_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="    横屏"
+                android:textSize="15sp"
+                android:button="@drawable/radio_live_selector"
+                android:textColor="@color/shop_font_black" />
+
+            <RadioButton
+                android:id="@+id/rb_orientation_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/radio_live_selector"
+                android:text="    竖屏"
+                android:textColor="@color/shop_font_black" />
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/shop_splite_line" />
+
+        <RadioGroup
+            android:id="@+id/rg_quality"
+            android:layout_width="match_parent"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_quality_m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="    标清"
+                android:button="@drawable/radio_live_selector"
+                android:textColor="@color/shop_font_black"  />
+
+            <RadioButton
+                android:id="@+id/rb_quality_h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="    高清"
+                android:button="@drawable/radio_live_selector"
+                android:textColor="@color/shop_font_black" />
+
+            <RadioButton
+                android:id="@+id/rb_quality_xh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="    超清"
+                android:button="@drawable/radio_live_selector"
+                android:textColor="@color/shop_font_black"  />
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/shop_splite_line" />
+
+        <Button
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:id="@+id/btn_start"
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:layout_marginTop="39dp"
+            android:textSize="17sp"
+            android:background="@drawable/bg_live_btn"
+            android:text="开始直播" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/coins_header2"
+    android:layout_width="match_parent"
+    android:layout_height="54dp"
+    android:background="@color/white"
+    android:paddingRight="12dp"
+    android:paddingLeft="12dp"
+    android:paddingTop="12dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvGoldTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLength="14"
+                android:maxLines="1"
+                android:singleLine="false"
+                android:text="晚上资料"
+                android:textColor="@color/black_extend_intro"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvGoldNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="+45"
+                android:textColor="@color/blue_gray"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="2dp"
+            android:text="@string/coin_task_remark"
+            android:textColor="@color/lv_item_content_text"
+            android:textSize="@dimen/text_size_12" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvfinish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/shape_white_bg_corne_gray"
+        android:textColor="@color/black_extend_intro"
+        android:textSize="13sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray_bg" />
+
+</RelativeLayout>

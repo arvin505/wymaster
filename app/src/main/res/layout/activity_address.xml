@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mobile_login_gray"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_include_header" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/mobile_login_gray"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        android:text="@string/address_hint"
+        android:textColor="@color/address_hint" />
+
+    <RelativeLayout
+        android:id="@+id/rlReceiver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="12dp">
+
+        <TextView
+            android:id="@+id/tvReceiver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:minEms="4"
+            android:text="@string/receiver"
+            android:textColor="@color/shop_font_black"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/etReceiver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tvReceiver"
+            android:background="@color/transparent"
+            android:padding="12dp"
+            android:textColor="@color/shop_font_black"
+            android:textCursorDrawable="@null"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/imgCleanReceiver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="12dp"
+            android:src="@drawable/icon_clean"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="12dp">
+
+        <TextView
+            android:id="@+id/tvPhoneNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:minEms="4"
+            android:text="@string/phonenumber"
+            android:textColor="@color/shop_font_black"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/etPhoneNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tvPhoneNum"
+            android:background="@color/transparent"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:padding="12dp"
+            android:textColor="@color/shop_font_black"
+            android:textCursorDrawable="@null"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/imgCleanPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="12dp"
+            android:src="@drawable/icon_clean"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="12dp">
+
+        <TextView
+            android:id="@+id/tvAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:minEms="4"
+            android:text="@string/address"
+            android:textColor="@color/shop_font_black"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/etAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tvAddress"
+            android:background="@color/transparent"
+            android:hint="@string/address_detail_hint"
+            android:padding="12dp"
+            android:textColor="@color/shop_font_black"
+            android:textColorHint="@color/address_hint"
+            android:textCursorDrawable="@null"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/imgCleanAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="12dp"
+            android:src="@drawable/icon_clean"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:height="39dp"
+        android:background="@drawable/btn_login"
+
+        android:clickable="false"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+
+        android:text="@string/countersign"
+        android:textColor="@color/white"
+
+        android:textSize="21sp" />
+</LinearLayout>

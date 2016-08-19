@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:text="全部视频"
+    android:gravity="center"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:textColor="@color/textColorBattle"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:singleLine="true"
+    android:background="@drawable/bg_lable_video_unselected"
+    android:textSize="12sp"
+    android:layout_height="30dp">
+
+</TextView>

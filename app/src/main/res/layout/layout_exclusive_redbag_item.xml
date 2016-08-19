@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/exclusive_redbag_bg"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp"
+    android:paddingTop="16dp">
+
+    <TextView
+        android:id="@+id/tvAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:text="5元网费增值券"
+        android:textColor="@color/light_orange"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvCanUseAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="满50元可用"
+        android:textColor="@color/black_extend_intro"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvExclusiveTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="有效期：2016年2月26日 18:00"
+        android:textColor="@color/lv_item_content_text"
+        android:textSize="@dimen/text_size_12" />
+</LinearLayout>

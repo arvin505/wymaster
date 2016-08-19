@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlEventDetail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_include_header" />
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="44dp"
+            android:layout_marginTop="45dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/ivOfficalEvent"
+                        android:layout_width="match_parent"
+                        android:layout_height="181dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/default_img" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/fight_gradient_bg_ad"
+                        android:gravity="right"
+                        android:padding="9dp">
+
+                        <TextView
+                            android:id="@+id/tvSponsor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:drawableLeft="@drawable/event_detail_person"
+                            android:drawablePadding="6dp"
+                            android:paddingRight="3dp"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_11" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingBottom="13dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="15dp">
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="6dp"
+                        android:text=""
+                        android:textColor="@color/shop_font_black"
+                        android:textSize="@dimen/text_size_16"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/llApplyTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/event_detail_apply_time"
+                            android:drawablePadding="2dp"
+                            android:text="@string/event_detail_apply_time"
+                            android:textColor="@color/textColorGray"
+                            android:textSize="@dimen/text_size_13" />
+
+                        <TextView
+                            android:id="@+id/tvApplyTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="8dp"
+                            android:text="5.28 15:00 -5.29 16:00"
+                            android:textColor="@color/textColorGray"
+                            android:textSize="@dimen/text_size_14" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llBeginMatchTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="13dp"
+                            android:text="@string/event_detail_begin_match_time"
+                            android:textColor="@color/textColorGray"
+                            android:textSize="@dimen/text_size_13" />
+
+                        <TextView
+                            android:id="@+id/tvBeginMatchTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="9dp"
+                            android:text="5.28 15:00"
+                            android:textColor="@color/textColorGray"
+                            android:textSize="@dimen/text_size_14" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llMatchTeam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/event_detail_match_team"
+                            android:drawablePadding="3dp"
+                            android:text="@string/event_detail_match_team"
+                            android:textColor="@color/textColorGray"
+                            android:textSize="@dimen/text_size_13" />
+
+                        <com.miqtech.master.client.view.CornerProgressView
+                            android:id="@+id/pbMatch"
+                            android:layout_width="200dp"
+                            android:layout_height="12dp"
+                            android:layout_marginLeft="9dp"
+                            android:visibility="visible"
+                            app:borderColor="#ff5f01"
+                            app:endColor="#ff5f01"
+                            app:progressBackground="#ffb081"
+                            app:startColor="#ff5f01" />
+
+                        <TextView
+                            android:id="@+id/tvMatchTeam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="9dp"
+                            android:text="10/30"
+                            android:textColor="@color/textColorGray"
+                            android:textSize="@dimen/text_size_14" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llMatchAward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/match_present"
+                            android:drawablePadding="3dp"
+                            android:text="@string/event_detail_match_award"
+                            android:textColor="@color/textColorGray"
+                            android:textSize="@dimen/text_size_13" />
+
+                        <TextView
+                            android:id="@+id/tvMatchAward"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="9dp"
+                            android:lineSpacingExtra="9dp"
+                            android:text=""
+                            android:textColor="@color/textColorGray"
+                            android:textSize="@dimen/text_size_14" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/shop_bg_color"
+                    android:orientation="vertical"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+
+                    <LinearLayout
+                        android:id="@+id/llMatchRule"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/event_detail_bg"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvMatchRule"
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:layout_marginLeft="12dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/event_detail_match_rule"
+                            android:textColor="@color/shop_font_black"
+                            android:textSize="@dimen/text_size_15"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/shop_gray_bg" />
+
+                        <TextView
+                            android:id="@+id/tvMatchContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="8dp"
+                            android:padding="12dp"
+                            android:text=""
+                            android:textColor="@color/textColorGray"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <View
+                            android:id="@+id/matchRuleSpliteLine"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/shop_gray_bg" />
+
+                        <LinearLayout
+                            android:id="@+id/llMatchMore"
+                            android:layout_width="match_parent"
+                            android:layout_height="39dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvMatchMore"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="6dp"
+                                android:drawableRight="@drawable/event_icon_down"
+                                android:padding="5dp"
+                                android:text="@string/event_detail_more"
+                                android:textColor="@color/light_orange"
+                                android:textSize="@dimen/text_size_13" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <com.miqtech.master.client.view.MyListView
+                        android:id="@+id/lvMatchProgress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/event_detail_bg"
+                        android:divider="@null"></com.miqtech.master.client.view.MyListView>
+
+                    <com.miqtech.master.client.view.MyListView
+                        android:id="@+id/lvInformationDynamic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/event_detail_bg"
+                        android:divider="@null"></com.miqtech.master.client.view.MyListView>
+
+                    <com.miqtech.master.client.view.MyListView
+                        android:id="@+id/lvNewComment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/event_detail_bg"
+                        android:divider="@null"></com.miqtech.master.client.view.MyListView>
+
+                    <View
+                        android:id="@+id/bottomBackground"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:background="@color/shop_bg_color"></View>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llCountDown"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:background="@color/light_orange_percent_70"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvMatchState"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="报名即将结束"
+                        android:textColor="@color/shop_bg_color"
+                        android:textSize="@dimen/text_size_12" />
+
+                    <TextView
+                        android:id="@+id/tvCountDown"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center"
+                        android:text="30s"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_12" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/bottomLine"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tvMathchComment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/reply_comment_office"
+                    android:drawablePadding="6dp"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="21dp"
+                    android:paddingRight="21dp"
+                    android:paddingTop="8dp"
+                    android:text="评论"
+                    android:textColor="@color/shop_font_black"
+                    android:textSize="@dimen/text_size_13" />
+
+                <TextView
+                    android:id="@+id/tvApply"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@id/tvMathchComment"
+                    android:background="@color/orange"
+                    android:gravity="center"
+                    android:text="立即报名"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_15" />
+            </RelativeLayout>
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

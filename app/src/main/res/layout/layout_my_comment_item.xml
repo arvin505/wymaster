@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/my_comment_item_ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="17dp"
+    android:paddingRight="17dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="37dp"
+            android:layout_height="37dp">
+
+            <com.miqtech.master.client.view.CircleImageView
+                android:id="@+id/ivUserHeader"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:src="@drawable/default_head" />
+
+            <ImageView
+                android:id="@+id/ivIsRead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/is_read_message"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_marginLeft="10dp"
+            android:paddingBottom="1dp"
+            android:paddingTop="1dp">
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:gravity="top"
+                android:text="5445"
+                android:textColor="#7D7D7D"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/tvUserName"
+                android:gravity="bottom"
+                android:text="5445"
+                android:textColor="#7D7D7D"
+                android:textSize="@dimen/text_size_12" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="47dp"
+        android:layout_marginTop="10dp"
+        android:gravity="left"
+        android:textColor="@color/black_extend_intro"
+        android:textSize="@dimen/text_size_14" />
+
+    <TextView
+        android:id="@+id/tvReply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="47dp"
+        android:layout_marginTop="7.5dp"
+        android:background="@color/no_read"
+        android:padding="5dp"
+        android:textColor="@color/lv_item_content_text"
+        android:textSize="@dimen/text_size_12" />
+
+
+    <View
+        android:id="@+id/line_view_comment_item"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="47dp"
+        android:background="#b3b3b3" />
+
+</LinearLayout>

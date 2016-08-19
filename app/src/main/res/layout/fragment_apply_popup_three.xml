@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/no_read"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_match_popupwindow_header" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/line" />
+
+    <LinearLayout
+        android:id="@+id/llFragmentIdentityCreateCorps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/llFragmentIdentityCropsExplain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/corp_name_explain"
+            android:textColor="@color/textColorBattle"
+            android:textSize="@dimen/text_size_12" />
+
+        <EditText
+            android:id="@+id/etFragmentIdentityCorpsName"
+            android:layout_width="290dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/corps_name_solid_white_stroke_corners"
+            android:gravity="center"
+            android:hint="@string/corp_name"
+            android:maxLength="16"
+            android:textColorHint="@color/font_gray"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/tvFragmentIdentityWordsNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:textColor="@color/font_gray"
+            android:textSize="@dimen/text_size_12" />
+    </LinearLayout>
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swRefreshFragmentIdentity"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/ryFragmentIdentity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_order_msg_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:minHeight="82dp"
+    android:paddingLeft="@dimen/information_toleft_toright"
+    android:paddingRight="@dimen/information_toleft_toright">
+
+
+    <RelativeLayout
+        android:id="@+id/order_msg_item"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:id="@+id/icon_order_msg_item"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/message_shop" />
+
+        <ImageView
+            android:id="@+id/ivIsRead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="3dp"
+            android:src="@drawable/is_read_message"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="6dp"
+        android:layout_toRightOf="@id/order_msg_item"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/title_order_msg_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:gravity="left"
+                android:singleLine="true"
+                android:text="支付网费"
+                android:textColor="@color/black_extend_intro"
+                android:textSize="@dimen/text_size_15" />
+
+            <TextView
+                android:id="@+id/time_order_msg_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/title_order_msg_item"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/title_order_msg_item"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="2015/2/1"
+                android:textColor="@color/lv_item_content_text"
+                android:textSize="@dimen/text_size_11" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/content_order_msg_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="您在网娱一店消费了10元"
+            android:textColor="@color/lv_item_content_text"
+            android:textSize="@dimen/text_size_12" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/buttom_line" />
+</RelativeLayout>

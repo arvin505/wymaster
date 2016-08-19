@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/information_head_height">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/information_head_text_height"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/head_vp_img"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingBottom="2dp"
+        android:paddingLeft="@dimen/information_toleft_toright"
+        android:paddingRight="@dimen/information_toleft_toright"
+        android:paddingTop="2dp">
+
+        <LinearLayout
+            android:id="@+id/ll_indicator"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center|right"
+            android:orientation="horizontal"
+
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/ll_indicator"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/banner_extend_infor_fragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/extend_banner"
+                android:gravity="center"
+                android:text="@string/information"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_10" />
+
+            <TextView
+                android:id="@+id/banner_extend_intro_infor_fragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/banner_banner_intro"
+                android:textColor="@color/black_extend_intro"
+                android:textSize="@dimen/text_size_12" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.antonyt.infiniteviewpager.InfiniteViewPager
+        android:id="@+id/head_vp_img"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/information_head_image_height" />
+</RelativeLayout>
