@@ -150,11 +150,11 @@ public class RewardCardAdapter extends CardAdapter<Reward> {
             changeStatueLlBottomAndTvStatue(0, holder);
             //显示倒计时f
             if (bean.getTime() > 0) {
-                holder.rewardUpCardLlTime.initView((int) (bean.getTime() / 1000),
+                holder.rewardUpCardLlTime.initView(getShowPosition(position),
                         holder.tvStatuExplian,
                         holder.llBottm,
                         holder.ivBottomImg,
-                        holder.tvBottomStatu);
+                        holder.tvBottomStatu, mData);
                 holder.rewardUpCardLlTime.setVisibility(View.VISIBLE);
             } else {
                 changeStatueLlBottomAndTvStatue(1, holder);
@@ -207,9 +207,12 @@ public class RewardCardAdapter extends CardAdapter<Reward> {
                     case 1://1-奖品发放成功
                         holder.tvStatuExplian.setTextColor(mContext.getResources().getColor(R.color.colorActionBarSelected));
                         statuExplian = mContext.getResources().getString(R.string.reward_is_successFul);
+                        holder.ivCardStatue.setVisibility(View.VISIBLE);
+                        holder.tvCardState.setVisibility(View.GONE);
                         break;
                     case 2://2-奖品非网娱自有且用户未填写信息
                         statuExplian = mContext.getResources().getString(R.string.reward_is_haved);
+                        holder.tvCardState.setVisibility(View.VISIBLE);
                         holder.ivCardStatue.setVisibility(View.VISIBLE);
                         break;
                     case 3://3-奖品非网娱自有商品且用户填写信息
@@ -258,8 +261,10 @@ public class RewardCardAdapter extends CardAdapter<Reward> {
                             if (reward.getType() == 3) {//排行榜,显示listview
                                 if (reward.isShowListView()) {
                                     hideListView(holder, reward);
+                                    observerable.notifyChange(Observerable.ObserverableType.REWARD_COMMENT, 9);
                                 } else {
                                     showListView(holder, reward);
+                                    observerable.notifyChange(Observerable.ObserverableType.REWARD_COMMENT, 8);
                                 }
                             }
                         } else {
@@ -298,6 +303,7 @@ public class RewardCardAdapter extends CardAdapter<Reward> {
         holder.ivRuleTwo.startAnimation(animation);
 
         holder.ivCardStatue.setVisibility(View.GONE);
+        holder.tvCardState.setVisibility(View.GONE);
         holder.llCardStatue.setEnabled(true);
 //        holder.bottomViewStub.setVisibility(View.GONE);
         holder.tvBottomStatu.setVisibility(View.VISIBLE);
@@ -558,6 +564,8 @@ public class RewardCardAdapter extends CardAdapter<Reward> {
         TextView tvStatuExplian;
         @Bind(R.id.rewardUpCardIvCardStatuImage)
         LinearLayout ivCardStatue;
+        @Bind(R.id.rewardUpCardTvCardState)
+        TextView tvCardState;
 
         @Bind(R.id.rewardUpCardLlBottom)
         LinearLayout llBottm;

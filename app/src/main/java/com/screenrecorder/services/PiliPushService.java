@@ -9,9 +9,11 @@ import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.PixelFormat;
 import android.media.projection.MediaProjection;
 import android.media.projection.MediaProjectionManager;
+import android.net.ConnectivityManager;
 import android.os.AsyncTask;
 import android.os.Binder;
 import android.os.Build;
@@ -27,8 +29,11 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.google.android.exoplayer.C;
 import com.miqtech.master.client.R;
 import com.miqtech.master.client.application.WangYuApplication;
+import com.miqtech.master.client.broadcastcontroller.NetStateChangeReceiver;
+import com.miqtech.master.client.simcpux.Util;
 import com.miqtech.master.client.utils.LogUtil;
 import com.miqtech.master.client.utils.ToastUtil;
 import com.miqtech.master.client.utils.Utils;
@@ -109,6 +114,7 @@ public class PiliPushService extends Service implements StreamingStateListener, 
 
     private int statusHeight = 0;
 
+
     /**
      * 防止被kill
      */
@@ -164,6 +170,7 @@ public class PiliPushService extends Service implements StreamingStateListener, 
         notification.flags = Notification.FLAG_NO_CLEAR;
         startForeground(1, notification);
 
+        registerReceiver(receiver, new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
         return START_STICKY;
     }
 
@@ -201,15 +208,20 @@ public class PiliPushService extends Service implements StreamingStateListener, 
 
     @Override
     public void frameAvailable(boolean endOfStream) {
-        long currentMills = System.currentTimeMillis();
-        if (currentMills - lastSystemMills > frameInteval) {
-            if (mStreamingManager != null) {
-                mStreamingManager.frameAvailable(endOfStream);
-                lastSystemMills = currentMills;
+        try {
+            long currentMills = System.currentTimeMillis();
+            if (currentMills - lastSystemMills > frameInteval) {
+                if (mStreamingManager != null) {
+                    mStreamingManager.frameAvailable(endOfStream);
+                    lastSystemMills = currentMills;
+                }
+            } else {
+                LogUtil.e(TAG, "frame return ----------    " + (currentMills - lastSystemMills));
             }
-        } else {
-            LogUtil.e(TAG, "frame return ----------    " + (currentMills - lastSystemMills));
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+
 
     }
 
@@ -246,16 +258,21 @@ public class PiliPushService extends Service implements StreamingStateListener, 
                 }
                 break;
             case IOERROR:
-                Toast.makeText(WangYuApplication.appContext, "网络错误", 0).show();
+                try {
+                    Toast.makeText(WangYuApplication.appContext, "网络错误", 0).show();
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+
                 break;
 
         }
     }
 
+
     @Override
     public void onCreate() {
         super.onCreate();
-
     }
 
     public void startActivityForResult() {
@@ -449,5 +466,16 @@ public class PiliPushService extends Service implements StreamingStateListener, 
     public void releaseActivity() {
         mActivity = null;
     }
+
+    private NetStateChangeReceiver receiver = new NetStateChangeReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            super.onReceive(context, intent);
+            if (Utils.checkNetworkState() == 0 &&isStreaming()) {
+                stopPush();
+                ToastUtil.showToast("网络连接已断开，直播停止", PiliPushService.this);
+            }
+        }
+    };
 
 }

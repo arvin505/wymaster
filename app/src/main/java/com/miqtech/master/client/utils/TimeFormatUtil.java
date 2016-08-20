@@ -1,5 +1,6 @@
 package com.miqtech.master.client.utils;
 
+import android.support.annotation.NonNull;
 import android.widget.TextView;
 
 import java.text.ParseException;
@@ -221,4 +222,12 @@ public class TimeFormatUtil {
         return retStr;
     }
 
+    public static String format(@NonNull String timeStr, @NonNull String mode) {
+        try {
+            return new SimpleDateFormat(mode).format(dateFormat.parse(timeStr));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return timeStr;
+    }
 }

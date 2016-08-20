@@ -55,6 +55,7 @@ public class RewardThePrizeActivity extends BaseActivity {
     private int pageSize = 10;
 
     private int countAll;
+    private int isLast = 0;
 
     @Override
     protected void init() {
@@ -88,9 +89,12 @@ public class RewardThePrizeActivity extends BaseActivity {
 
             @Override
             public void onPullUpToRefresh(PullToRefreshBase<HasErrorListView> refreshView) {
-                if (rewardGradeList.size() < countAll) {
+                if (isLast != 1) {
                     page++;
                     loadData();
+                }else{
+                    showToast(getResources().getString(R.string.load_no));
+                    pullToRefreshListView.onRefreshComplete();
                 }
             }
 
@@ -145,6 +149,7 @@ public class RewardThePrizeActivity extends BaseActivity {
                     if (page == 1) {
                         rewardGradeList.clear();
                         countAll = jsonObject.getInt("total");
+                        isLast = jsonObject.getInt("isLast");
                         tvTitle.setText(getResources().getString(R.string.a_bounty_hunter_list) + "(" + jsonObject.getInt("total") + ")");
                     }
 

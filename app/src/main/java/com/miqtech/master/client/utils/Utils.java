@@ -193,6 +193,40 @@ public class Utils {
     }
 
     /**
+     * 检查网络状态  0 没有网络  1有wifi 2 有gprs 3 既有wifi也有gprs
+     * @return
+     */
+    public static int checkNetworkState() {
+        int type = 0;
+        boolean flag=false;
+        //得到网络连接信息
+         ConnectivityManager  manager = (ConnectivityManager) WangYuApplication.getGlobalContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        //去进行判断网络是否连接
+        if (manager.getActiveNetworkInfo() != null) {
+            flag = manager.getActiveNetworkInfo().isAvailable();
+        }
+        if (!flag) {
+            type=0;
+        } else {
+            NetworkInfo.State gprs = manager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState();
+            NetworkInfo.State wifi = manager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState();
+            if((gprs == NetworkInfo.State.CONNECTED || gprs == NetworkInfo.State.CONNECTING)
+                    && (wifi == NetworkInfo.State.CONNECTED || wifi == NetworkInfo.State.CONNECTING)){
+                type = 3;
+            }else {
+                if (gprs == NetworkInfo.State.CONNECTED || gprs == NetworkInfo.State.CONNECTING) {
+                    type = 2;
+                }
+                //判断为wifi状态下才加载广告，如果是GPRS手机网络则不加载！
+                if (wifi == NetworkInfo.State.CONNECTED || wifi == NetworkInfo.State.CONNECTING) {
+                    type = 1;
+                }
+            }
+
+        }
+        return type;
+    }
+    /**
      * 得到数的形式 ： 6555 , 9.6万,9.6亿
      *
      * @param i

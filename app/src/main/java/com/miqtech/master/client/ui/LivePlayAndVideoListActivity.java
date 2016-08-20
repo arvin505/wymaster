@@ -7,6 +7,7 @@ import android.os.Build;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.view.Window;
 import android.widget.TextView;
 
 import com.miqtech.master.client.R;
@@ -19,15 +20,14 @@ import com.miqtech.master.client.http.HttpConstant;
 import com.miqtech.master.client.ui.baseactivity.BaseActivity;
 import com.miqtech.master.client.utils.GsonUtil;
 import com.miqtech.master.client.utils.LogUtil;
-import com.screenrecorder.ui.ScreenRecorderActivity;
 import com.miqtech.master.client.view.pullToRefresh.PullToRefreshBase;
 import com.miqtech.master.client.view.pullToRefresh.PullToRefreshRecyclerView;
+import com.screenrecorder.ui.ScreenRecorderActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.IllegalFormatCodePointException;
 import java.util.List;
 
 import butterknife.Bind;
@@ -53,7 +53,9 @@ public class LivePlayAndVideoListActivity extends BaseActivity implements View.O
     @Override
     protected void init() {
         super.init();
+        getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
         setContentView(R.layout.activity_liveplay_and_video_layout);
+        LogUtil.d(TAG,"开始");
         ButterKnife.bind(this);
         context = LivePlayAndVideoListActivity.this;
         initView();

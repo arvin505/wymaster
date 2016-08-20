@@ -4,10 +4,9 @@ package com.miqtech.master.client.http;
  * Created by Administrator on 2015/11/19 0019.
  */
 public class HttpConstant {
-
-    public static String SERVICE_HTTP_AREA = "http://172.16.2.62/";
+//        public static String SERVICE_HTTP_AREA = "http://172.16.2.62/";
 //    public static String SERVICE_HTTP_AREA = "http://172.16.2.14/";
-    //   public static String SERVICE_HTTP_AREA = "http://wy.api.wangyuhudong.com/";
+    public static String SERVICE_HTTP_AREA = "http://wy.api.wangyuhudong.com/";
 //    public static String SERVICE_HTTP_AREA = "http://api.wangyuhudong.com/";
 
     /**
@@ -467,6 +466,8 @@ public class HttpConstant {
     public static final String INFORMATION_URL = "v2/activity/info/share/info?id=";
     //悬赏令分享
     public static final String V2_SHARE_BOUNTY = "v2/share/bountyShare?bountyId=";
+    //
+    public static final String LIVE_SHARE="v4/live/liveShare?id=";
 
     /**
      * 竞技项目列表

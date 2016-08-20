@@ -65,7 +65,7 @@ public class MyAmuseAdapter extends BaseAdapter {
         } else {
             holder = (ReleaseByShelfMatchViewHolder) convertView.getTag();
         }
-
+        setReleaseBySelfView(holder,position);
 
         return convertView;
     }

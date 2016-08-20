@@ -67,7 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="@dimen/distance_20dp"
+            android:layout_marginBottom="34dp"
             android:layout_marginTop="50dp"
             android:src="@drawable/blank_mine"></ImageView>
 
@@ -79,7 +79,7 @@
             android:paddingLeft="25dp"
             android:paddingRight="25dp"
             android:text="矮油，木有赛事动态啦"
-            android:textColor="@color/black_extend_intro"
+            android:textColor="@color/shop_buy_record_gray"
             android:textSize="@dimen/text_size_14" />
     </LinearLayout>
 </LinearLayout>

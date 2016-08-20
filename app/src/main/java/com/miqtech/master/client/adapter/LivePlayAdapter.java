@@ -102,7 +102,7 @@ public class LivePlayAdapter extends RecyclerView.Adapter {
                 } else if (type == 1) {
                     ((EmptyHolder) holder).errTitle.setText("直播被怪兽抓走了，我们正在全力营救!");
                 } else if (type == 2) {
-                    ((EmptyHolder) holder).errTitle.setText("该栏目下没有视屏");
+                    ((EmptyHolder) holder).errTitle.setText("该栏目下没有视频");
                 }
             }else{
                 ((EmptyHolder) holder).errTitle.setText("网络不给力,请检查网络再试试");
@@ -204,7 +204,8 @@ public class LivePlayAdapter extends RecyclerView.Adapter {
                         intent.putExtra("id", finalData.getId() + "");
                         intent.putExtra("rtmp",finalData.getRtmp());
                         mContext.startActivity(intent);
-                    }
+                        }
+
                 }
             });
             if (type == 1) {
@@ -260,7 +261,7 @@ public class LivePlayAdapter extends RecyclerView.Adapter {
         }
         LogUtil.d(TAG, "setupVideo" + (position - 1) + ":::::");
         if (data != null) {
-            AsyncImage.loadPhoto(mContext, HttpConstant.SERVICE_UPLOAD_AREA + data.getIcon(), holder.ivVideoPic);
+            AsyncImage.loadPhoto(mContext,data.getIcon(), holder.ivVideoPic);
             holder.tvPlayNum.setText(Utils.calculate(data.getPlayTimes(), 10000, "万"));
             holder.tvVideoTitle.setText(data.getTitle());
             holder.tvVideoContent.setText(data.getNickname());

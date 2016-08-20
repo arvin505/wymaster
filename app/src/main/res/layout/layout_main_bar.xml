@@ -29,7 +29,6 @@
             android:drawableTop="@drawable/icon_bar_match_selected"
             android:gravity="center"
             android:text="@string/main_bar_match"
-
             android:textColor="@color/colorActionBarSelected"
             android:textSize="11sp" />
 
@@ -66,9 +65,7 @@
             android:drawableTop="@drawable/icon_bar_info_unselected"
             android:gravity="center"
             android:text="@string/main_bar_mine"
-
             android:textColor="@color/textColorGray"
             android:textSize="11sp" />
-
     </LinearLayout>
 </LinearLayout>

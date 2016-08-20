@@ -11,6 +11,7 @@ import com.miqtech.master.client.ui.InternetBarActivityV2;
 import com.miqtech.master.client.ui.MainActivity;
 import com.miqtech.master.client.ui.OfficalEventActivity;
 import com.miqtech.master.client.ui.RecreationMatchDetailsActivity;
+import com.miqtech.master.client.ui.RewardActivity;
 import com.miqtech.master.client.ui.StartActivity;
 import com.miqtech.master.client.ui.YueZhanDetailsActivity;
 import com.miqtech.master.client.ui.baseactivity.BaseActivity;
@@ -27,6 +28,8 @@ public class JumpManager extends BaseActivity {
     private static final String MATCH = "match"; //约战
     private static final String AMUSE = "amuse"; //娱乐赛
     private static final String ACTIVITY = "activity"; //官方活动
+    private static final String REWARD="bountying"; //悬赏令
+    private static final String REWARD2="bounty"; //悬赏令
 
     private String[] schemeDatas;
     private boolean hasExtras = false;
@@ -93,7 +96,18 @@ public class JumpManager extends BaseActivity {
                 extraBundles.putString("id", schemeDatas[2]);
                 extraBundles.putString("key", "matchId");
                 break;
-
+            case REWARD:
+                extraIntent.setClass(this, RewardActivity.class);
+                extraBundles.putString("action", RewardActivity.class.getName());
+                extraBundles.putInt("rewardId", Integer.valueOf(schemeDatas[2]));
+                extraBundles.putString("isEnd", 0+"");
+                break;
+            case REWARD2:
+                extraIntent.setClass(this, RewardActivity.class);
+                extraBundles.putString("action", RewardActivity.class.getName());
+                extraBundles.putInt("rewardId", Integer.valueOf(schemeDatas[2]));
+                extraBundles.putString("isEnd", 1+"");
+                break;
         }
 
         if (AppManager.getAppManager().findActivity(MainActivity.class)) {

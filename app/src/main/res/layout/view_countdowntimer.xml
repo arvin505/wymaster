@@ -9,7 +9,6 @@
     <TextView
         android:id="@+id/tv_hour_decade"
         style="@style/RushBuyCountDownTimerViewStyle"
-        android:layout_marginRight="6dp"
         />
 
     <TextView
@@ -20,24 +19,31 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:background="@android:color/white"
         android:gravity="center"
-        android:text=":"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:textColor="#4F4242"
-        android:textSize="13sp" />
+        android:text="小时"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="6dp"
+        android:textColor="@color/orange"
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/tv_min_decade"
         style="@style/RushBuyCountDownTimerViewStyle"
-        android:layout_marginRight="6dp"
         />
 
     <TextView
         android:id="@+id/tv_min_unit"
         style="@style/RushBuyCountDownTimerViewStyle"
         android:layout_marginLeft="1dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="分钟"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:textColor="@color/orange"
+        android:textSize="15sp"
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -54,7 +60,6 @@
         style="@style/RushBuyCountDownTimerViewStyle"
         android:visibility="gone"
         />
-
     <TextView
         android:id="@+id/tv_sec_unit"
         style="@style/RushBuyCountDownTimerViewStyle"

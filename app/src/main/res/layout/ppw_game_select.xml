@@ -13,6 +13,31 @@
         android:stretchMode = "columnWidth"
         android:horizontalSpacing = "1px"
         android:verticalSpacing = "1px"
-        android:numColumns="3" />
+        android:numColumns="3"
+        android:paddingBottom="1px"/>
+    <LinearLayout
+        android:id="@+id/llAllLive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        >
+        <TextView
+            android:id="@+id/tvAllLive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:textSize="@dimen/text_size_15"
+            android:textColor="@color/light_orange"
+            android:text="@string/all_live"
+            android:background="@drawable/shape_all_live_bg"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingRight="22dp"
+            android:paddingLeft="22dp"
+            />
+    </LinearLayout>
 
 </LinearLayout>

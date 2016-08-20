@@ -17,6 +17,7 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
+import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -273,6 +274,12 @@ public class LivePlayListActivity extends BaseActivity implements View.OnClickLi
             case R.id.viewHidden:
                 selectPopWindow.dismiss();
                 break;
+            case R.id.tvAllLive:
+                if(selectPopWindow!=null && selectPopWindow.isShowing()){
+                    selectPopWindow.dismiss();
+                    getInfomations(0);
+                }
+                break;
         }
     }
     /**
@@ -301,9 +308,11 @@ public class LivePlayListActivity extends BaseActivity implements View.OnClickLi
             selectPopWindow.setAnimationStyle(R.style.pop_anim);
             View popView = LayoutInflater.from(context).inflate(R.layout.ppw_game_select, null);
             GridView gridView = (GridView) popView.findViewById(R.id.gvGame);
+            TextView tvAllLive=(TextView)popView.findViewById(R.id.tvAllLive);
             GameSelectAdapter adapter =new GameSelectAdapter(context,gameInfos);
             gridView.setAdapter(adapter);
             viewHidden.setOnClickListener(this);
+            tvAllLive.setOnClickListener(this);
             gridView.setOnItemClickListener(this);
             selectPopWindow.setContentView(popView);
             selectPopWindow.setOutsideTouchable(true);

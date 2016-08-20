@@ -203,8 +203,9 @@ public class MyOrderActivity extends BaseActivity implements View.OnClickListene
                 prlvOrderlist.onRefreshComplete();
                 mPayOrderAdapter.notifyDataSetChanged();
             } else if (method.equals(HttpConstant.DELETE_ORDER)) {
-                if (mCurrentPosition >= 0)
+                if (mCurrentPosition >= 0){
                     mPayOrder.remove(mCurrentPosition);
+                }
                 mCurrentPosition = -1;
                 ToastUtil.showToast("订单已删除", mContext);
                 mPayOrderAdapter.notifyDataSetChanged();

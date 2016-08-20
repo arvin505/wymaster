@@ -177,14 +177,12 @@
     </style>
 
     <style name="RushBuyCountDownTimerViewStyle">
-        <item name="android:layout_width">24dp</item>
-        <item name="android:layout_height">24dp</item>
-        <item name="android:background">@drawable/corner_black_bg</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center</item>
         <item name="android:text">0</item>
-        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColor">@color/orange</item>
         <item name="android:textSize">15sp</item>
-        <item name="android:textStyle">bold</item>
     </style>
 
 

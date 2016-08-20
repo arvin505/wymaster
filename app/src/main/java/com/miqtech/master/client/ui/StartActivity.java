@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.os.PersistableBundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
@@ -20,6 +21,7 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 import com.miqtech.master.client.R;
 import com.miqtech.master.client.application.WangYuApplication;
+import com.miqtech.master.client.constant.Constant;
 import com.miqtech.master.client.entity.Config;
 import com.miqtech.master.client.http.HttpConstant;
 import com.miqtech.master.client.ui.baseactivity.BaseActivity;
@@ -27,6 +29,7 @@ import com.miqtech.master.client.utils.AsyncImage;
 import com.miqtech.master.client.utils.GsonUtil;
 import com.miqtech.master.client.utils.LogUtil;
 import com.miqtech.master.client.utils.PreferencesUtil;
+import com.networkbench.agent.impl.NBSAppAgent;
 import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
 import com.tencent.mm.sdk.constants.Build;
@@ -65,6 +68,12 @@ public class StartActivity extends BaseActivity implements View.OnClickListener,
     Bundle data;
 
     private boolean isJumpFromWeb;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        NBSAppAgent.setLicenseKey(Constant.TINYUN_AUTHORCODE).withLocationServiceEnabled(true).start(getApplicationContext());
+    }
 
     protected void init() {
         setContentView(R.layout.activity_start);

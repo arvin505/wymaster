@@ -96,22 +96,26 @@ public class MyToast {
         }
     }
 
-    public static MyToast MakeText(Context context, String text, int pushType,Intent intent, boolean showTime) {
-        MyToast result = new MyToast(context, text, pushType,intent, showTime);
+    public static MyToast MakeText(Context context, String text, int pushType, Intent intent, boolean showTime) {
+        MyToast result = new MyToast(context, text, pushType, intent, showTime);
         return result;
     }
 
     public void show() {
-        if (!mIsShow) {//如果Toast没有显示，则开始加载显示
-            mIsShow = true;
-            mWdm.addView(mToastView, mParams);//将其加载到windowManager上
-            mTimer.schedule(new TimerTask() {
-                @Override
-                public void run() {
-                    mWdm.removeView(mToastView);
-                    mIsShow = false;
-                }
-            }, (long) (mShowTime ? 5000 : 2000));
+        try {
+            if (!mIsShow) {//如果Toast没有显示，则开始加载显示
+                mIsShow = true;
+                mWdm.addView(mToastView, mParams);//将其加载到windowManager上
+                mTimer.schedule(new TimerTask() {
+                    @Override
+                    public void run() {
+                        mWdm.removeView(mToastView);
+                        mIsShow = false;
+                    }
+                }, (long) (mShowTime ? 5000 : 2000));
+            }
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
         }
     }
 
@@ -214,7 +218,7 @@ public class MyToast {
             case PushType.BOUNTY_ID://悬赏令
                 newIntent.setClass(context, RewardActivity.class);
                 newIntent.putExtra("rewardId", Integer.valueOf(intent.getStringExtra("id")));
-                intent.putExtra("isEnd", 1 + "");
+                newIntent.putExtra("isEnd", "1");
                 context.startActivity(newIntent);
                 break;
         }

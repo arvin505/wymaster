@@ -561,7 +561,7 @@
         <item> %1$s个直播</item>
     </string-array>
     <string name="hot_liveplay">热门直播</string>
-    <string name="hot_video">热门视屏</string>
+    <string name="hot_video">热门视频</string>
     <string name="live_play_information_tab">信息</string>
     <string name="live_play_ralk_tab">聊天</string>
     <string name="live_play_history_tab">往期</string>
@@ -569,6 +569,7 @@
     <string name="live_play_hint"> %1$s个直播</string>
     <string name="live_play_fans_num">粉丝 %1$s</string>
     <string name="live_online_num">在线 %1$s</string>
+    <string name="all_live">全部直播</string>
 
     <string name="my_match_card">我的参赛卡</string>
     <string name="my_match_wallet">我的钱包</string>
@@ -586,13 +587,13 @@
     <string name="live_video_new">最新视频</string>
     <string name="live_video_hot">最热视频</string>
 
-    <string name="live_room_attention">+ 关注</string>
-    <string name="live_room_attentioned">已关注</string>
+    <string name="live_room_attention">+ 订阅</string>
+    <string name="live_room_attentioned">已订阅</string>
     <string name="comment_hint">发表评论</string>
     <string name="anchor_leave">主播当前不在线,看看其别的吧</string>
     <string name="no_wifi_hint">现在没有wifi,再看要花流量费哦</string>
     <string name="no_wifi_continue">土豪请继续</string>
-
+   <string name="live_share">正在直播，快来体验</string>
 
     <string-array name="spinner_live_play_line">
         <item>wyds_player</item>

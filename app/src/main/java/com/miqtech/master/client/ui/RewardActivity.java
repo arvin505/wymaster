@@ -97,8 +97,8 @@ public class RewardActivity extends BaseActivity implements McoyUpPage.GetReward
     private List<Reward> rewardList = new ArrayList<>();
     private int rewardPosition = 0;//悬赏令在数据集中的位置
     private Reward bean;
-    private int rewardId;//悬赏令id，每次卡片翻页都是刷新
-    private String isEnd = "-1";
+    private int rewardId = -1;//悬赏令id，每次卡片翻页都是刷新
+    private String isEnd = "-1";//0表示进行中。1表示已结束
     private int id;//悬赏令id，前一个页面传过来的
 
     private MyAlertView ruleDialog;//规则弹窗
@@ -140,7 +140,7 @@ public class RewardActivity extends BaseActivity implements McoyUpPage.GetReward
         upView = LayoutInflater.from(context).inflate(R.layout.layout_reward_up_page, null);
         downView = LayoutInflater.from(context).inflate(R.layout.layout_reward_down_page, null);
 
-        mcoyUpPage = new McoyUpPage(context, upView, mcoySnapPageLayout,isOne);
+        mcoyUpPage = new McoyUpPage(context, upView, mcoySnapPageLayout, isOne);
         mcoyDownPage = new McoyDownPage(context, downView);
 
         mcoySnapPageLayout.setSnapPages(mcoyUpPage, mcoyDownPage);
@@ -191,6 +191,7 @@ public class RewardActivity extends BaseActivity implements McoyUpPage.GetReward
         if (imgUrl == null) {
             return;
         }
+
         if (!drawableList.isEmpty() && rewardPosition < drawableList.size() && drawableList.get(rewardPosition) != null) {
             linearLayout.setBackgroundDrawable(drawableList.get(rewardPosition));
             linearLayout.getBackground().setAlpha(77);
@@ -251,12 +252,8 @@ public class RewardActivity extends BaseActivity implements McoyUpPage.GetReward
         map.put("page", "1");
         map.put("pageSize", "30");
         map.put("isEnd", isEnd);//	0-正在进行中 1-已经结束  （只要正在进行中的）
-        if(TextUtils.isEmpty(isEnd)){
+        if ((isEnd.equals("1") || isOne == 1) && id != -1) {
             map.put("bountyId", id + "");
-        }else{
-            if ((isEnd.equals("1") || isOne == 1) && id != -1) {
-                map.put("bountyId", id + "");
-            }
         }
         sendHttpPost(HttpConstant.SERVICE_HTTP_AREA + HttpConstant.BOUNTY_LIST, map, HttpConstant.BOUNTY_LIST);
     }
@@ -291,7 +288,6 @@ public class RewardActivity extends BaseActivity implements McoyUpPage.GetReward
                 } else {
                     refreshData(newRewardList);
                 }
-
                 isToLogin = false;
 
             } else if (method.equals(HttpConstant.BOUNTY_FAV)) {//悬赏令收藏
@@ -334,6 +330,7 @@ public class RewardActivity extends BaseActivity implements McoyUpPage.GetReward
             if (method.equals(HttpConstant.BOUNTY_LIST)) {
                 if (object.has("code") && object.getInt("code") == -4) {
                     toLogin();
+                } else if (object.has("code") && object.getInt("code") == -1) {
                 } else {
                     showEmpty(1);
                 }
@@ -491,6 +488,12 @@ public class RewardActivity extends BaseActivity implements McoyUpPage.GetReward
                 timerList.add(timer);
                 timerTaskList.add(timerTask);
                 break;
+            case 8:
+                mcoySnapPageLayout.setShowListView(true);//当为排行榜时，在显示排行榜名单时，卡片与评论不能上下滑动
+                break;
+            case 9:
+                mcoySnapPageLayout.setShowListView(false);
+                break;
         }
     }
 
@@ -561,6 +564,7 @@ public class RewardActivity extends BaseActivity implements McoyUpPage.GetReward
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        hideLoading();
         if (observerable != null) {
             observerable.unSubscribe(Observerable.ObserverableType.REWARD_COMMENT, this);
             observerable = null;
@@ -575,13 +579,13 @@ public class RewardActivity extends BaseActivity implements McoyUpPage.GetReward
         }
         bitmap = null;
 
-        for(Timer timer : timerList){
+        for (Timer timer : timerList) {
             if (timer != null) {
                 timer.cancel();
                 timer = null;
             }
         }
-        for(TimerTask task : timerTaskList){
+        for (TimerTask task : timerTaskList) {
             if (task != null) {
                 task.cancel();
                 task = null;
@@ -630,7 +634,9 @@ public class RewardActivity extends BaseActivity implements McoyUpPage.GetReward
      * 重置原始参数，并请求数据
      */
     private void resetData() {
-        id = rewardId;
+        if (rewardId > 0) {
+            id = rewardId;
+        }
         position = 0;
         rewardList.clear();
         drawableList.clear();

@@ -31,6 +31,34 @@
             android:layout_width="match_parent"
             android:layout_height="49dp"
             android:layout_alignParentBottom="true" />
+
     </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/guideRl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#d8000000"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="168dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/newbie_home_filter" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/newbie_home_discovery" />
+    </RelativeLayout>
+
+
 
 </RelativeLayout>

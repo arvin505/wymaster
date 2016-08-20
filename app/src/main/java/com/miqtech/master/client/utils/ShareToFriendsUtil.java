@@ -420,6 +420,7 @@ public class ShareToFriendsUtil implements ResponseListener {
         bundle.putString("targetUrl", shareUrl);
         bundle.putString("summary", shareContent);
         bundle.putString("appName", mContext.getPackageName());
+        LogUtil.d("shareByQQ","URL"+shareUrl);
         mTencent = Tencent.createInstance(Constant.QQ_APP_ID, mContext);
         mTencent.shareToQQ((Activity) mContext, bundle, qqShareListener);
         if (mSharePopWindow != null) {

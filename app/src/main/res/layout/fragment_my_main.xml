@@ -107,7 +107,7 @@
                 android:layout_height="30dp"
                 android:layout_marginTop="9dp"
                 android:background="@drawable/shape_corner_orange_bg"
-                android:text="编辑资料"
+                android:text="立即登录"
                 android:textColor="@color/orange"
                 android:textSize="14sp" />
 

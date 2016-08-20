@@ -256,6 +256,9 @@ public class FragmentDiscovery extends BaseFragment implements View.OnClickListe
         TextView mItemTitle = (TextView) view.findViewById(R.id.tvTitle);
         mItemTitle.setText(itemTitles[position]);
         TextView hint = (TextView) view.findViewById(R.id.tvHint);
+        if(position==1){
+            hint.setVisibility(View.GONE);
+        }
         if (position == 2) {
             setFontDiffrentColor(getString(R.string.live_play_hint, liveNum), 0, (liveNum + "").length(), hint);
         } else {

@@ -152,6 +152,15 @@ public class PreferencesUtil {
     }
 
     /**
+     * 首页是否显示过
+     *
+     * @param context
+     * @return
+     */
+    public static boolean getFirstMainGuideStatu(Context context) {
+        return getPreferences(context).getBoolean(MAIN_GUIDE, true);
+    }
+    /**
      * 我的页面是否显示过
      *
      * @param context

@@ -1,12 +1,15 @@
 package com.miqtech.master.client.entity;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.miqtech.master.client.application.WangYuApplication;
 import com.miqtech.master.client.utils.Utils;
 
 /**
  * Created by xiaoyi on 2016/7/28.
  */
-public class MessageCount {
+public class MessageCount implements Parcelable{
     private int activity;
 
     private int comment;
@@ -59,4 +62,42 @@ public class MessageCount {
     }
 
     private int total;
+
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(this.activity);
+        dest.writeInt(this.comment);
+        dest.writeInt(this.sys);
+        dest.writeInt(this.order);
+        dest.writeInt(this.total);
+    }
+
+    public MessageCount() {
+    }
+
+    protected MessageCount(Parcel in) {
+        this.activity = in.readInt();
+        this.comment = in.readInt();
+        this.sys = in.readInt();
+        this.order = in.readInt();
+        this.total = in.readInt();
+    }
+
+    public static final Creator<MessageCount> CREATOR = new Creator<MessageCount>() {
+        @Override
+        public MessageCount createFromParcel(Parcel source) {
+            return new MessageCount(source);
+        }
+
+        @Override
+        public MessageCount[] newArray(int size) {
+            return new MessageCount[size];
+        }
+    };
 }

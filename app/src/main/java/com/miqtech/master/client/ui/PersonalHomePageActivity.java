@@ -275,6 +275,7 @@ public class PersonalHomePageActivity extends BaseActivity implements OnClickLis
             tvEdit.setCompoundDrawables(dabaojian, null, null, null);
             ivAddGame.setVisibility(View.GONE);
             tvEdit.setText("向TA发起约战");
+            tvEdit.setVisibility(View.GONE);
         }
         if (currentType == GAME) {
             if (isMyShelf) {

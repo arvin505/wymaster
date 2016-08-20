@@ -14,9 +14,10 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:drawablePadding="6dp"
+        android:maxWidth="80dp"
         android:drawableRight="@drawable/icon_match_down"
-        android:maxLength="7"
-        android:ellipsize="middle"
+        android:singleLine="true"
+        android:ellipsize="end"
         android:textColor="@color/shop_font_black"
         android:textSize="14sp" />
 

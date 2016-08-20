@@ -90,7 +90,7 @@ public class RewardDetailActivity extends BaseActivity {
             case R.id.rewardDetailTvBottomStatue:
                 Intent intent = new Intent(context, AddressActivity.class);
                 intent.putExtra("goodid", rewardDetail.getHistoryId() + "");
-                intent.putExtra("goodType", TextUtils.isEmpty(rewardDetail.getCommodityType()) ? "" : rewardDetail.getCommodityType());
+                intent.putExtra("goodtype", TextUtils.isEmpty(rewardDetail.getCommodityType()) ? "" : rewardDetail.getCommodityType());
                 startActivityForResult(intent, REQUESTCODE);
                 break;
         }

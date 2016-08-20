@@ -102,7 +102,6 @@ public class FragmentInternetbarActivity extends BaseFragment implements NetbarA
                     String strObj = object.getString("object");
                     netbarActivityInfo = GsonUtil.getBean(strObj, NetbarActivityInfo.class);
                     NetbarActivityAdapter adapter = new NetbarActivityAdapter(getActivity(), netbarActivityInfo, this);
-
                     List<YueZhan> matches = netbarActivityInfo.getMatches();
                     FullLinearLayoutManager mLayoutManager = new FullLinearLayoutManager(getContext());
                     mLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);

@@ -36,7 +36,6 @@ import butterknife.ButterKnife;
 public class MatchLobbyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private final LayoutInflater inflater;
     private List<MatchV2> matches;
-
     private Context context;
 
     //悬赏令
@@ -157,6 +156,45 @@ public class MatchLobbyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
             mHolder.llReleaseMatchContent.setVisibility(View.VISIBLE);
             mHolder.tvTitle.setText(mMatch.getTitle());
             mHolder.tvStartTime.setText(DateUtil.dateToStrPoint(mMatch.getStart_time()));
+
+            if (!TextUtils.isEmpty(mMatch.getItem_name())) {
+                mHolder.tvGameName.setVisibility(View.VISIBLE);
+                mHolder.tvGameName.setText(mMatch.getItem_name());
+            } else {
+                mHolder.tvGameName.setVisibility(View.GONE);
+            }
+
+            //1-线上赛事,2-线下赛事,3-线上海选+线下决赛
+            if (mMatch.getMode() == 1) {
+                mHolder.tvMode.setText("线上赛事");
+                mHolder.tvMode.setVisibility(View.VISIBLE);
+            } else if (mMatch.getMode() == 2) {
+                mHolder.tvMode.setText("线下赛事");
+                mHolder.tvMode.setVisibility(View.VISIBLE);
+            } else if (mMatch.getMode() == 3) {
+                mHolder.tvMode.setText("线上海选+线下决赛");
+                mHolder.tvMode.setVisibility(View.VISIBLE);
+            } else {
+                mHolder.tvMode.setVisibility(View.GONE);
+            }
+            //赛制:1-单败淘汰制,2-双败淘汰制,3-小组内单循环制,4-积分循环制
+            if (mMatch.getRegime() == 1) {
+                mHolder.tvRegime.setText("单败淘汰制");
+                mHolder.tvRegime.setVisibility(View.VISIBLE);
+            } else if (mMatch.getRegime() == 2) {
+                mHolder.tvRegime.setText("双败淘汰制");
+                mHolder.tvRegime.setVisibility(View.VISIBLE);
+            } else if (mMatch.getRegime() == 3) {
+                mHolder.tvRegime.setText("小组内单循环制");
+                mHolder.tvRegime.setVisibility(View.VISIBLE);
+            } else if (mMatch.getRegime() == 4) {
+                mHolder.tvRegime.setText("积分循环制");
+                mHolder.tvRegime.setVisibility(View.VISIBLE);
+            }
+
+
+
+
         }
     }
 
@@ -356,6 +394,13 @@ public class MatchLobbyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         TextView tvTitle;
         @Bind(R.id.tvStartTime)
         TextView tvStartTime;
+
+        @Bind(R.id.tvGameName)
+        TextView tvGameName;
+        @Bind(R.id.tvMode)
+        TextView tvMode;
+        @Bind(R.id.tvRegime)
+        TextView tvRegime;
 
         public ReleaseByShelfMatchViewHolder(View itemView) {
             super(itemView);

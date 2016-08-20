@@ -22,6 +22,7 @@ import com.miqtech.master.client.http.HttpConstant;
 import com.miqtech.master.client.ui.ImagePagerActivity;
 import com.miqtech.master.client.utils.AsyncImage;
 import com.miqtech.master.client.utils.BitmapUtil;
+import com.miqtech.master.client.utils.LogUtil;
 import com.miqtech.master.client.view.CircleImageView;
 import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
@@ -108,7 +109,10 @@ public class RewardCardRankingListAdapter extends BaseAdapter {
         }
 
         //加载头像
-        AsyncImage.loadAvatar(context, HttpConstant.SERVICE_UPLOAD_AREA + bean.getIcon() + "!small", holder.ivHead);
+        if(holder.ivHead.getTag() == null || !(bean.getIcon().equals(holder.ivHead.getTag().toString()))){
+            AsyncImage.loadAvatar(context, HttpConstant.SERVICE_UPLOAD_AREA + bean.getIcon() + "!small", holder.ivHead);
+            holder.ivHead.setTag(bean.getIcon());
+        }
 
 //        AsyncImage.loadNetPhotoWithListener(HttpConstant.SERVICE_UPLOAD_AREA + bean.getIcon() + "!small", new ImageLoadingListener() {
 //            @Override
@@ -140,8 +144,8 @@ public class RewardCardRankingListAdapter extends BaseAdapter {
         }
 
         //显示成绩
-        if (!TextUtils.isEmpty(bean.getGrade())) {
-            holder.tvExplain.setText(bean.getGrade());
+        if (!TextUtils.isEmpty(bean.getCreate_date())) {
+            holder.tvExplain.setText(bean.getCreate_date());
         } else {
             holder.tvExplain.setText("");
         }
@@ -168,11 +172,12 @@ public class RewardCardRankingListAdapter extends BaseAdapter {
     }
 
     private void changeSize(ViewHolder holder, int position) {
-        if (isFirst) {
+//        if (isFirst) {
             paramsHead = (RelativeLayout.LayoutParams) holder.ivHead.getLayoutParams();
-            isFirst = false;
-        }
+//            isFirst = false;
+//        }
         if (position > 2) {
+            LogUtil.e("position-------------------------------", position + ""+"----------------"+"小");
             paramsHead.height = (int) distance30Dp;
 //            paramsHead.width = (int) distance32Dp;
 //            paramsHead.setMargins((int) distance12Dp, 0, 0, 0);
@@ -180,6 +185,7 @@ public class RewardCardRankingListAdapter extends BaseAdapter {
             paramsHead.setMargins((int) distance15Dp, 0, 0, 0);
             holder.ivHead.setLayoutParams(paramsHead);
         } else {
+            LogUtil.e("position-------------------------------", position + ""+"----------------"+"大");
             paramsHead.height = (int) distance40Dp;
 //            paramsHead.width = (int) distance42Dp;
 //            paramsHead.setMargins((int) distance3Dp, 0, 0, 0);

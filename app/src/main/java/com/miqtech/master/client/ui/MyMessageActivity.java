@@ -23,6 +23,7 @@ import com.miqtech.master.client.ui.fragment.FragmentMyOrder;
 import com.miqtech.master.client.ui.fragment.FragmentMySystem;
 import com.miqtech.master.client.utils.PreferencesUtil;
 import com.miqtech.master.client.utils.Utils;
+import com.miqtech.master.client.watcher.Observerable;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -37,7 +38,8 @@ import butterknife.ButterKnife;
  * 我的消息
  * Created by Administrator on 2015/12/4.
  */
-public class MyMessageActivity extends BaseActivity implements View.OnClickListener, ViewPager.OnPageChangeListener {
+public class MyMessageActivity extends BaseActivity implements View.OnClickListener,
+        ViewPager.OnPageChangeListener {
     @Bind(R.id.message_order_tv)
     TextView order_tv;
     @Bind(R.id.message_activitis_tv)
@@ -108,7 +110,6 @@ public class MyMessageActivity extends BaseActivity implements View.OnClickListe
     private int current;
     private int typeFragment = 0;
 
-
     @Override
     protected void init() {
         super.init();
@@ -158,12 +159,26 @@ public class MyMessageActivity extends BaseActivity implements View.OnClickListe
         }, 100);
     }
 
+
     @Override
     protected void initData() {
         super.initData();
         int index = viewPager.getCurrentItem();
         fragment = (MyBaseFragment) adapter.getItem(index);
         fragment.refreView();
+    }
+
+    /**
+     * 请求未读的消息
+     */
+    public void requestMsgCount() {
+        Map<String, String> map = new HashMap<>();
+        User user = WangYuApplication.getUser(WangYuApplication.appContext);
+        if (user != null) {
+            map.put("userId", user.getId());
+            map.put("token", user.getToken());
+            sendHttpPost(HttpConstant.SERVICE_HTTP_AREA + HttpConstant.GET_MSG_COUNT, map, HttpConstant.GET_MSG_COUNT);
+        }
     }
 
     @Override
@@ -186,7 +201,8 @@ public class MyMessageActivity extends BaseActivity implements View.OnClickListe
     protected void onResume() {
         super.onResume();
         PreferencesUtil.clearPushStatue(mContext);
-        refreMessage();
+        requestMsgCount();
+//        refreMessage();
     }
 
     @Override
@@ -287,8 +303,23 @@ public class MyMessageActivity extends BaseActivity implements View.OnClickListe
                     showToast("清除成功");
                     refreChildView();
                 }
-            } else {
-                showToast("清除失败");
+            } else if (method.equals(HttpConstant.GET_MSG_COUNT)) {
+
+                JSONObject jsonObject = new JSONObject(object.getJSONObject("object").toString());
+
+                if (jsonObject.has("order")) {
+                    MainActivity.orderCount = jsonObject.getInt("order");
+                }
+                if (jsonObject.has("activity")) {
+                    MainActivity.activitesCount = jsonObject.getInt("activity");
+                }
+                if (jsonObject.has("sys")) {
+                    MainActivity.systemCount = jsonObject.getInt("sys");
+                }
+                if (jsonObject.has("comment")) {
+                    MainActivity.commentCount = jsonObject.getInt("comment");
+                }
+                refreMessage();
             }
         } catch (JSONException e) {
             e.printStackTrace();
@@ -342,7 +373,6 @@ public class MyMessageActivity extends BaseActivity implements View.OnClickListe
     }
 
     public void refreMessage() {
-
         if (MainActivity.orderCount > 0) {
             order_drop.setVisibility(View.VISIBLE);
             order_drop.setText(Utils.getnumberForms(MainActivity.orderCount, mContext));
@@ -367,7 +397,6 @@ public class MyMessageActivity extends BaseActivity implements View.OnClickListe
         } else {
             commentDrop.setVisibility(View.GONE);
         }
-
         isOnclickForRightTextView(current);
     }
 

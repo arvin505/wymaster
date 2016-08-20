@@ -305,7 +305,7 @@ public class MatchLobbyActivity extends BaseActivity implements MatchLobbyAdapte
             lvAllGame.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-               //     setGameItemSelectedType(parent, view);
+                    //     setGameItemSelectedType(parent, view);
                     MatchItem matchItem = matchItems.get(position);
                     tvGame.setText(matchItem.getItem_name());
                     ivGame.setBackgroundResource(R.drawable.match_filter_down);
@@ -331,6 +331,7 @@ public class MatchLobbyActivity extends BaseActivity implements MatchLobbyAdapte
         }
         matchStatusFilterPopupWindow.showAsDropDown(llFilter, 0, 0);
     }
+
     //根据ID找到对应的position
     private int findItemByGameId() {
         if (matchItems != null) {
@@ -382,9 +383,9 @@ public class MatchLobbyActivity extends BaseActivity implements MatchLobbyAdapte
                 break;
             case R.id.tvRightHandle:
                 Intent intent = new Intent();
-                intent.setClass(context,MatchOverdueActivity.class);
-                intent.putExtra("itemId",itemId);
-                intent.putExtra("matchName",tvGame.getText().toString());
+                intent.setClass(context, MatchOverdueActivity.class);
+                intent.putExtra("itemId", itemId);
+                intent.putExtra("matchName", tvGame.getText().toString());
                 startActivity(intent);
                 break;
         }
@@ -631,13 +632,13 @@ public class MatchLobbyActivity extends BaseActivity implements MatchLobbyAdapte
                         showMatchTimeStatusFilterPopWindow();
                         break;
                 }
-            }else if (HttpConstant.ROUND_INFO.equals(method)) {
+            } else if (HttpConstant.ROUND_INFO.equals(method)) {
                 String objStr = object.getString("object");
                 ArrayList<MatchV2.RoundInfo> rounds = new Gson().fromJson(objStr, new TypeToken<List<MatchV2.RoundInfo>>() {
                 }.getType());
                 MatchV2 match = matches.get(officialMatchPosition);
                 match.setRounds(rounds);
-                View matchView = layoutManager.findViewByPosition(officialMatchPosition );
+                View matchView = layoutManager.findViewByPosition(officialMatchPosition);
                 MatchLobbyAdapter.MatchOfficialViewHolder matchViewHolder = (MatchLobbyAdapter.MatchOfficialViewHolder) rvMatch.getChildViewHolder(matchView);
                 for (int i = 0; i < rounds.size(); i++) {
                     MatchV2.RoundInfo round = rounds.get(i);
@@ -706,7 +707,7 @@ public class MatchLobbyActivity extends BaseActivity implements MatchLobbyAdapte
         Intent intent = new Intent();
         intent.setClass(context, RewardActivity.class);
         intent.putExtra("rewardId", rewardId);
-        intent.putExtra("isEnd", state + "");
+        intent.putExtra("isEnd", (state - 2) + "");
         startActivity(intent);
     }
 

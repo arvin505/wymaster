@@ -454,7 +454,6 @@ public class MatchOverdueActivity extends BaseActivity implements View.OnClickLi
                 String objStr = object.getString("object");
                 matchItems = new Gson().fromJson(objStr, new TypeToken<List<MatchItem>>() {
                 }.getType());
-
                 currentGamePosition = findItemByGameId();
                 //根据ID来区别点击的类型
                 switch (onClickViewId) {

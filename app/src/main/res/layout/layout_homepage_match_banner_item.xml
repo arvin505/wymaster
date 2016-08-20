@@ -126,7 +126,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
-                    android:layout_marginRight="12dp"
+                    android:layout_marginRight="9dp"
                     android:text="距离本场签到"
                     android:textColor="@color/shop_font_black_light"
                     android:textSize="@dimen/text_size_13" />
@@ -136,9 +136,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
-                    android:layout_marginRight="12dp"
+                    android:layout_marginRight="6dp"
                     android:textColor="@color/orange"
-                    android:textSize="@dimen/text_size_13"
+                    android:textSize="@dimen/text_size_15"
                     android:visibility="gone" />
 
                 <com.miqtech.master.client.view.RushBuyCountDownTimerView

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <include
         android:id="@+id/tabBar"
@@ -15,7 +15,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="31dp"
-        android:text="Copyright © 2015"
+        android:text="Copyright © 2016"
         android:textColor="@color/gray"
         android:textSize="@dimen/text_size_small" />
 
@@ -35,9 +35,9 @@
         android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
         android:layout_margin="20dp"
-        android:text="网娱大师是一款为一亿游戏用户量身打造的专属APP。每周150000红包抢到手软，网咖消费一键搞定，多重竞技赛事，在线约战，金币换购，游戏福利，更有最新最有趣的游戏资讯，游戏娱乐尽在网娱大师"
-        android:textSize="@dimen/text_size_small"
-        android:textColor="@color/black" />
+        android:text="网娱大师是一款好玩的电竞APP，通过举办电竞赛事，提供独具特色的娱乐比赛、热门资讯、精彩视频、福利商城、手游直播等多重服务，让玩家充分享受电竞带来的乐趣。这里是电竞玩家的专属舞台，汇聚各路大神玩家，快来加入我们吧！"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_small" />
 
     <ImageView
         android:id="@+id/imageView1"

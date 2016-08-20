@@ -39,7 +39,7 @@ public class Reward {
 
     private String state;
 
-    private int count_down;
+    private long count_down;
 
     public int getApplyNum() {
         return applyNum;
@@ -231,11 +231,11 @@ public class Reward {
         this.isShowListView = isShowListView;
     }
 
-    public int getCount_down() {
+    public long getCount_down() {
         return count_down;
     }
 
-    public void setCount_down(int count_down) {
+    public void setCount_down(long count_down) {
         this.count_down = count_down;
     }
 }

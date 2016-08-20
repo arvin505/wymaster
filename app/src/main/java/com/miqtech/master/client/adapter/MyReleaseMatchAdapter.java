@@ -105,7 +105,7 @@ public class MyReleaseMatchAdapter extends BaseAdapter {
             mHolder.ivHead.setBorderWidth(Utils.dp2px(3));
             AsyncImage.loadAvatar(context, HttpConstant.SERVICE_UPLOAD_AREA + mMatch.getSponsor_icon(), mHolder.ivHead);
             AsyncImage.loadPhoto(context, HttpConstant.SERVICE_UPLOAD_AREA + mMatch.getIcon(), mHolder.ivImg);
-            mHolder.tvTime.setText(DateUtil.dateToStrPoint(mMatch.getApply_begin()) + " - " + DateUtil.dateToStrPoint(mMatch.getApply_end()));
+            mHolder.tvTime.setText(DateUtil.dateToStrPoint(mMatch.getStart_time()) + " - " + DateUtil.dateToStrPoint(mMatch.getEnd_time()));
             mHolder.tvContent.setText(mMatch.getSummary()+"");
             mHolder.ivSpontaneousBg.setImageDrawable(context.getResources().getDrawable(R.drawable.match_blue_bg));
             mHolder.tvMatchName.setText("官方赛");
@@ -162,6 +162,7 @@ public class MyReleaseMatchAdapter extends BaseAdapter {
             ForegroundColorSpan graySpan = new ForegroundColorSpan(context.getResources().getColor(R.color.c7_gray));
             builder.setSpan(orangeSpan, 0, (mMatch.getApplyNum() + "").length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
             builder.setSpan(graySpan, (mMatch.getApplyNum() + "").length(), peopleNumStr.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
             mHolder.tvHasApplyNum.setText(builder);
         }
     }

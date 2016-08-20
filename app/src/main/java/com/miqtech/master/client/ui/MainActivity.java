@@ -64,9 +64,13 @@ import com.miqtech.master.client.watcher.Observerable;
 import com.screenrecorder.core.ScreenRecorder;
 import com.screenrecorder.ui.ScreenRecorderActivity;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -93,6 +97,8 @@ public class MainActivity extends BaseActivity implements Observerable.ISubscrib
     RelativeLayout rlMainHeader;
     @Bind(R.id.tvCurrentCity)
     TextView tvCurrentCity;
+    @Bind(R.id.guideRl)
+    RelativeLayout guideRl;
 
 
     private List<Fragment> fragmentList;
@@ -141,7 +147,7 @@ public class MainActivity extends BaseActivity implements Observerable.ISubscrib
         distriBution(getIntent());
 
         BroadcastController.registerUserChangeReceiver(this, mUserChangeReceiver);
-
+        isShowGuide();
         //registerReceiver(liveReceiver,new IntentFilter("com.miqtech.wymaster.live"));
     }
 
@@ -152,6 +158,7 @@ public class MainActivity extends BaseActivity implements Observerable.ISubscrib
             // FIXME: 2016/7/28
             //updateUserView();
             //getMyStatistics();
+//            requestMsgCount();
         }
     };
 
@@ -236,11 +243,9 @@ public class MainActivity extends BaseActivity implements Observerable.ISubscrib
      */
     public void initView() {
         fragmentList = new ArrayList<>();
-        fragmentList = new ArrayList<>();
         for (int i = 0; i < classes.length; i++) {
             fragmentList.add(null);
         }
-
         setSelectItem(changePage);
     }
 
@@ -398,7 +403,7 @@ public class MainActivity extends BaseActivity implements Observerable.ISubscrib
             case PushType.BOUNTY_ID://悬赏令
                 newIntent.setClass(this, RewardActivity.class);
                 newIntent.putExtra("rewardId", Integer.valueOf(intent.getStringExtra("id")));
-                intent.putExtra("isEnd", 1 + "");
+                newIntent.putExtra("isEnd", "1");
                 this.startActivity(newIntent);
                 break;
         }
@@ -759,5 +764,18 @@ public class MainActivity extends BaseActivity implements Observerable.ISubscrib
             LogUtil.e(TAG,"------onreceiver---------");
         }
     };*/
+
+    private void isShowGuide() {
+        if (PreferencesUtil.getFirstMainGuideStatu(this)) {
+            guideRl.setVisibility(View.VISIBLE);
+            PreferencesUtil.setFirstMainGuideStatus(this, false);
+        }
+        guideRl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                guideRl.setVisibility(View.GONE);
+            }
+        });
+    }
 }
 

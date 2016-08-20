@@ -13,6 +13,7 @@
         android:layout_marginLeft="60dp"
         android:layout_marginRight="60dp"
         android:layout_marginTop="55dp"
+        android:visibility="gone"
         android:text="该网吧暂时没有什么活动\n不如来发起一场约战吧"
         android:textColor="@color/black_extend_intro"
         android:textSize="@dimen/text_size_15" />
@@ -24,7 +25,24 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="12.5dp"
         android:textSize="@dimen/text_size_14"
+        android:visibility="gone"
         android:textColor="@color/orange"
         android:text="发布约战"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/default_search"
+        android:layout_gravity="center"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_14"
+        android:text="空空如也，没搜到任何信息"
+        android:textColor="@color/shop_buy_record_gray"
+        android:layout_gravity="center"
+        android:layout_marginTop="34dp"
         />
 </LinearLayout>

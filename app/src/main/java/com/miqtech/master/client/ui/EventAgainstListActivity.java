@@ -19,6 +19,7 @@ import com.miqtech.master.client.entity.EventAgainst;
 import com.miqtech.master.client.entity.User;
 import com.miqtech.master.client.http.HttpConstant;
 import com.miqtech.master.client.ui.baseactivity.BaseActivity;
+import com.miqtech.master.client.view.PinnedHeaderExpandableListView;
 
 import org.json.JSONException;
 import org.json.JSONObject;

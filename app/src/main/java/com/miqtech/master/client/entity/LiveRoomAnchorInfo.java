@@ -23,6 +23,26 @@ public class LiveRoomAnchorInfo implements Serializable {
     private int upUserId; //主播的id
     private String title; //标题
     private int sex;//0  男 1 女
+    @SerializedName("can_share")
+    private int canShare; //能否分享 0 不能 1 能
+    @SerializedName("share_url")
+    private String shareUrl; //分享地址
+
+    public int getCanShare() {
+        return canShare;
+    }
+
+    public void setCanShare(int canShare) {
+        this.canShare = canShare;
+    }
+
+    public String getShareUrl() {
+        return shareUrl;
+    }
+
+    public void setShareUrl(String shareUrl) {
+        this.shareUrl = shareUrl;
+    }
 
     public int getSex() {
         return sex;

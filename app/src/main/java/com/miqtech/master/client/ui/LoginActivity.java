@@ -272,7 +272,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
     public void onSuccess(JSONObject object, String method) {
         super.onSuccess(object, method);
         if (HttpConstant.USER_LOGIN.equals(method)) {
-            observerable.notifyChange(Observerable.ObserverableType.REWARD_COMMENT, 6);
             initUser(object);
         } else if (method.equals(HttpConstant.THIRD_LOGIN)) {
             toBindingOrtoMain(object);
@@ -305,6 +304,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
                         showToast("登录成功");
                         BroadcastController.sendUserChangeBroadcase(context);
                         //返回标识，成功登录
+                        observerable.notifyChange(Observerable.ObserverableType.REWARD_COMMENT, 6);
                         setResult(RESULT_OK);
                         finish();
                     }

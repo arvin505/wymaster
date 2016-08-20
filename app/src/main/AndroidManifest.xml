@@ -374,6 +374,12 @@
             android:name=".ui.MyRewardActivity"
             android:screenOrientation="portrait" />
 
+        <receiver android:name=".broadcastcontroller.NetStateChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
         <!--
              这里输入申请的百度地图的key
         	   测试key:SSw8VsbM0nFb5dO4wBCqwC8F

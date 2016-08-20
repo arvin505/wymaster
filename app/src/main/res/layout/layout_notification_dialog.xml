@@ -8,7 +8,11 @@
         android:layout_width="match_parent"
         android:layout_height="24dp"
         android:background="@color/light_orange_percent_70"
+        android:ellipsize="end"
         android:gravity="center"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:singleLine="true"
         android:text="报名即将结束"
         android:textColor="@color/shop_bg_color"
         android:textSize="@dimen/text_size_12"></TextView>

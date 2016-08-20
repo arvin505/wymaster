@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.media.AudioManager;
 import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -33,6 +32,7 @@ import android.widget.Toast;
 
 import com.miqtech.master.client.R;
 import com.miqtech.master.client.application.WangYuApplication;
+import com.miqtech.master.client.entity.LiveRoomAnchorInfo;
 import com.miqtech.master.client.entity.LiveRoomInfo;
 import com.miqtech.master.client.http.HttpConstant;
 import com.miqtech.master.client.ui.baseactivity.BaseActivity;
@@ -42,9 +42,15 @@ import com.miqtech.master.client.ui.fragment.FragmentTalkLP;
 import com.miqtech.master.client.utils.AsyncImage;
 import com.miqtech.master.client.utils.GsonUtil;
 import com.miqtech.master.client.utils.LogUtil;
+import com.miqtech.master.client.utils.ShareToFriendsUtil;
+import com.miqtech.master.client.utils.Utils;
 import com.miqtech.master.client.view.CustomMarqueeTextView;
+import com.miqtech.master.client.view.ExpertMorePopupWindow;
 import com.pili.pldroid.player.AVOptions;
 import com.pili.pldroid.player.PLMediaPlayer;
+import com.sina.weibo.sdk.api.share.BaseResponse;
+import com.sina.weibo.sdk.api.share.IWeiboHandler;
+import com.sina.weibo.sdk.constant.WBConstants;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -61,7 +67,7 @@ import butterknife.ButterKnife;
 /**
  * Created by admin on 2016/8/12.
  */
-public class LiveRoomActivity extends BaseActivity implements View.OnClickListener,FragmentHistoryLP.UpdataVideoData{
+public class LiveRoomActivity extends BaseActivity implements View.OnClickListener,FragmentHistoryLP.UpdataVideoData,IWeiboHandler.Response{
     @Bind(R.id.rlSurfaceView)
     RelativeLayout rlSurfaceView; //整个播放布局
     @Bind(R.id.surfaceView)
@@ -96,6 +102,8 @@ public class LiveRoomActivity extends BaseActivity implements View.OnClickListen
     ImageView ivGamePic2;//图片2
     @Bind(R.id.tvNoAnchorHint)
     TextView tvNoAnchorHint;//主播不在或者没有网络下的提示语
+    @Bind(R.id.ivShareIcon)
+    ImageView ivShareIcon ;//分享按钮
 
     private String mVideoPath; // 播放地址
     private Context context;
@@ -121,6 +129,9 @@ public class LiveRoomActivity extends BaseActivity implements View.OnClickListen
     private boolean isPlayComplete=false;
     private ConnectivityManager manager;
     private View main;
+
+    private ShareToFriendsUtil shareToFriendsUtil;//分享
+    private ExpertMorePopupWindow popwin;//分享弹框
     private Handler handler=new Handler(){
         @Override
         public void handleMessage(Message msg) {
@@ -148,6 +159,7 @@ public class LiveRoomActivity extends BaseActivity implements View.OnClickListen
     public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         super.onCreate(savedInstanceState, persistentState);
+        initSinaSso(savedInstanceState);
     }
 
     @Override
@@ -164,7 +176,11 @@ public class LiveRoomActivity extends BaseActivity implements View.OnClickListen
         setOnClickListener();
         initData();
     }
-
+    public void initSinaSso(Bundle savedInstanceState) {
+        if (savedInstanceState != null) {
+            shareToFriendsUtil.getIWeiApiInstance(this).handleWeiboResponse(getIntent(), this);
+        }
+    }
     @Override
     protected void initData() {
         checkState();
@@ -229,6 +245,7 @@ public class LiveRoomActivity extends BaseActivity implements View.OnClickListen
                             prepare();
                             isSubscribe=liveRoomInfo.getInfo().getIsSubscibe()==1?true:false;
                             tvTitle.setText(liveRoomInfo.getInfo().getTitle());
+                            setShareBtn(liveRoomInfo.getInfo());
                             initPlayerView(liveRoomInfo.getInfo().getScreen()==0?true:false);
                             ((FragmentInformationLP) fragements[0]).setAnchorData(liveRoomInfo.getInfo());
                             ((FragmentTalkLP)fragements[1]).setAnchorData(liveRoomInfo.getInfo());
@@ -269,6 +286,20 @@ public class LiveRoomActivity extends BaseActivity implements View.OnClickListen
             } catch (JSONException e) {
                 e.printStackTrace();
             }
+        }
+    }
+
+    /**
+     *   分享按钮的显示与否
+     * @param info
+     */
+    private void setShareBtn(LiveRoomAnchorInfo info) {
+        if(info.getCanShare()==0){
+            ivShareIcon.setVisibility(View.GONE);
+            ivShareIcon.setOnClickListener(null);
+        }else{
+            ivShareIcon.setVisibility(View.VISIBLE);
+            ivShareIcon.setOnClickListener(this);
         }
     }
 
@@ -366,8 +397,13 @@ public class LiveRoomActivity extends BaseActivity implements View.OnClickListen
         fragements[2] = fragment;
         ((FragmentHistoryLP)fragements[2]).setContext(this);
         moretabViewPager.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
-        setTabSelect(0);
+        setTabSelect(1);
+        moretabViewPager.setCurrentItem(1);
         llBufferingIndicator.setVisibility(View.VISIBLE);
+
+        popwin = new ExpertMorePopupWindow(context, R.style.Dialog);
+        popwin.setOnItemClick(itemOnClick);
+        shareToFriendsUtil = new ShareToFriendsUtil(context, popwin);
     }
     private void initPlayParameter(){
         mAVOptions = new AVOptions();
@@ -813,6 +849,47 @@ public class LiveRoomActivity extends BaseActivity implements View.OnClickListen
         }
         timer.schedule(task, 1000, 1000);
     }
+    View.OnClickListener itemOnClick = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            String sharetitle = liveRoomInfo.getInfo().getTitle();
+            String sharecontent = liveRoomInfo.getInfo().getNickname()+getResources().getString(R.string.live_share);
+            String shareurl = HttpConstant.SERVICE_HTTP_AREA
+                    +HttpConstant.LIVE_SHARE+id;
+            String imgurl = HttpConstant.SERVICE_UPLOAD_AREA
+                    +liveRoomInfo.getInfo().getIcon();
+            switch (v.getId()) {
+                case R.id.llSina:
+                    shareToFriendsUtil.shareBySina(sharetitle, sharecontent, shareurl, imgurl);
+                    break;
+                case R.id.llWeChat:
+                    shareToFriendsUtil.shareWyByWXFriend(sharetitle, sharecontent, shareurl, imgurl, 0);
+                    break;
+                case R.id.llFriend:
+                    shareToFriendsUtil.shareWyByWXFriend(sharetitle, sharecontent, shareurl, imgurl, 1);
+                    break;
+                case R.id.llQQ:
+                    shareToFriendsUtil.shareByQQ(sharetitle, sharecontent, shareurl, imgurl);
+                    break;
+            }
+        }
+    };
+
+    @Override
+    public void onResponse(BaseResponse baseResponse) {
+        switch (baseResponse.errCode) {
+            case WBConstants.ErrorCode.ERR_OK:
+                Toast.makeText(this, R.string.weibo_share_success, Toast.LENGTH_LONG).show();
+                break;
+            case WBConstants.ErrorCode.ERR_CANCEL:
+                Toast.makeText(this, R.string.weibo_share_cancel, Toast.LENGTH_LONG).show();
+                break;
+            case WBConstants.ErrorCode.ERR_FAIL:
+                Toast.makeText(this, getResources().getString(R.string.weibo_share_fail) + "Error Message: " + baseResponse.errMsg,
+                        Toast.LENGTH_LONG).show();
+                break;
+        }
+    }
 
     public class MyTimerTask extends TimerTask {
         @Override
@@ -830,6 +907,9 @@ public class LiveRoomActivity extends BaseActivity implements View.OnClickListen
         });
     }
     private void reConnect(){
+        if (mMediaPlayer==null){
+            return;
+        }
         try {
             mMediaPlayer.reset();
             mMediaPlayer.setDisplay(surfaceView.getHolder());
@@ -881,6 +961,16 @@ public class LiveRoomActivity extends BaseActivity implements View.OnClickListen
                 setNoWifiData(false);
                 reConnectRequest();
                 LogUtil.d(TAG,"onClick 重新连接");
+                break;
+            case R.id.ivShareIcon:
+                if (popwin != null) {
+                    popwin.show();
+                } else {
+                    popwin = new ExpertMorePopupWindow(context, R.style.Dialog);
+                    popwin.setOnItemClick(itemOnClick);
+                    shareToFriendsUtil = new ShareToFriendsUtil(context, popwin);
+                    popwin.show();
+                }
                 break;
         }
 
@@ -950,7 +1040,7 @@ public class LiveRoomActivity extends BaseActivity implements View.OnClickListen
        }
    }
     private boolean checkState(){
-       int type= checkNetworkState();
+       int type= Utils.checkNetworkState();
         if(type==0){
          showToast(getString(R.string.noNeteork));
             return false;
@@ -968,38 +1058,4 @@ public class LiveRoomActivity extends BaseActivity implements View.OnClickListen
         return true;
     }
 
-    /**
-     * 检查网络状态  0 没有网络  1有wifi 2 有gprs 3 既有wifi也有gprs
-     * @return
-     */
-    private int checkNetworkState() {
-        int type = 0;
-        boolean flag=false;
-        //得到网络连接信息
-        manager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        //去进行判断网络是否连接
-        if (manager.getActiveNetworkInfo() != null) {
-            flag = manager.getActiveNetworkInfo().isAvailable();
-        }
-        if (!flag) {
-           type=0;
-        } else {
-            NetworkInfo.State gprs = manager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState();
-            NetworkInfo.State wifi = manager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState();
-           if((gprs == NetworkInfo.State.CONNECTED || gprs == NetworkInfo.State.CONNECTING)
-                   && (wifi == NetworkInfo.State.CONNECTED || wifi == NetworkInfo.State.CONNECTING)){
-               type = 3;
-           }else {
-               if (gprs == NetworkInfo.State.CONNECTED || gprs == NetworkInfo.State.CONNECTING) {
-                   type = 2;
-               }
-               //判断为wifi状态下才加载广告，如果是GPRS手机网络则不加载！
-               if (wifi == NetworkInfo.State.CONNECTED || wifi == NetworkInfo.State.CONNECTING) {
-                   type = 1;
-               }
-           }
-
-        }
-        return type;
-    }
 }

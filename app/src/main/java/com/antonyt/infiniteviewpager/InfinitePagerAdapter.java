@@ -6,7 +6,6 @@ import android.support.v4.view.PagerAdapter;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.miqtech.master.client.utils.LogUtil;
 
 /**
  * A PagerAdapter that wraps around another PagerAdapter to handle paging wrap-around.

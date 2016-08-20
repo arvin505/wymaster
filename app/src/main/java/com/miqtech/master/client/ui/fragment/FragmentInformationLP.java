@@ -73,6 +73,9 @@ public class FragmentInformationLP extends BaseFragment implements View.OnClickL
         setData(info);
     }
     private void setData(LiveRoomAnchorInfo info) {
+        if(info==null){
+            return;
+        }
         this.info=info;
         this.id=info.getUpUserId();
         AsyncImage.loadAvatar(getActivity(), HttpConstant.SERVICE_UPLOAD_AREA + info.getIcon(), anchorHeader);

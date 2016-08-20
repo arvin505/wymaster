@@ -29,11 +29,9 @@
                     android:id="@+id/tvRewardTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
                     android:ellipsize="end"
                     android:lineSpacingExtra="6dp"
                     android:maxLines="2"
-                    android:text="1111111111111111111111111"
                     android:textColor="@color/shop_font_black"
                     android:textSize="@dimen/text_size_17" />
 
@@ -93,6 +91,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="9dp"
                         android:lineSpacingExtra="6dp"
+                        android:maxLines="2"
+                        android:minLines="2"
+                        android:ellipsize="end"
                         android:textColor="@color/shop_font_black"
                         android:textSize="@dimen/text_size_13" />
                 </LinearLayout>
@@ -102,7 +103,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="bottom"
-                    android:text="1111111111111正在抢榜"
                     android:textColor="@color/c7_gray" />
             </LinearLayout>
 
@@ -113,6 +113,7 @@
                 android:orientation="vertical">
 
                 <ImageView
+
                     android:id="@+id/ivMatchImg"
                     android:layout_width="99.5dp"
                     android:layout_height="135dp"
@@ -122,6 +123,16 @@
                     android:src="@drawable/default_img"
 
                     />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="正在统计中"
+                    android:id="@+id/tvState"
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"
+                    android:drawableBottom="@drawable/icon_mine_ellipsis"
+                    android:layout_height="wrap_content" />
 
                 <ImageView
                     android:id="@+id/ivRewardBg"

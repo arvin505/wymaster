@@ -43,10 +43,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
+            android:text="获奖详情"
             android:textColor="@color/shop_font_black"
             android:textSize="@dimen/text_size_17"
-            android:textStyle="bold"
-            android:text="获奖详情"  />
+            android:textStyle="bold" />
     </FrameLayout>
 
     <LinearLayout
@@ -110,6 +110,8 @@
                 android:id="@+id/rewardDetailTvRewardInfo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="end"
                 android:layout_marginLeft="15dp"
                 android:textColor="@color/shop_font_black"
                 android:textSize="@dimen/text_size_14"
@@ -141,6 +143,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
+                android:singleLine="true"
+                android:ellipsize="end"
                 android:textColor="@color/shop_font_black"
                 android:textSize="@dimen/text_size_14"
                 ignore:text="LOL英雄手办" />
@@ -171,6 +175,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
+                android:singleLine="true"
+                android:ellipsize="end"
                 android:textColor="@color/shop_font_black"
                 android:textSize="@dimen/text_size_14"
                 ignore:text="LOL英雄手办" />
@@ -200,6 +206,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="28dp"
+                android:singleLine="true"
+                android:ellipsize="end"
                 android:textColor="@color/shop_font_black"
                 android:textSize="@dimen/text_size_14"
                 ignore:text="LOL英雄手办" />
@@ -219,6 +227,7 @@
         android:gravity="center"
         android:textColor="@color/white"
         android:textSize="@dimen/text_size_15"
+        android:visibility="gone"
         ignore:text="立即填写" />
 
 

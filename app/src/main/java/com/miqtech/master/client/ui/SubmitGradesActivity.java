@@ -244,13 +244,10 @@ public class SubmitGradesActivity extends BaseActivity {
         // 下面这句指定调用相机拍照后的照片存储的路径
         intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(photoFile));
         startActivityForResult(intent, REQUEST_TAKE_PHOTO);
-
-
     }
 
     public String imagenames = "";
     public File photoFile = null;
-
 
     private void takeAlbum() {
         // TODO Auto-generated method stub
@@ -366,8 +363,8 @@ public class SubmitGradesActivity extends BaseActivity {
         intent.putExtra("crop", "true");
         intent.putExtra("aspectX", 1);// 裁剪框比例
         intent.putExtra("aspectY", 1);
-        intent.putExtra("outputX", 340);// 输出图片大小
-        intent.putExtra("outputY", 340);
+        intent.putExtra("outputX", 1000);// 输出图片大小
+        intent.putExtra("outputY", 1000);
         startActivityForResult(intent, REQUEST_CROP_PHOTO);
     }
 
@@ -402,11 +399,14 @@ public class SubmitGradesActivity extends BaseActivity {
                             reset(0);
                             showToast(getResources().getString(R.string.uploadfsuccess));
                             imgName = object.getString("object").toString();
+
                             if (isCamera) {
                                 AsyncImage.loadNetPhoto(context, HttpConstant.SERVICE_UPLOAD_AREA + imgName + "!small", ivSubmitCamera);
                             } else {
                                 AsyncImage.loadNetPhoto(context, HttpConstant.SERVICE_UPLOAD_AREA + imgName + "!small", ivSubmitGrades);
                             }
+
+                            deltetPhone();
                         } else {
                             reset(1);
                         }
@@ -504,6 +504,23 @@ public class SubmitGradesActivity extends BaseActivity {
             showToast(getResources().getString(R.string.uploadfail));
         } else if (type == 2) {
             showToast(getResources().getString(R.string.get_img_fail));
+        }
+    }
+
+
+    private void deltetPhone() {
+        if (photoFile != null && photoFile.exists()) {
+            photoFile.delete();
+            Intent media = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.fromFile(photoFile));
+            sendBroadcast(media);
+            photoFile = null;
+        }
+
+        if (outputImage != null && outputImage.exists()) {
+            outputImage.delete();
+            Intent media = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.fromFile(outputImage));
+            sendBroadcast(media);
+            outputImage = null;
         }
     }
 

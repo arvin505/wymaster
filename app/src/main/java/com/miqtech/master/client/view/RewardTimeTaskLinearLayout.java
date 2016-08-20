@@ -11,9 +11,13 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.miqtech.master.client.R;
+import com.miqtech.master.client.entity.Reward;
+import com.miqtech.master.client.utils.LogUtil;
 import com.miqtech.master.client.utils.TimeFormatUtil;
 import com.miqtech.master.client.watcher.Observerable;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -41,8 +45,11 @@ public class RewardTimeTaskLinearLayout extends LinearLayout {
     private TextView tvBottomStatu;//底部橘色的状态文字
     private LinearLayout linearLayout;//底部橘色按钮
     private ImageView imageView;//底部橘色部分内的图片
-
     private Observerable observerable = Observerable.getInstance();
+
+    private List<Integer> integerList = new ArrayList<>();
+    private int position;
+    private int total;
 
 
     public RewardTimeTaskLinearLayout(Context context) {
@@ -61,27 +68,34 @@ public class RewardTimeTaskLinearLayout extends LinearLayout {
     /**
      * 初始化 倒计时控件
      *
-     * @param totalTime     倒计时的时间
+     * @param position      倒计时的时间
      * @param textView      橘色底部上方的状态的文字颜色
      * @param linearLayout  橘色底部整体按钮
      * @param imageView     橘色底部内图片
      * @param tvBottomStatu 橘色底部内的文字
+     * @param tvBottomStatu 橘色底部内的文字
      */
-    public void initView(int totalTime, TextView textView, LinearLayout linearLayout, ImageView imageView, TextView tvBottomStatu) {
+    public void initView(int position, TextView textView, LinearLayout linearLayout, ImageView imageView, TextView tvBottomStatu, List<Reward> rewardList) {
+        this.position = position;
+        this.tvBottomStatu = tvBottomStatu;
+        this.textView = textView;
+        this.linearLayout = linearLayout;
+        this.imageView = imageView;
         if (isFirstCreat) {
-            this.tvBottomStatu = tvBottomStatu;
-            this.textView = textView;
-            this.linearLayout = linearLayout;
-            this.imageView = imageView;
-            this.totalTime = totalTime;
             dayStr = context.getApplicationContext().getResources().getString(R.string.day);
             view = LayoutInflater.from(context).inflate(R.layout.layout_reward_time_task, null);
             holder = new ViewHolder(view);
             this.addView(view);
             myHandler = new MyHandler();
-            secToTimeReward(totalTime);
             timeOut();
+
+            integerList.clear();
+            for (Reward bean : rewardList) {
+                integerList.add((int) (bean.getTime() / (float) 1000));
+            }
             isFirstCreat = false;
+            total = integerList.size();
+            secToTimeReward((int) (rewardList.get(0).getTime() / (float) 1000));
         }
     }
 
@@ -97,17 +111,25 @@ public class RewardTimeTaskLinearLayout extends LinearLayout {
         if (timer == null) {
             timer = new Timer();
         }
+
         if (task == null) {
             task = new MyTimerTask();
         }
+
         timer.schedule(task, 1000, 1000);
-        observerable.notifyChange(Observerable.ObserverableType.REWARD_COMMENT, 7,timer,task);
+        observerable.notifyChange(Observerable.ObserverableType.REWARD_COMMENT, 7, timer, task);
     }
 
     public class MyTimerTask extends TimerTask {
         @Override
         public void run() {
-            totalTime--;
+
+            for (int i = 0; i < total; i++) {
+                int timers = integerList.get(i);
+                timers--;
+                integerList.set(i, timers);
+            }
+//            totalTime--;
             myHandler.sendEmptyMessage(0);
         }
     }
@@ -116,12 +138,16 @@ public class RewardTimeTaskLinearLayout extends LinearLayout {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
+            totalTime = integerList.get(position);
             if (totalTime > 0) {
                 //倒计时时间
                 //设置倒计时时间
                 secToTimeReward(totalTime);
             } else {
                 showDayOrTime(-1);
+            }
+
+            if (isTimer()) {
                 if (timer != null) {
                     timer.cancel();
                     timer = null;
@@ -134,6 +160,19 @@ public class RewardTimeTaskLinearLayout extends LinearLayout {
                 myHandler.removeMessages(0);
             }
         }
+    }
+
+    private boolean isTimer() {
+        boolean isStop = false;
+        for (Integer integer : integerList) {
+            if (integer > 0) {
+                isStop = false;
+                break;
+            } else {
+                isStop = true;
+            }
+        }
+        return isStop;
     }
 
     private void secToTimeReward(int time) {
@@ -159,16 +198,11 @@ public class RewardTimeTaskLinearLayout extends LinearLayout {
                 showDayOrTime(0);
             } else {
                 day = hour / 24;
-                if (day != preDay) {//只要当天数产生变化时才会重新改变显示的数据
-                    holder.tvDay.setText(day + dayStr);
-                    showDayOrTime(1);
-                }
-                preDay = day;
+                holder.tvDay.setText(day + dayStr);
+                showDayOrTime(1);
             }
         }
     }
-
-    int preDay;
 
     /**
      * 显示天数  还是时分秒

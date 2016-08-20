@@ -10,7 +10,10 @@ import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 import android.widget.Scroller;
 
+import com.miqtech.master.client.entity.Reward;
 import com.miqtech.master.client.utils.LogUtil;
+
+import java.util.List;
 
 /**
  * <p/>
@@ -53,6 +56,11 @@ public class McoySnapPageLayout extends ViewGroup {
     //这个值表示需要第一页和第二页之间的鸿沟
     private int gapBetweenTopAndBottom;
 
+    private boolean isShowListView = false;
+
+    public void setShowListView(boolean showListView) {
+        isShowListView = showListView;
+    }
 
     public interface McoySnapPage {
         /**
@@ -264,6 +272,11 @@ public class McoySnapPageLayout extends ViewGroup {
                     if ((yDiff < 0 && mPageTop.isAtBottom() && mCurrentScreen == 0)
                             || (yDiff > 0 && mPageBottom.isAtTop() && mCurrentScreen == 1)) {
                         Log.e("mcoy", "121212121212121212121212");
+
+                        if(mCurrentScreen == 0 && isShowListView){
+                            return false;
+                        }
+
                         if (mCurrentScreen == 1 && !recyclerviewIsTop) {//当为评论界面，且recyclerview向上滑动到顶部时，不返回false
                             return false;
                         }

@@ -18,6 +18,7 @@ import com.miqtech.master.client.entity.Reward;
 import com.miqtech.master.client.http.HttpConstant;
 import com.miqtech.master.client.utils.AsyncImage;
 import com.miqtech.master.client.utils.DateUtil;
+import com.miqtech.master.client.utils.TimeFormatUtil;
 
 import java.util.List;
 
@@ -64,17 +65,26 @@ public class MyRewardAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
         Reward reward = mDatas.get(position);
-        holder.tvTime.setText("时间：");
+
         holder.tvTarget.setText(reward.getTarget());
         holder.tvRewardTitle.setText(reward.getTitle());
-        holder.tvCountDown.setText(DateUtil.secToTime(reward.getCount_down()));
+
         SpannableStringBuilder builder = null;
         if (reward.getIsEnd() == 0) {
             holder.ivStatus.setImageResource(R.drawable.match_doing);
             builder = new SpannableStringBuilder(reward.getApplyNum() + "人正在抢榜");
+            holder.tvTime.setText("倒计时：");
+            holder.tvCountDown.setText(DateUtil.secToTime(reward.getCount_down()));
         } else if (reward.getIsEnd() == 1) {
             holder.ivStatus.setImageResource(R.drawable.match_end);
             builder = new SpannableStringBuilder(reward.getApplyNum() + "人抢榜");
+            holder.tvTime.setText("结束时间：");
+            holder.tvCountDown.setText(TimeFormatUtil.format(reward.getEnd_time(),"yyyy.MM.dd"));
+            if (reward.getState().equals("1")) {
+                holder.tvState.setVisibility(View.VISIBLE);
+            } else {
+                holder.tvState.setVisibility(View.GONE);
+            }
         }
         builder.setSpan(new ForegroundColorSpan(mContext.getApplicationContext().getResources().getColor(R.color.light_orange)),
                 0, builder.length() - (builder.toString().contains("正在") ? 5 : 3), Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
@@ -111,6 +121,8 @@ public class MyRewardAdapter extends BaseAdapter {
         ImageView imgIsWin;
         @Bind(R.id.tv_time)
         TextView tvTime;
+        @Bind(R.id.tvState)
+        TextView tvState;
 
         ViewHolder(View view) {
             ButterKnife.bind(this, view);

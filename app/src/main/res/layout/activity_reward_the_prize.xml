@@ -49,6 +49,10 @@
             Ignore:text="江湖悬赏令" />
     </FrameLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/reward_comment_color_e2e2e2" />
 
     <com.miqtech.master.client.view.pullToRefresh.PullToRefreshListView
         android:id="@+id/rewardPrizeListView"

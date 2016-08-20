@@ -62,7 +62,7 @@ public class McoyUpPage implements McoySnapPageLayout.McoySnapPage, View.OnClick
 
     private McoySnapPageLayout mcoySnapPageLayout;
     private int position;//该悬赏令在数据中的位置
-    private int isOne = 0;
+    private int isOne = -1;
 
     public McoyUpPage(Context context, View rootView, McoySnapPageLayout mcoySnapPageLayout, int isOne) {
         this.context = context;
@@ -107,7 +107,7 @@ public class McoyUpPage implements McoySnapPageLayout.McoySnapPage, View.OnClick
 
         this.rewardList = rewardList;
 
-        if (rewardList.get(0).getCheckStatus() == -1 || isOne == 1) {//当未到结束时间时，需要下滑；到了结束时间，只会有一张悬赏令，不滑动
+        if (rewardList.get(0).getCheckStatus() == -1 && isOne != 1) {//当未到结束时间时，需要下滑；到了结束时间，只会有一张悬赏令，不滑动
             cardView.setGoDown(true);
             cardView.setMaxVisibleCount(3);
         } else {

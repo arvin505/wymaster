@@ -24,7 +24,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
  */
 
-package com.miqtech.master.client.ui;
+package com.miqtech.master.client.view;
 
 import android.content.Context;
 import android.graphics.Canvas;

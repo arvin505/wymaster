@@ -29,7 +29,9 @@ import com.miqtech.master.client.entity.MatchV2;
 import com.miqtech.master.client.entity.MyMatch;
 import com.miqtech.master.client.http.HttpConstant;
 import com.miqtech.master.client.ui.EventDetailActivity;
+import com.miqtech.master.client.ui.InformationAtlasActivity;
 import com.miqtech.master.client.ui.InformationDetailActivity;
+import com.miqtech.master.client.ui.InformationTopicActivity;
 import com.miqtech.master.client.ui.OfficalEventActivity;
 import com.miqtech.master.client.ui.RewardActivity;
 import com.miqtech.master.client.utils.AsyncImage;
@@ -176,6 +178,7 @@ public class HomePageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                 if (myMatch == null) {
                     mHolder.llMyMatch.setVisibility(View.GONE);
                 } else {
+                    mHolder.llMyMatch.setVisibility(View.VISIBLE);
                     mHolder.tvTip.setText(myMatch.getTip());
                     setCountDown(mHolder.tvDay, mHolder.timeView, myMatch.getTime());
                     mHolder.tvMatchTitle.setText(myMatch.getTitle());
@@ -187,10 +190,10 @@ public class HomePageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                             Intent intent = new Intent();
                             if (matchType == 1) {
                                 intent.setClass(context, OfficalEventActivity.class);
-                                intent.putExtra("matchId",myMatch.getId()+"");
+                                intent.putExtra("matchId", myMatch.getId() + "");
                             } else if (matchType == 2) {
                                 intent.setClass(context, EventDetailActivity.class);
-                                intent.putExtra("matchId",myMatch.getId());
+                                intent.putExtra("matchId", myMatch.getId());
                             }
                             context.startActivity(intent);
                         }
@@ -246,11 +249,22 @@ public class HomePageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
             tvNotice.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View arg0) {
+                    //:1图文 2专题 3图集4视频
                     Log.e("HeadLine", arg0.getTag().toString());
                     Intent intent = new Intent();
-
-                    intent.setClass(context, InformationDetailActivity.class);
-                    intent.putExtra("id", headLine.getId() + "");
+                    if (headLine.getType() == 1) {
+                        intent.setClass(context, InformationDetailActivity.class);
+                        intent.putExtra("id", headLine.getId() + "");
+                    } else if (headLine.getType() == 2) {
+                        intent.setClass(context, InformationTopicActivity.class);
+                        intent.putExtra("activityId", headLine.getId() + "");
+                    } else if (headLine.getType() == 3) {
+                        intent.setClass(context, InformationAtlasActivity.class);
+                        intent.putExtra("activityId", headLine.getId() + "");
+                    } else if (headLine.getType() == 4) {
+                        intent.setClass(context, InformationDetailActivity.class);
+                        intent.putExtra("id", headLine.getId() + "");
+                    }
                     context.startActivity(intent);
                 }
             });
@@ -264,7 +278,7 @@ public class HomePageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         final MatchV2 rewardMatch = matches.get(position - 2);
         if (rewardMatch != null) {
             mHolder.tvRewardTitle.setText(rewardMatch.getTitle());
-            mHolder.tvCountDown.setText(DateUtil.secToTime((int)(rewardMatch.getCount_down() / 1000)));
+            mHolder.tvCountDown.setText(DateUtil.secToTime((long)rewardMatch.getCount_down()));
             mHolder.tvTarget.setText(rewardMatch.getTarget());
             AsyncImage.loadPhoto(context, HttpConstant.SERVICE_UPLOAD_AREA + rewardMatch.getIcon(), mHolder.ivMatchImg);
             mHolder.llReward.setOnClickListener(new View.OnClickListener() {
@@ -335,6 +349,7 @@ public class HomePageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
             } else {
                 mHolder.tvGameName.setVisibility(View.GONE);
             }
+
             //1-线上赛事,2-线下赛事,3-线上海选+线下决赛
             if (mMatch.getMode() == 1) {
                 mHolder.tvMode.setText("线上赛事");

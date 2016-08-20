@@ -48,6 +48,15 @@ public class MatchV2 {
     ArrayList<RoundInfo> rounds;
     float count_down;
 
+    public String getEnd_time() {
+        return end_time;
+    }
+
+    public void setEnd_time(String end_time) {
+        this.end_time = end_time;
+    }
+
+    String end_time;
 
     public int getApplyNum() {
         return applyNum;

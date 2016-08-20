@@ -366,11 +366,7 @@ public class FragmentRewardComment extends MyBaseFragment implements CommentsSec
                 isDelectComment = false;
                 showToast("删除失败");
             } else if (method.equals(HttpConstant.AMUSE_COMMENT)) {//提交评论
-                if (1 == object.getInt("code")) {
-                    showToast(object.getString("result"));
-                } else {
-                    new MyAlertView.Builder(context).setMessage("0").createComentSuccessOrFail();
-                }
+                showToast(object.getString("result"));
             } else {
                 showToast(object.getString("result"));
             }

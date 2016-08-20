@@ -28,6 +28,12 @@ public class LoadingDialog extends Dialog {
 		super(context, theme);
 	}
 
+	@Override
+	public void dismiss() {
+		context = null;
+		super.dismiss();
+	}
+
 	public static LoadingDialog createDialog(Context context, String text) {
 		Log.e("loadingdialog_context--", context+"",null );
 		loadingProgress = new LoadingDialog(context, R.style.dialog_transparent);

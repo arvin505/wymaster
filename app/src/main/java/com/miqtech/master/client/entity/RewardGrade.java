@@ -22,6 +22,8 @@ public class RewardGrade {
     private int id;
     private String img;//悬赏令成绩图片
 
+    private String create_date;//时间
+
     public String getGrade() {
         return grade;
     }
@@ -78,5 +80,13 @@ public class RewardGrade {
 
     public void setImg(String img) {
         this.img = img;
+    }
+
+    public String getCreate_date() {
+        return create_date;
+    }
+
+    public void setCreate_date(String create_date) {
+        this.create_date = create_date;
     }
 }

@@ -42,6 +42,7 @@ import com.miqtech.master.client.http.HttpConstant;
 import com.miqtech.master.client.ui.baseactivity.BaseActivity;
 import com.miqtech.master.client.utils.LogUtil;
 import com.miqtech.master.client.utils.PreferencesUtil;
+import com.miqtech.master.client.utils.Utils;
 import com.screenrecorder.Constants;
 import com.screenrecorder.services.PiliPushService;
 
@@ -479,6 +480,9 @@ public class ScreenRecorderActivity extends BaseActivity implements RadioGroup.O
      * 请求直播
      */
     private void requestLive() {
+        if (Utils.checkNetworkState()==0){
+         showToast("请注意：您正在使用流量直播");
+        }
         User user = WangYuApplication.getUser(WangYuApplication.appContext);
         if (user != null) {
             Map<String, String> params = new HashMap<>();

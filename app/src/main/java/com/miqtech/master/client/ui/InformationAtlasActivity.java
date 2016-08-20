@@ -49,7 +49,7 @@ import butterknife.ButterKnife;
  * 资讯图集详情
  * Created by zhaosentao on 2015/11/28.
  */
-public class InformationAtlasActivity extends BaseActivity implements View.OnClickListener {
+public class  InformationAtlasActivity extends BaseActivity implements View.OnClickListener {
 
     @Bind(R.id.pager)
     HackyViewPager pager;

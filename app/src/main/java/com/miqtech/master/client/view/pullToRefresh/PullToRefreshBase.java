@@ -847,8 +847,11 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
 			onPtrRestoreInstanceState(bundle);
 			return;
 		}
-
-		super.onRestoreInstanceState(state);
+		try {
+			super.onRestoreInstanceState(state);
+		} catch (Exception e) {
+		}
+		state = null;
 	}
 
 	@Override

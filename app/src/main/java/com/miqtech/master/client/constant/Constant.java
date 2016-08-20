@@ -92,5 +92,9 @@ public class Constant {
     public static final String BUGTAGS_KEY_LIVE = "475936a4af1b9e3bcfbd0e6bea245c25";
     public static final String BUGTAGS_KEY_BETA = "52a10a4f9910e4da9f9c6f845b9118fc";
 
+    /**
+     * 听云授权码
+     */
+    public static final String TINYUN_AUTHORCODE = "a219296082214c21a44a0605958eebf3";
 
 }

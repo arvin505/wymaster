@@ -78,6 +78,7 @@ public class WangYuApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
         LeakCanary.install(this);
         BlockCanary.install(this, new AppBlockCanaryContext()).start();
         Bugtags.start(BuildConfig.DEBUG ? Constant.BUGTAGS_KEY_BETA : Constant.BUGTAGS_KEY_LIVE, this, Bugtags.BTGInvocationEventNone);

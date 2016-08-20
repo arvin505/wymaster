@@ -27,7 +27,7 @@ import cn.jpush.android.api.JPushInterface;
 
 /**
  * 自定义接收器
- * <p/>
+ * <p>
  * 如果不定义这个 Receiver，则： 1) 默认用户会打开主界面 2) 接收不到自定义消息
  */
 public class MyReceiver extends BroadcastReceiver {
@@ -46,9 +46,6 @@ public class MyReceiver extends BroadcastReceiver {
         try {
             if (extras != null) {
                 pt.setJsonObject(new JSONObject(extras));
-                if (Utils.isRunningForeground(context)) {
-                    toStartActivity(context, AppManager.getAppManager().currentActivity().getClass(), alert);
-                }
             }
         } catch (JSONException e) {
             e.printStackTrace();
@@ -61,6 +58,11 @@ public class MyReceiver extends BroadcastReceiver {
             LogUtil.e(TAG, "[MyReceiver] 接收到推送下来的自定义消息: " + bundle.getString(JPushInterface.EXTRA_MESSAGE));
         } else if (JPushInterface.ACTION_NOTIFICATION_RECEIVED.equals(intent.getAction())) {
             LogUtil.e(TAG, "[MyReceiver] 接收到推送下来的通知");
+            if (extras != null) {
+                if (Utils.isRunningForeground(context)) {
+                    toStartActivity(context, AppManager.getAppManager().currentActivity().getClass(), alert);
+                }
+            }
             @SuppressWarnings("unused")
             int notifactionId = bundle.getInt(JPushInterface.EXTRA_NOTIFICATION_ID);
             /** 订单推送 **/
@@ -160,11 +162,13 @@ public class MyReceiver extends BroadcastReceiver {
                     ComponentName cn = new ComponentName(packageName, packageName + ".ui.StartActivity");
                     intent.setComponent(cn);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    intent.putExtra("bottom", 0);
                     break;
                 case 1:
                     intent.setClass(context, MainActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    intent.putExtra("bottom", 0);
                     break;
             }
         } else {

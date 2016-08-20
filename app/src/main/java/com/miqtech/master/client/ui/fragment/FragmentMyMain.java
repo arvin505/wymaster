@@ -27,6 +27,7 @@ import com.miqtech.master.client.ui.EditDataActivity;
 import com.miqtech.master.client.ui.FansListActivity;
 import com.miqtech.master.client.ui.GameCenterActivity;
 import com.miqtech.master.client.ui.LoginActivity;
+import com.miqtech.master.client.ui.MainActivity;
 import com.miqtech.master.client.ui.MyActivityCardActivity;
 import com.miqtech.master.client.ui.MyCollectActivity;
 import com.miqtech.master.client.ui.MyCorpsActivity;
@@ -41,6 +42,7 @@ import com.miqtech.master.client.utils.AsyncImage;
 import com.miqtech.master.client.utils.GsonUtil;
 import com.miqtech.master.client.utils.Utils;
 import com.miqtech.master.client.view.CircleImageView;
+import com.miqtech.master.client.watcher.Observerable;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -123,6 +125,7 @@ public class FragmentMyMain extends BaseFragment {
     private boolean shouldUpdate = false;
     private static FragmentMyMain mInstance;
 
+
     @Override
     public View onViewInit(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_my_main, container, false);
@@ -171,7 +174,7 @@ public class FragmentMyMain extends BaseFragment {
      * 清空登陆状态
      */
     private void cleanInfo() {
-        btnMyEdit.setText("登陆");
+        btnMyEdit.setText("立即登录");
         tvMessageCount.setVisibility(View.GONE);
         tvMyOrderCount.setVisibility(View.GONE);
         tvMyActivities.setText("0");
@@ -221,7 +224,6 @@ public class FragmentMyMain extends BaseFragment {
                 jumpToActivity(MyMessageActivity.class);
                 break;
             case R.id.tv_my_activities:
-
                 break;
             case R.id.tv_my_attentions:
                 shouldUpdate = true;
@@ -261,7 +263,6 @@ public class FragmentMyMain extends BaseFragment {
      * activity跳转
      */
     private void jumpToActivity(Class clazz, Intent intent) {
-
         User user = WangYuApplication.getUser(WangYuApplication.appContext);
         if (user != null || clazz == GameCenterActivity.class) {
             intent.setClass(getActivity(), clazz);
