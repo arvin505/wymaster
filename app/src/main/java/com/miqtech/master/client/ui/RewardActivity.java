@@ -29,6 +29,7 @@ import com.miqtech.master.client.entity.User;
 import com.miqtech.master.client.http.HttpConstant;
 import com.miqtech.master.client.ui.baseactivity.BaseActivity;
 import com.miqtech.master.client.ui.basefragment.MyBaseFragment;
+import com.miqtech.master.client.ui.basefragment.RewardBaseFragment;
 import com.miqtech.master.client.ui.fragment.FragmentRewardComment;
 import com.miqtech.master.client.utils.AsyncImage;
 import com.miqtech.master.client.utils.BitmapUtil;
@@ -90,7 +91,7 @@ public class RewardActivity extends BaseActivity implements McoyUpPage.GetReward
 
     private int position = 0;//每一个悬赏令对应在fragmentlist中的位置
     private FragmentTransaction transaction;
-    private List<MyBaseFragment> fragmentList = new ArrayList<MyBaseFragment>();
+    private List<RewardBaseFragment> fragmentList = new ArrayList<RewardBaseFragment>();
     private Map<Integer, Integer> integerMap = new HashMap<>();
     private MyBaseFragment commentBaseFragment;
 
@@ -169,6 +170,12 @@ public class RewardActivity extends BaseActivity implements McoyUpPage.GetReward
                 } else if (derection == -1) {//评论滑到卡片
                     if (isToLogin) {
                         loadData();
+                    }
+                    if (!fragmentList.isEmpty() &&
+                            !integerMap.isEmpty() &&
+                            integerMap.containsKey(rewardId) &&
+                            fragmentList.get(integerMap.get(rewardId)) != null) {
+                        fragmentList.get(integerMap.get(rewardId)).hideCommentView();
                     }
                 }
             }
@@ -331,6 +338,7 @@ public class RewardActivity extends BaseActivity implements McoyUpPage.GetReward
                 if (object.has("code") && object.getInt("code") == -4) {
                     toLogin();
                 } else if (object.has("code") && object.getInt("code") == -1) {
+
                 } else {
                     showEmpty(1);
                 }
@@ -357,7 +365,7 @@ public class RewardActivity extends BaseActivity implements McoyUpPage.GetReward
     public void setOnShowComment(int id) {
         transaction = getSupportFragmentManager().beginTransaction();
         transaction.setTransitionStyle(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-        MyBaseFragment baseFragment;
+        RewardBaseFragment baseFragment;
         for (MyBaseFragment fragment : fragmentList) {
             if (null != fragment) {
                 transaction.hide(fragment);

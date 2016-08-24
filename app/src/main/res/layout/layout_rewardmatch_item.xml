@@ -30,15 +30,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
-                    android:lineSpacingExtra="6dp"
                     android:maxLines="2"
+                    android:minLines="2"
                     android:textColor="@color/shop_font_black"
                     android:textSize="@dimen/text_size_17" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="8dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -73,7 +73,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="8dp"
                     android:orientation="horizontal">
 
                     <TextView
@@ -100,7 +100,7 @@
 
                 <TextView
                     android:id="@+id/tvPeopleNum"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="bottom"
                     android:textColor="@color/c7_gray" />

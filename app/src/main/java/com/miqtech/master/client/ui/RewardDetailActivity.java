@@ -165,7 +165,6 @@ public class RewardDetailActivity extends BaseActivity {
         }
         ivIcon.setVisibility(View.GONE);
         tvBottomStatue.setVisibility(View.GONE);
-
         tvTitle.setTextColor(getResources().getColor(R.color.colorActionBarSelected));
         switch (rewardDetail.getStatus()) {//-1未填写信息 0-兑换中，1 发放成功，2-奖励信息过期
             case -1:

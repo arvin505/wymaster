@@ -317,13 +317,18 @@ public class PiliPushService extends Service implements StreamingStateListener, 
      * 停止推流
      */
     public void stopPush() {
-        isStreaming = false;
-        if (mStreamingManager != null) {
-            mStreamingManager.stopStreaming();
-            mStreamingManager.pause();
+        try {
+            isStreaming = false;
+            if (mStreamingManager != null) {
+                mStreamingManager.stopStreaming();
+                mStreamingManager.pause();
 
-            mStreamingManager.destroy();
+                mStreamingManager.destroy();
+            }
+        }catch (Exception e){
+            e.printStackTrace();
         }
+
         removeFloatView();
     }
 

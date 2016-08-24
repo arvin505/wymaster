@@ -105,6 +105,7 @@ public class MyMessageActivity extends BaseActivity implements View.OnClickListe
     public final static int MsgType_Exchange = 10;
     public final static int MsgType_ShopDetail = 12;
     public final static int MsgType_OET = 16;//自发赛
+    public final static int MsgType_REWARD = 17;//悬赏令
     private int type;
     private MyBaseFragment fragment;
     private int current;

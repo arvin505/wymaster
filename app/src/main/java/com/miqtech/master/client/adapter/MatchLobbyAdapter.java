@@ -89,7 +89,7 @@ public class MatchLobbyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         final MatchV2 rewardMatch = matches.get(position);
         if (rewardMatch != null) {
             mHolder.tvRewardTitle.setText(rewardMatch.getTitle());
-            mHolder.tvCountDown.setText(DateUtil.secToTime((int)(rewardMatch.getCount_down()/1000)));
+            mHolder.tvCountDown.setText(DateUtil.secToTime((int)rewardMatch.getCount_down()));
             mHolder.tvTarget.setText(rewardMatch.getTarget());
             AsyncImage.loadPhoto(context, HttpConstant.SERVICE_UPLOAD_AREA + rewardMatch.getIcon(), mHolder.ivMatchImg);
             mHolder.llReward.setOnClickListener(new View.OnClickListener() {
@@ -136,7 +136,13 @@ public class MatchLobbyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
             }
             mHolder.cpView.setMaxCount(mMatch.getMax_num());
             mHolder.cpView.setCurrentCount(mMatch.getApplyNum());
-            mHolder.tvHasApplyNum.setText(mMatch.getApplyNum() + "/" + mMatch.getMax_num());
+            String peopleNumStr = mMatch.getApplyNum() + "/" + mMatch.getMax_num();
+            SpannableStringBuilder builder = new SpannableStringBuilder(peopleNumStr);
+            ForegroundColorSpan orangeSpan = new ForegroundColorSpan(context.getResources().getColor(R.color.orange));
+            ForegroundColorSpan graySpan = new ForegroundColorSpan(context.getResources().getColor(R.color.shop_font_black));
+            builder.setSpan(orangeSpan, 0, (mMatch.getApplyNum() + "").length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            builder.setSpan(graySpan, (mMatch.getApplyNum() + "").length(), peopleNumStr.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            mHolder.tvHasApplyNum.setText(builder);
             mHolder.llReleaseMatch.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

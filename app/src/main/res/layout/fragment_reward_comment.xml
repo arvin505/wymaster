@@ -63,7 +63,6 @@
         android:paddingRight="12dp"
         android:paddingTop="9dp">
 
-
         <LinearLayout
             android:id="@+id/fragmentRewardLlCommentSend"
             android:layout_width="54dp"
@@ -108,6 +107,8 @@
             android:hint="@string/speak"
             android:maxHeight="70dp"
             android:maxLength="200"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
             android:minHeight="36dp"
             android:paddingLeft="7dp"
             android:textColor="@color/shop_font_black"

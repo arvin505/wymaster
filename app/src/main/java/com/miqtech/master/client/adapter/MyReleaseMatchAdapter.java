@@ -22,6 +22,7 @@ import com.miqtech.master.client.entity.MatchV2;
 import com.miqtech.master.client.http.HttpConstant;
 import com.miqtech.master.client.utils.AsyncImage;
 import com.miqtech.master.client.utils.DateUtil;
+import com.miqtech.master.client.utils.LogUtil;
 import com.miqtech.master.client.utils.Utils;
 import com.miqtech.master.client.view.CircleImageView;
 
@@ -41,7 +42,7 @@ public class MyReleaseMatchAdapter extends BaseAdapter {
 
     private LayoutInflater inflater;
 
-    private MatchOfficialViewHolder mHolder;
+
 
     public MyReleaseMatchAdapter(List<MatchV2> matches, Context context) {
         this.matches = matches;
@@ -95,8 +96,8 @@ public class MyReleaseMatchAdapter extends BaseAdapter {
     }
 
     //设置官方赛
-    private void setMatchOfficialView(MatchOfficialViewHolder holder, final int position) {
-            mHolder = (MatchOfficialViewHolder) holder;
+    private void setMatchOfficialView(final MatchOfficialViewHolder mHolder, final int position) {
+
         final MatchV2 mMatch = matches.get(position);
         if (mMatch != null) {
             mHolder.tvName.setText(mMatch.getSponsor());
@@ -135,6 +136,7 @@ public class MyReleaseMatchAdapter extends BaseAdapter {
                     } else {
                         mHolder.llTime.setVisibility(View.VISIBLE);
                         if (mMatch.getRounds() != null) {
+                            LogUtil.e("TAG","--positino---" + position);
                             ArrayList<MatchV2.RoundInfo> rounds = mMatch.getRounds();
                             for (int i = 0; i < rounds.size(); i++) {
                                 MatchV2.RoundInfo round = rounds.get(i);
@@ -167,9 +169,7 @@ public class MyReleaseMatchAdapter extends BaseAdapter {
         }
     }
 
-    public MatchOfficialViewHolder getHolder(){
-        return mHolder;
-    }
+
 
     public static class MatchOfficialViewHolder {
         public TextView tvName;

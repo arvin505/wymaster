@@ -6,6 +6,7 @@ import java.util.TimerTask;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.PixelFormat;
+import android.os.Handler;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,7 +42,7 @@ public class MyToast {
     private WindowManager mWdm;
     private View mToastView;
     private WindowManager.LayoutParams mParams;
-    private Timer mTimer;
+//    private Timer mTimer;
     private boolean mShowTime;//记录Toast的显示长短类型
     private boolean mIsShow;//记录当前Toast的内容是否已经在显示
 
@@ -70,7 +71,7 @@ public class MyToast {
         //通过Toast实例获取当前android系统的默认Toast的View布局
         Toast.makeText(context, text, Toast.LENGTH_SHORT).setView(mToastView);
 
-        mTimer = new Timer();
+//        mTimer = new Timer();
         //设置布局参数
         setParams();
 
@@ -106,24 +107,34 @@ public class MyToast {
             if (!mIsShow) {//如果Toast没有显示，则开始加载显示
                 mIsShow = true;
                 mWdm.addView(mToastView, mParams);//将其加载到windowManager上
-                mTimer.schedule(new TimerTask() {
+//                mTimer.schedule(new TimerTask() {
+//                    @Override
+//                    public void run() {
+//                        mWdm.removeView(mToastView);
+//                        mIsShow = false;
+//                    }
+//                }, (long) (mShowTime ? 5000 : 2000));
+
+                new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         mWdm.removeView(mToastView);
                         mIsShow = false;
                     }
-                }, (long) (mShowTime ? 5000 : 2000));
+                },5000);
             }
         } catch (IllegalArgumentException e) {
             e.printStackTrace();
+        } catch (IllegalStateException i) {
+            i.printStackTrace();
         }
     }
 
     public void cancel() {
-        if (mTimer == null) {
-            mWdm.removeView(mToastView);
-            mTimer.cancel();
-        }
+//        if (mTimer == null) {
+//            mWdm.removeView(mToastView);
+//            mTimer.cancel();
+//        }
         mIsShow = false;
     }
 

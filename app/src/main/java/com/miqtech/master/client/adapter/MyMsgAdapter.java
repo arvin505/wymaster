@@ -124,6 +124,8 @@ public class MyMsgAdapter extends BaseAdapter {
                     holder.ivIcon.setImageResource(R.drawable.message_exchange);
                 } else if (messages.get(position).getType() == 16) {//自发赛
                     holder.ivIcon.setImageResource(R.drawable.message_push);
+                }else if (messages.get(position).getType() == 17) {//悬赏令
+                    holder.ivIcon.setImageResource(R.drawable.message_push);
                 }
                 break;
 //		case MyMessageActivity.SELECT_ORDER:// 订单消息

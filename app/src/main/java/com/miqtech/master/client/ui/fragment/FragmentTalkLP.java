@@ -145,6 +145,7 @@ public class FragmentTalkLP extends BaseFragment implements  RecreationCommentAd
         }else{
             rlAnchorInformation.setVisibility(View.VISIBLE);
         }
+        loadOfficalCommentList();
 
     }
     private void setFontDiffrentColor(String content, int start, int end, TextView tv) {
@@ -161,7 +162,7 @@ public class FragmentTalkLP extends BaseFragment implements  RecreationCommentAd
             tvAttention.setText(getResources().getString(R.string.live_room_attentioned));
             tvAttention.setTextColor(getContext().getResources().getColor(R.color.shop_buy_record_gray));
             bgShape.setStroke(Utils.dp2px(1),getContext().getResources().getColor(R.color.shop_buy_record_gray));
-            rlAnchorInformation.setVisibility(View.GONE);
+          //  rlAnchorInformation.setVisibility(View.GONE);
         }else{
             tvAttention.setText(getResources().getString(R.string.live_room_attention));
             tvAttention.setTextColor(getContext().getResources().getColor(R.color.light_orange));
@@ -173,10 +174,10 @@ public class FragmentTalkLP extends BaseFragment implements  RecreationCommentAd
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
-        if(isVisibleToUser && isFirst){
-            loadOfficalCommentList();
-            isFirst=false;
-        }
+//        if(isVisibleToUser && isFirst){
+//            loadOfficalCommentList();
+//            isFirst=false;
+//        }
     }
     private void loadOfficalCommentList() {
         user = WangYuApplication.getUser(context);
@@ -257,9 +258,9 @@ public class FragmentTalkLP extends BaseFragment implements  RecreationCommentAd
             try {
                 if(object.getInt("code")==0 && "success".equals(object.getString("result"))){
                     info.setIsSubscibe(info.getIsSubscibe()==1?0:1);
-                    if(info.getIsSubscibe()==1){
-                        rlAnchorInformation.setVisibility(View.GONE);
-                    }
+//                    if(info.getIsSubscibe()==1){
+//                        rlAnchorInformation.setVisibility(View.GONE);
+//                    }
                     ((LiveRoomActivity)getActivity()).updataSubscribeState(info.getIsSubscibe()==1?true:false);
                 }
             } catch (JSONException e) {
@@ -274,6 +275,7 @@ public class FragmentTalkLP extends BaseFragment implements  RecreationCommentAd
     @Override
     public void onFaild(JSONObject object, String method) {
         super.onFaild(object, method);
+        LogUtil.d(TAG,"onFaild"+object.toString());
         hideLoading();
         try {
             int code=object.getInt("code");

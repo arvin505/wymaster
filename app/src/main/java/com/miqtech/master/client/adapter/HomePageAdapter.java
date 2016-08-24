@@ -325,7 +325,14 @@ public class HomePageAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
             }
             mHolder.cpView.setMaxCount(mMatch.getMax_num());
             mHolder.cpView.setCurrentCount(mMatch.getApplyNum());
-            mHolder.tvHasApplyNum.setText(mMatch.getApplyNum() + "/" + mMatch.getMax_num());
+            String peopleNumStr = mMatch.getApplyNum() + "/" + mMatch.getMax_num();
+            SpannableStringBuilder builder = new SpannableStringBuilder(peopleNumStr);
+            ForegroundColorSpan orangeSpan = new ForegroundColorSpan(context.getResources().getColor(R.color.orange));
+            ForegroundColorSpan graySpan = new ForegroundColorSpan(context.getResources().getColor(R.color.shop_font_black));
+            builder.setSpan(orangeSpan, 0, (mMatch.getApplyNum() + "").length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            builder.setSpan(graySpan, (mMatch.getApplyNum() + "").length(), peopleNumStr.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            mHolder.tvHasApplyNum.setText(builder);
+
             mHolder.llReleaseMatch.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

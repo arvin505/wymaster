@@ -41,6 +41,7 @@ import com.miqtech.master.client.ui.LoginActivity;
 import com.miqtech.master.client.ui.PersonalCommentDetail;
 import com.miqtech.master.client.ui.basefragment.BaseFragment;
 import com.miqtech.master.client.ui.basefragment.MyBaseFragment;
+import com.miqtech.master.client.ui.basefragment.RewardBaseFragment;
 import com.miqtech.master.client.utils.GsonUtil;
 import com.miqtech.master.client.utils.LogUtil;
 import com.miqtech.master.client.utils.Utils;
@@ -66,7 +67,7 @@ import butterknife.OnClick;
  * 悬赏令评论
  * Created by zhaosentao on 2016/7/25.
  */
-public class FragmentRewardComment extends MyBaseFragment implements CommentsSectionAdapter.ProcessTheData, QuickCommentAdapter.OnClickItemListener {
+public class FragmentRewardComment extends RewardBaseFragment implements CommentsSectionAdapter.ProcessTheData, QuickCommentAdapter.OnClickItemListener {
 
     @Bind(R.id.reawrdUpLlBack)
     LinearLayout back;//返回
@@ -146,6 +147,7 @@ public class FragmentRewardComment extends MyBaseFragment implements CommentsSec
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        showLoading();
         ButterKnife.bind(this, view);
         context = getActivity();
         resources = context.getResources();
@@ -153,8 +155,8 @@ public class FragmentRewardComment extends MyBaseFragment implements CommentsSec
     }
 
     private void initView() {
-        rewardId = getArguments().getString(REWARD_ID);
 
+        rewardId = getArguments().getString(REWARD_ID);
         refreshComment.setMode(PullToRefreshBase.Mode.PULL_FROM_END);
         recyclerView = refreshComment.getRefreshableView();
         refreshComment.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener2<RecyclerView>() {
@@ -352,6 +354,7 @@ public class FragmentRewardComment extends MyBaseFragment implements CommentsSec
         if (mDialog != null) {
             mDialog.dismiss();
         }
+        showToast(context.getResources().getString(R.string.noNeteork));
     }
 
     @Override
@@ -457,6 +460,7 @@ public class FragmentRewardComment extends MyBaseFragment implements CommentsSec
                     }
                 }
                 showCommentNum(object.has("total") ? object.getInt("total") : 0);
+                refreshComment.setVisibility(View.VISIBLE);
             }
 
             if (object.has("list") && !TextUtils.isEmpty(object.getString("list").toString())) {
@@ -682,5 +686,11 @@ public class FragmentRewardComment extends MyBaseFragment implements CommentsSec
     public void refreView() {
         page = 1;
         requestData();
+    }
+
+    @Override
+    public void hideCommentView() {
+        refreshComment.setVisibility(View.GONE);
+        rvQuickComment.setVisibility(View.GONE);
     }
 }

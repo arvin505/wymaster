@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,17 +15,12 @@ import com.miqtech.master.client.R;
 import com.miqtech.master.client.adapter.MyAmuseAdapter;
 import com.miqtech.master.client.application.WangYuApplication;
 import com.miqtech.master.client.entity.MatchV2;
-import com.miqtech.master.client.entity.MyAmuse;
-import com.miqtech.master.client.entity.MyAmuseSet;
 import com.miqtech.master.client.entity.User;
 import com.miqtech.master.client.http.HttpConstant;
 import com.miqtech.master.client.ui.EventDetailActivity;
 import com.miqtech.master.client.ui.LoginActivity;
-import com.miqtech.master.client.ui.RecreationMatchDetailsActivity;
 import com.miqtech.master.client.ui.basefragment.MyBaseFragment;
-import com.miqtech.master.client.utils.GsonUtil;
 import com.miqtech.master.client.view.HasErrorListView;
-import com.miqtech.master.client.view.RefreshLayout;
 import com.miqtech.master.client.view.pullToRefresh.PullToRefreshBase;
 import com.miqtech.master.client.view.pullToRefresh.PullToRefreshListView;
 
@@ -202,7 +196,7 @@ public class FragmentMyAmuse extends MyBaseFragment implements AdapterView.OnIte
         }
         Intent intent = new Intent();
         intent.setClass(getContext(), EventDetailActivity.class);
-        intent.putExtra("matchId", myAmuseList.get(position) + "");
+        intent.putExtra("matchId", myAmuseList.get(position).getId() + "");
         startActivity(intent);
     }
 

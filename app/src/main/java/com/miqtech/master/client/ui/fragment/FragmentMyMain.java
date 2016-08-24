@@ -36,6 +36,7 @@ import com.miqtech.master.client.ui.MyMessageActivity;
 import com.miqtech.master.client.ui.MyOrderActivity;
 import com.miqtech.master.client.ui.MyRedBagActivity;
 import com.miqtech.master.client.ui.MyRewardActivity;
+import com.miqtech.master.client.ui.PersonalHomePageActivity;
 import com.miqtech.master.client.ui.SettingActivity;
 import com.miqtech.master.client.ui.basefragment.BaseFragment;
 import com.miqtech.master.client.utils.AsyncImage;
@@ -185,7 +186,7 @@ public class FragmentMyMain extends BaseFragment {
 
     @OnClick({R.id.btn_my_edit, R.id.rl_my_order, R.id.rl_my_wallet, R.id.rl_my_match_card, R.id.rl_my_matchs,
             R.id.rl_my_team, R.id.rl_my_reward, R.id.rl_my_collect, R.id.rl_my_gamecenter, R.id.ibLeft, R.id.img_bar_right,
-            R.id.tv_my_activities, R.id.tv_my_attentions, R.id.tv_my_fans})
+            R.id.tv_my_activities, R.id.tv_my_attentions, R.id.tv_my_fans,R.id.img_my_header})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_my_edit:
@@ -237,6 +238,12 @@ public class FragmentMyMain extends BaseFragment {
                 user = WangYuApplication.getUser(WangYuApplication.appContext);
                 intent.putExtra("id", user.getId());
                 jumpToActivity(FansListActivity.class, intent);
+                break;
+            case R.id.img_my_header:
+                intent = new Intent();
+                user = WangYuApplication.getUser(WangYuApplication.appContext);
+                intent.putExtra("id", user.getId());
+                jumpToActivity(PersonalHomePageActivity.class, intent);
                 break;
         }
     }

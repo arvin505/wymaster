@@ -227,7 +227,6 @@
         android:gravity="center"
         android:textColor="@color/white"
         android:textSize="@dimen/text_size_15"
-        android:visibility="gone"
         ignore:text="立即填写" />
 
 

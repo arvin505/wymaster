@@ -127,8 +127,6 @@ public class LiveRoomActivity extends BaseActivity implements View.OnClickListen
     private static final int MSG_PLAY_TIMES_REQUEST=101;
     private boolean isSubscribe=false;
     private boolean isPlayComplete=false;
-    private ConnectivityManager manager;
-    private View main;
 
     private ShareToFriendsUtil shareToFriendsUtil;//分享
     private ExpertMorePopupWindow popwin;//分享弹框
@@ -439,15 +437,18 @@ public class LiveRoomActivity extends BaseActivity implements View.OnClickListen
 
         @Override
         public void surfaceCreated(SurfaceHolder holder) {
-        //    prepare();
+            LogUtil.d(TAG,"surfaceCreated");
+            prepare();
         }
 
         @Override
         public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
+            LogUtil.d(TAG,"surfaceChanged");
         }
 
         @Override
         public void surfaceDestroyed(SurfaceHolder holder) {
+            LogUtil.d(TAG,"surfaceDestroyed");
             // release();
             releaseWithoutStop();
         }
@@ -603,10 +604,18 @@ public class LiveRoomActivity extends BaseActivity implements View.OnClickListen
     protected void onResume() {
         super.onResume();
    //     mReqDelayMills = REQ_DELAY_MILLS;
+        LogUtil.d(TAG,"onResume");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        LogUtil.d(TAG,"onStop");
     }
 
     @Override
     protected void onDestroy() {
+        LogUtil.d(TAG,"onDestroy");
         release();
         AudioManager audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
         audioManager.abandonAudioFocus(null);

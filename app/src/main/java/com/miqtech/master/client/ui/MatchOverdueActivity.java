@@ -449,7 +449,6 @@ public class MatchOverdueActivity extends BaseActivity implements View.OnClickLi
 //                    ivEmpty.setVisibility(View.GONE);
 //                }
                 adapter.notifyDataSetChanged();
-                page++;
             } else if (HttpConstant.ALL_MATCH_ITEM.equals(method)) {
                 String objStr = object.getString("object");
                 matchItems = new Gson().fromJson(objStr, new TypeToken<List<MatchItem>>() {

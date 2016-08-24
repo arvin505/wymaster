@@ -302,6 +302,7 @@ public class ScreenRecorderActivity extends BaseActivity implements RadioGroup.O
                 if (mPiliPushService.isStreaming()) {
                     btnStart.setText("开始直播");
                     mPiliPushService.stopService();
+                    closeLive();
                     setEnable(true);
                 } else {
                     setSizeWithOrientation();
@@ -480,8 +481,8 @@ public class ScreenRecorderActivity extends BaseActivity implements RadioGroup.O
      * 请求直播
      */
     private void requestLive() {
-        if (Utils.checkNetworkState()==0){
-         showToast("请注意：您正在使用流量直播");
+        if (Utils.checkNetworkState() == 0) {
+            showToast("请注意：您正在使用流量直播");
         }
         User user = WangYuApplication.getUser(WangYuApplication.appContext);
         if (user != null) {
@@ -580,6 +581,17 @@ public class ScreenRecorderActivity extends BaseActivity implements RadioGroup.O
         super.onPause();
         if (mPiliPushService != null) {
             mPiliPushService.setShouldJump(true);
+        }
+    }
+
+
+    private void closeLive() {
+        User user = WangYuApplication.getUser(getApplicationContext());
+        if (user != null) {
+            Map<String, String> params = new HashMap<>();
+            params.put("token", user.getToken());
+            params.put("userId", user.getId());
+            sendHttpPost(HttpConstant.SERVICE_HTTP_AREA + HttpConstant.CLOSE_LIVE, params, HttpConstant.SERVICE_HTTP_AREA);
         }
     }
 }

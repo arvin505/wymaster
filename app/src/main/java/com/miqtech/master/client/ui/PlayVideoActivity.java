@@ -236,6 +236,7 @@ public class PlayVideoActivity extends BaseActivity implements View.OnClickListe
         anchorContent.setVisibility(View.GONE);
         if (info != null) {
             mVideoPath=info.getRtmp();
+            LogUtil.d(TAG,"播放地址33333：：："+mVideoPath);
             //开始播放
             videoView.setVideoPath(mVideoPath);
             videoView.requestFocus();
@@ -895,6 +896,7 @@ public class PlayVideoActivity extends BaseActivity implements View.OnClickListe
 
     @Override
     public boolean onError(PLMediaPlayer plMediaPlayer, int extra) {
+        LogUtil.d(TAG,"extra"+extra);
             if (extra == PlayerCode.EXTRA_CODE_INVALID_URI || extra == PlayerCode.EXTRA_CODE_EOF) {
                 if (llBufferingIndicator != null)
                     llBufferingIndicator.setVisibility(View.GONE);

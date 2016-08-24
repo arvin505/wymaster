@@ -64,6 +64,8 @@ public class SubmitGradesActivity extends BaseActivity {
     ImageView ivSubmitGrades;
     @Bind(R.id.ivSubmitCamera)
     ImageView ivSubmitCamera;
+    @Bind(R.id.tvTitle)
+    TextView tvTitle;
 
 
     private Context context;
@@ -107,8 +109,14 @@ public class SubmitGradesActivity extends BaseActivity {
         enterCharacter = getResources().getString(R.string.also_you_can_enter);
         hintWord = getResources().getString(R.string.share_the_mood);
         monitorEditView();
+        setTitle();
     }
-
+    //设置标题
+   private void setTitle(){
+       if(fromType==1){
+           tvTitle.setText(R.string.commit_comment);
+       }
+   }
     @OnClick({R.id.llBack, R.id.submitGradesTv, R.id.ivSubmitGrades, R.id.ivSubmitCamera})
     public void onClick(View view) {
         switch (view.getId()) {
@@ -278,8 +286,8 @@ public class SubmitGradesActivity extends BaseActivity {
         intent.putExtra("crop", "true");
         intent.putExtra("aspectX", 1);// 裁剪框比例
         intent.putExtra("aspectY", 1);
-        intent.putExtra("outputX", 340);// 输出图片大小
-        intent.putExtra("outputY", 340);
+        intent.putExtra("outputX", 1000);// 输出图片大小
+        intent.putExtra("outputY", 1000);
         startActivityForResult(intent, REQUEST_CROP_PHOTO);
     }
 

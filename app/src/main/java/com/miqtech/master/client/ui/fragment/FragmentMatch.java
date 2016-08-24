@@ -304,7 +304,6 @@ public class FragmentMatch extends BaseFragment implements HomePageAdapter.HomeP
                 loadMatchList();
             } else if (HttpConstant.MATCH_LIST.equals(method)) {
                 setMatchList(object);
-                page++;
             } else if (HttpConstant.ALL_MATCH_ITEM.equals(method)) {
                 String objStr = object.getString("object");
                 matchItems = new Gson().fromJson(objStr, new TypeToken<List<MatchItem>>() {

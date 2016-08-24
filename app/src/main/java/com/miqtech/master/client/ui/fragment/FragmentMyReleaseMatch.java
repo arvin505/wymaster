@@ -183,7 +183,7 @@ public class FragmentMyReleaseMatch extends BaseFragment implements AdapterView.
                 MatchV2 match = matches.get(officialMatchPosition);
                 match.setRounds(rounds);
                 View matchView = mListView.getChildAt(officialMatchPosition);
-                MyReleaseMatchAdapter.MatchOfficialViewHolder matchViewHolder = adapter.getHolder();
+                MyReleaseMatchAdapter.MatchOfficialViewHolder matchViewHolder = new MyReleaseMatchAdapter.MatchOfficialViewHolder(matchView);
                 for (int i = 0; i < rounds.size(); i++) {
                     MatchV2.RoundInfo round = rounds.get(i);
                     if (round.getState().equals("报名")) {

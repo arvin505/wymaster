@@ -583,7 +583,7 @@
     <string name="main_bar_find">发现</string>
     <string name="main_bar_mine">我的</string>
     <string name="live_play_hall_title">直播大厅</string>
-    <string name="live_play_hall_video">全部视屏</string>
+    <string name="live_play_hall_video">全部视频</string>
     <string name="live_video_new">最新视频</string>
     <string name="live_video_hot">最热视频</string>
 
@@ -593,7 +593,8 @@
     <string name="anchor_leave">主播当前不在线,看看其别的吧</string>
     <string name="no_wifi_hint">现在没有wifi,再看要花流量费哦</string>
     <string name="no_wifi_continue">土豪请继续</string>
-   <string name="live_share">正在直播，快来体验</string>
+    <string name="live_share">正在直播，快来体验</string>
+    <string name="commit_comment">提交评论</string>
 
     <string-array name="spinner_live_play_line">
         <item>wyds_player</item>

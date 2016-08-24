@@ -76,6 +76,7 @@ public class RewardThePrizeActivity extends BaseActivity {
         pullToRefreshListView.setScrollingWhileRefreshingEnabled(true);
         listView = pullToRefreshListView.getRefreshableView();
         listView.setErrorView(getResources().getString(R.string.no_bounty_hunter_list));
+        listView.setDivider(null);
 
         adapter = new RewardPrizeAdapter(context, rewardGradeList);
         listView.setAdapter(adapter);

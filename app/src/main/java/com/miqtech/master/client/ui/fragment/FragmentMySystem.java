@@ -32,6 +32,7 @@ import com.miqtech.master.client.ui.MsgTypeSystemDetailActivity;
 import com.miqtech.master.client.ui.MyMessageActivity;
 import com.miqtech.master.client.ui.MyRedBagActivity;
 import com.miqtech.master.client.ui.PersonalCommentDetail;
+import com.miqtech.master.client.ui.RewardActivity;
 import com.miqtech.master.client.ui.ShopDetailActivity;
 import com.miqtech.master.client.ui.ZifaMatchListActivity;
 import com.miqtech.master.client.ui.basefragment.MyBaseFragment;
@@ -56,7 +57,7 @@ import java.util.Map;
 /**
  * Created by Administrator on 2015/12/4.
  */
-public class FragmentMySystem extends MyBaseFragment implements  AdapterView.OnItemLongClickListener,
+public class FragmentMySystem extends MyBaseFragment implements AdapterView.OnItemLongClickListener,
         AdapterView.OnItemClickListener {
 
     private View mainView;
@@ -120,7 +121,7 @@ public class FragmentMySystem extends MyBaseFragment implements  AdapterView.OnI
         myDialog = new DeleteView(mContext, R.style.delete_style, R.layout.delete_dialog);
         prlvMyMsg = (PullToRefreshListView) mainView.findViewById(R.id.prlvMyMsg);
         prlvMyMsg.setMode(PullToRefreshBase.Mode.BOTH);
-        lvSystem =prlvMyMsg.getRefreshableView();
+        lvSystem = prlvMyMsg.getRefreshableView();
         lvSystem.setErrorView("太低调了,还没有收到任何系统消息");
 
         adapter = new MyMsgAdapter(mContext, messges, MyMessageActivity.SELECT_SYSTEM);
@@ -155,7 +156,7 @@ public class FragmentMySystem extends MyBaseFragment implements  AdapterView.OnI
 
             @Override
             public void isHasNetWork(boolean isHasNetWork) {
-                if(!isHasNetWork) {
+                if (!isHasNetWork) {
                     showToast(getActivity().getResources().getString(R.string.noNeteork));
                 }
             }
@@ -258,7 +259,7 @@ public class FragmentMySystem extends MyBaseFragment implements  AdapterView.OnI
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-       prlvMyMsg.onRefreshComplete();
+        prlvMyMsg.onRefreshComplete();
     }
 
     @Override
@@ -354,7 +355,7 @@ public class FragmentMySystem extends MyBaseFragment implements  AdapterView.OnI
                 break;
             case MyMessageActivity.MsgType_Praise:
                 intent = new Intent(mContext, PersonalCommentDetail.class);
-                intent.putExtra("parentId", msg.getObj_id()+"");
+                intent.putExtra("parentId", msg.getObj_id() + "");
                 mContext.startActivity(intent);
                 break;
             case MyMessageActivity.MsgType_Exchange:
@@ -372,8 +373,15 @@ public class FragmentMySystem extends MyBaseFragment implements  AdapterView.OnI
                 intent.putExtra("matchId", msg.getObj_id() + "");
                 mContext.startActivity(intent);
                 break;
+            case MyMessageActivity.MsgType_REWARD://悬赏令
+                intent = new Intent(mContext, RewardActivity.class);
+                intent.putExtra("rewardId", msg.getObj_id());
+                intent.putExtra("isEnd", "1");
+                mContext.startActivity(intent);
+                break;
         }
     }
+
     @Override
     public void refreView() {
         showLoading();

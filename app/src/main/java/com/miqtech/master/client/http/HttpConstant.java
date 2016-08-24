@@ -1097,4 +1097,10 @@ public class HttpConstant {
      * 我的赛事
      */
     public static final String MY_MATCH = "v4/my/match";
+
+
+    /**
+     * 退出直播
+     */
+    public static final String CLOSE_LIVE = "v4/live/closeLive";
 }

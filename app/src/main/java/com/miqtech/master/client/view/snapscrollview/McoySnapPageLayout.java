@@ -10,13 +10,15 @@ import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 import android.widget.Scroller;
 
+import com.miqtech.master.client.application.WangYuApplication;
 import com.miqtech.master.client.entity.Reward;
 import com.miqtech.master.client.utils.LogUtil;
+import com.miqtech.master.client.view.LoadingDialog;
 
 import java.util.List;
 
 /**
- * <p/>
+ * <p>
  * 了解此ViewGroup之前， 有两点一定要做到心中有数
  * 一个是对Scroller的使用， 另一个是对onInterceptTouchEvent和onTouchEvent要做到很熟悉
  * 以下几个网站可以做参考用
@@ -175,7 +177,7 @@ public class McoySnapPageLayout extends ViewGroup {
      * computeScroll方法会调用postInvalidate()方法， 而postInvalidate()方法中系统
      * 又会调用computeScroll方法， 因此会一直在循环互相调用， 循环的终结点是在computeScrollOffset()
      * 当computeScrollOffset这个方法返回false时，说明已经结束滚动。
-     * <p/>
+     * <p>
      * 重要：真正的实现此view的滚动是调用scrollTo(mScroller.getCurrX(), mScroller.getCurrY());
      */
     @Override
@@ -273,7 +275,7 @@ public class McoySnapPageLayout extends ViewGroup {
                             || (yDiff > 0 && mPageBottom.isAtTop() && mCurrentScreen == 1)) {
                         Log.e("mcoy", "121212121212121212121212");
 
-                        if(mCurrentScreen == 0 && isShowListView){
+                        if (mCurrentScreen == 0 && isShowListView) {
                             return false;
                         }
 
@@ -390,6 +392,7 @@ public class McoySnapPageLayout extends ViewGroup {
         }
         return true;
     }
+
 
     private void clearOnTouchEvents() {
         mTouchState = TOUCH_STATE_REST;
